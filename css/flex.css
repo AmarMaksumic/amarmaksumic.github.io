@@ -1,0 +1,18 @@
+.flex-containter:after {
+  /* content: ""; */
+  display: flex;
+  /* clear: both; */
+  align-items: center;
+}
+
+.flex-box {
+  float: left;
+  width: 50%;
+  padding-bottom: 3vh;
+}
+
+@media screen and (max-width: 600px) {
+  .flex-box {
+    width: 100%;
+  }
+}

@@ -1,0 +1,48 @@
+.section {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-height: 100vh;
+}
+
+.section.visioncalc {
+  display: flex;
+  position: relative;
+  background-image: url(/img/vision_calc.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.section.visioncalc:after {
+  padding-top: min(75%, 100vh);
+  display: block;
+  content: '';
+}
+
+.section.visioncalc > .content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  color: white;
+  filter: drop-shadow(.05em .05em orange);
+  mix-blend-mode: difference;
+  text-align: center;
+  font-size: 15vw;
+  margin-top: min(25%, 33vh);
+}
+
+.section.dark {
+  display: flex;
+  display: inline-block;
+  position: relative;
+  background-color: #111;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+
+.section.dark > .content {
+  color: white;
+  text-align: center;
+}
