@@ -1,7 +1,7 @@
 .flex-containter:after {
-  /* content: ""; */
-  display: flex;
-  /* clear: both; */
+  content: "";
+  display: table;
+  clear: both;
   align-items: center;
 }
 
@@ -9,6 +9,10 @@
   float: left;
   width: 50%;
   padding-bottom: 3vh;
+}
+
+.clear {
+  clear: both;
 }
 
 @media screen and (max-width: 600px) {

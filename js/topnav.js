@@ -13,21 +13,31 @@ function nav_menu() {
 }
 
   
-jQuery(document).ready(function( $ ) {
-	var mywindow = $(window);
-	var mypos = mywindow.scrollTop();
-	var up = false;
-	var newscroll;
-	mywindow.scroll(function () {
-			newscroll = mywindow.scrollTop();
-			if (newscroll > mypos && !up) {
-					$('.topnav').stop().fadeOut();
-					up = !up;
-					console.log(up);
-			} else if(newscroll < mypos && up) {
-					$('.topnav').stop().fadeIn();
-					up = !up;
-			}
-			mypos = newscroll;
-  });
-});
+// jQuery(document).ready(function( $ ) {
+// 	var mywindow = $(window);
+// 	var mypos = mywindow.scrollTop();
+// 	var up = false;
+// 	var newscroll;
+// 	mywindow.scroll(function () {
+// 			newscroll = mywindow.scrollTop();
+// 			if (newscroll > mypos && !up) {
+// 					$('.topnav').stop().fadeOut();
+// 					up = !up;
+// 					console.log(up);
+// 			} else if(newscroll < mypos && up) {
+// 					$('.topnav').stop().fadeIn();
+// 					up = !up;
+// 			}
+// 			mypos = newscroll;
+//   });
+// });
+
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}

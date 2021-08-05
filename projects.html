@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Home | Amar Maksumić</title>
+  <title>Projects | Amar Maksumić</title>
   <meta name='author' content='Amar Maksumić'>
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
@@ -19,12 +19,13 @@
   <link rel='stylesheet' type='text/css' href='css/topnav.css'>
   <link rel='stylesheet' type='text/css' href='css/sections.css'> 
   <link rel='stylesheet' type='text/css' href='css/flex.css'> 
+  <link rel='stylesheet' type='text/css' href='css/card.css'> 
 
 </head>
 <body>
   <div class='topnav' id='navbar'>
-    <a href='index.html' class='active'>Home</a>
-    <a href='projects.html'>Projects</a>
+    <a href='index.html'>Home</a>
+    <a href='projects.html' class='active'>Projects</a>
     <a href='about.html'>About</a>
     <a href='javascript:void(0);' class='icon' onclick='nav_menu()'>
       <i class='fa fa-bars'></i>
@@ -34,33 +35,15 @@
     <div class="progress-bar" id="myBar"></div>
   </div>
 
-  <div class='section visioncalc'>
+  <div class='section projects'>
     <div class='content'>
-      WELCOME
+      PROJECTS
     </div>
-  </div>
+  </div>  
+
   <div class='section dark'>
-    <div class='content'>
-      <h1>Who am I?</h1>
-      <div class='flex-container'>
-        <div class='flex-box'>
-          <img src='img/amar.jpg'>
-        </div>
-        <div class='flex-box'>
-          <div style='margin-left: 7.5%; margin-right: 7.5%;'>
-            Hello! I'm <n class='theme color'>Amar</n>!
-            <br><br>
-            I'm a student at Rensselaer Polytechnic Institure studying Computer Science and Computer & Systems Engineering. From working with machine learning to launching rockets in the sky, I always find something to keep myself busy.
-            <br><br>
-            <button onclick="window.location.href='projects.html';">To projects&nbsp&nbsp&nbsp<i class='fa fa-arrow-right'></i></button>
-            <br><br>
-            <button>To about&nbsp&nbsp&nbsp<i class='fa fa-arrow-right'></i></button>
-            <br><br>
-            <button>Contact&nbsp&nbsp&nbsp<i class='fa fa-envelope-o'></i></button>
-          </div>
-        </div>
-      </div>
-      <span style="clear:both;"></span>
+    <div class='dynamic content card_row'>
+      
     </div>
   </div>
 
@@ -70,5 +53,6 @@
 </body>
 
 <script src='js/topnav.js'></script>
+<script src='js/project.js'></script>
 
 </html>
