@@ -46,7 +46,7 @@
   background-color: #f1f1f1;
   color: black;
   border-radius: 10px;
-  height: 50vh;
+  height: 500px;
   overflow-y: scroll;
 }
 
@@ -65,5 +65,21 @@
   .card {
     height: auto;
     overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .card_column {
+    float: left;
+    width: calc(100%/3);
+    padding: 0 10px;
+  }
+}
+
+@media screen and (min-width: 1081px) {
+  .card_column {
+    float: left;
+    width: calc(100%/4);
+    padding: 0 10px;
   }
 }

@@ -109,7 +109,7 @@ function dynamic_render() {
   for (project in projects) {
     let data = projects[project];
     let card_container = document.createElement('DIV');
-    card_container.setAttribute('class', 'card_column three');
+    card_container.setAttribute('class', 'card_column');
     
     let card = document.createElement('DIV');
     card.setAttribute('class', 'card');
@@ -123,7 +123,13 @@ function dynamic_render() {
 }
 
 projects = {
-  "VeZa": {
+  "DynamAero": {
+    "description": "Dynamic Aero system for Formula SAE cars. Reads track conditions and pre-determines positioning of active aero.",
+    "start_date": "Sep '21",
+    "end_date": "WIP",
+    "resources": {},
+    "tags": ["Control Systems"]
+  },"VeZa": {
     "description": "Web service using topology and knot theory for management and viewing of family trees. Utilizes D3 Tree to render family trees, and a flask server on Repl.it to store user and tree data.",
     "start_date": "Feb '21",
     "end_date": "WIP",
@@ -155,8 +161,7 @@ projects = {
     "end_date": "Jun '21",
     "resources": {
       "cad": "https://cad.onshape.com/documents/4e32d9f36a97adf58a6869c2/w/24def73a5e4a5848b79d8d09/e/69e1de1bbc6c503f41a5028c",
-      "github": "https://github.com/AmarMaksumic/AquilaHeavy",
-      "website": ""
+      "github": "https://github.com/AmarMaksumic/AquilaHeavy"
     },
     "tags": ["Control Systems", "Rocketry", "Mechanical Engineering"]
   },
@@ -197,7 +202,7 @@ projects = {
       "github": "https://github.com/AmarMaksumic/thhsama",
       "website": "https://amarmaksumic.github.io/thhsama/"
     },
-    "tags": []
+    "tags": ["Website"]
   },
   "Day.io": {
     "description": "A simple meeting and assignment organizer for students. Has integration for Google Calendar events and Google Classroom assignments.",

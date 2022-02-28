@@ -62,7 +62,7 @@
 }
 
 .section.dark {
-  display: flex;
+  /*display: flex;*/
   display: inline-block;
   position: relative;
   background-color: #54585a;
