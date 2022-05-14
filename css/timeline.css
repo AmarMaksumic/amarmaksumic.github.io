@@ -49,9 +49,20 @@
   margin-bottom: 1.2em;
 }
   
+.timeline-event-copy strong {
+  font-size: 1.1em;
+  font-weight: 900;
+}
+
 .timeline-event-copy p {
   font-size: 1.1em;
   font-weight: 500;
+}
+
+.timeline-event-copy a {
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #f5f7fa;
 }
   
 /* .timeline-event-copy  p:not(.timeline-event-thumbnail) {

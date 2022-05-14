@@ -49,16 +49,16 @@ function fill_card(card, inst, data) {
   if (data['sdegree'] != null) card.appendChild(make_element('H4', null, data['sdegree']))
   
   // Equip GPA 
-  if (data['gpa'] != null) card.appendChild(make_element('P', null, 'GPA: ' + data['gpa']))
+  if (data['gpa'] != null) card.appendChild(make_element('P', null, '<strong>GPA:</strong> ' + data['gpa']))
 
   // Equip socs_and_acts 
-  if (data['socs_and_acts'] != null) card.appendChild(make_element('P', null, 'Socities & Acitivites: ' + data['socs_and_acts']))
+  if (data['socs_and_acts'] != null) card.appendChild(make_list(null, '<strong>Socities & Acitivites:</strong> ', data['socs_and_acts']))
   
   // Equip hons_and_awds 
-  if (data['hons_and_awds'] != null) card.appendChild(make_element('P', null, 'Honors & Awards: ' + data['hons_and_awds']))
+  if (data['hons_and_awds'] != null) card.appendChild(make_list(null, '<strong>Honors & Awards:</strong> ', data['hons_and_awds']))
   
   // Equip classes 
-  if (data['courses'] != null) card.appendChild(make_list(null, 'Classes:', data['courses']))
+  if (data['courses'] != null) card.appendChild(make_list(null, '<strong>Classes:</strong>', data['courses']))
   if (data['courses'] != null) card.appendChild(make_element('P', null, ''))
 
   // Equip website 

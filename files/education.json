@@ -4,8 +4,15 @@
     "gpa": 3.95,
     "degree": "Bachelor of Science in Computer Science and Computer & Systems Engineering",
     "sdegree": "with Minor in Literature and Creative Writing",
-    "socs_and_acts": "Rensselaer Motorsport, RPI Robotics, The Archimedean Program/Society",
-    "hons_and_awds": "Dean's Honor List (Fall '21, Spring '22)",
+    "socs_and_acts": [
+      "Rensselaer Motorsport", 
+      "RPI Robotics", 
+      "The Archimedean Program/Society"
+    ],
+    "hons_and_awds": [
+      "Dean's Honor List (Spring 2022)",
+      "Dean's Honor List (Fall 2021)"
+    ],
     "courses": [
       "CSCI 1200 - Data Structures", 
       "CSCI 2200 - Foundations of CS",
@@ -38,8 +45,27 @@
     "gpa": "4.00 // 99.17% UW",
     "degree": "Advanced Regents Diploma with Honors in Math and Science",
     "sdegree": null,
-    "socs_and_acts": "Robotics Team (2017-2021), Mu Alpha Theta National Honor Society (2020 & 2021), New York State Science Honor Society (2020 & 2021), Fencing Team (2019), Soccer Team (2018), Balkan FON (2018)",
-    "hons_and_awds": null,
+    "socs_and_acts": [
+      "FRC Team 2601 Steel Hawks - Robotics Team (2017-2021)", 
+      "Mu Alpha Theta National Honor Society (2020 & 2021)", 
+      "New York State Science Honor Society (2020 & 2021)", 
+      "Fencing Team (2019)", 
+      "Soccer Team (2018)", 
+      "Balkan FON (2018)"
+    ],
+    "hons_and_awds": [
+      "AP Scholar with Distinction (2020 & 2021)", 
+      "Certificate of Outstanding Scholarship in Advanced Placement Computer Science A", 
+      "Certificate of Outstanding Scholarship in Mathematics", 
+      "Plaque for Highest Honors in Robotics",
+      "2nd Place Team at Bay Area Hacks", 
+      "Excellent Progress in Spanish Language Study and Generosity to Peers", 
+      "National Latin Exam - Maxima Cum Laude / Silver Medal Award for Level II", 
+      "FIRST Robotics Competition Chairman's Award (2020 NYC Regional)", 
+      "FIRST Robotics Competition Judges' Award (2018 Hudson Valley Regional)", 
+      "FIRST Robotics Competition Regional Engineering Inspiration Award (2018 SBPLI Long Island Regional #2)", 
+      "FIRST Robotics Competition Regional Finalists (2018 Hudson Valley Regional)"
+    ],
     "courses": [
       "AP Calculus BC",
       "AP Computer Science A",
