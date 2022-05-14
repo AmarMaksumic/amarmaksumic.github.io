@@ -1,0 +1,60 @@
+{
+  "Rensselaer Polytechnic Institute": {
+    "time": "Aug '21 - Dec '24",
+    "gpa": 3.95,
+    "degree": "Bachelor of Science in Computer Science and Computer & Systems Engineering",
+    "sdegree": "with Minor in Literature and Creative Writing",
+    "socs_and_acts": "Rensselaer Motorsport, RPI Robotics, The Archimedean Program/Society",
+    "hons_and_awds": "Dean's Honor List (Fall '21, Spring '22)",
+    "courses": [
+      "CSCI 1200 - Data Structures", 
+      "CSCI 2200 - Foundations of CS",
+      "ECSE 1010 - Intro to Electrical, Computer, & Systems Engineering", 
+      "ENGR 1200 - Engineering Graphics & CAD", 
+      "IHSS 1550 - Fiction: From Film to the Internet",
+      "LITR 2110 - Intro to Literature",
+      "MATH 2010 - Multivariable Calculus & Linear Algebra", 
+      "MATH 2400 - Intro to Differential Equations"
+    ],
+    "website": "https://www.rpi.edu/"
+  },
+  "CUNY - Queens College": {
+    "time": "Aug '20 - May '21",
+    "gpa": "4.00",
+    "degree": null,
+    "sdegree": "Bridge Program with Townsend Harris HS",
+    "socs_and_acts": null,
+    "hons_and_awds": null,
+    "courses": [
+      "ASTR 1 - Intro to Astronomy",
+      "CSCI 211 - Object Orientated Programming in C++",
+      "HTH 101 - Freshman Humanities Colloquium",
+      "HTH 102 - Freshman Humanities Colloquium"
+    ],
+    "website": "https://www.qc.cuny.edu/"
+  },
+  "Townsend Harris High School": {
+    "time": "Sep '17 - Jun '21",
+    "gpa": "4.00 // 99.17% UW",
+    "degree": "Advanced Regents Diploma with Honors in Math and Science",
+    "sdegree": null,
+    "socs_and_acts": "Robotics Team (2017-2021), Mu Alpha Theta National Honor Society (2020 & 2021), New York State Science Honor Society (2020 & 2021), Fencing Team (2019), Soccer Team (2018), Balkan FON (2018)",
+    "hons_and_awds": null,
+    "courses": [
+      "AP Calculus BC",
+      "AP Computer Science A",
+      "AP English Literature and Composition",
+      "AP Physics 1",
+      "AP Physics C: Mechanics",
+      "AP Spanish Language and Culture",
+      "AP US History",
+      "AP US Government and Politics",
+      "AP World History",
+      "Band - Flute",
+      "Principles of Engineering",
+      "Mechanics and Electronics of Robots",
+      "Latin I, II, III, and IV"
+    ],
+    "website": "https://www.thhs.qc.edu/"
+  }
+}
