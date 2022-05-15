@@ -1,5 +1,7 @@
 {
   "Rensselaer Motorsport": {
+    "bg_color": "#ffffff",
+    "color": "#b2282e",
     "image": "img/rm-modified.png",
     "time": "Mar '22 - Present",
     "desc": null,
@@ -23,6 +25,8 @@
     ]
   },
   "RPI Robotics": {
+    "bg_color": "#696969",
+    "color": "#ffffff",
     "time": "Aug '21 - Present",
     "desc": null,
     "website": null,
@@ -38,6 +42,8 @@
     ]
   },
   "FRC 2601 - Steel Hawks": {
+    "bg_color": "#D4AF37",
+    "color": "#ffffff",
     "image": "img/steelhawks.svg",
     "time": "Sep '17 - Jul '21",
     "desc": null,    
@@ -104,11 +110,14 @@
     ]
   },
   "TA PC Repair": {
+    "bg_color": "#008AD8",
+    "color": "#f5f7fa",
     "time": "Jun '18 - Aug '18",
     "desc": null,
     "positions": [
       {
-        "title": "Computer Repair Technician"
+        "title": "Computer Repair Technician",
+        "time": "Jun '18 - Aug '18"
       }
     ]
   }

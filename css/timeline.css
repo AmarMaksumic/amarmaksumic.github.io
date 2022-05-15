@@ -40,26 +40,26 @@
   width: 80%;
 }
   
-.timeline-event-copy  h3 {
+h3 {
   font-size: 1.95em;
 }
   
-.timeline-event-copy  h4 {
+h4 {
   font-size: 1.3em;
   margin-bottom: 1.2em;
 }
   
-.timeline-event-copy strong {
+strong {
   font-size: 1.1em;
   font-weight: 900;
 }
 
-.timeline-event-copy p {
+p {
   font-size: 1.1em;
   font-weight: 500;
 }
 
-.timeline-event-copy a {
+a {
   font-size: 1.1em;
   font-weight: 500;
   color: inherit;
@@ -104,7 +104,7 @@
 
 @media screen and (max-width: 600px) {
   .timeline:before {left: 1.5em; /*display: none*/}
-  .timeline-event-thumbnail {margin-left: -1em}
+  .timeline-event-thumbnail {margin-left: -1.5em}
   .timeline {max-width: 100%; margin: 0% auto; padding-right: 40px;}
   .timeline-event-copy {padding: 0em; left: 0em; position: relative; width: 100%}
   .timeline-event-icon {display: none}

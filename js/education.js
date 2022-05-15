@@ -91,6 +91,8 @@ $.getJSON('./files/education.json', function(json_data) {
     section_container.setAttribute('class', 'section shadow')
     section_container.setAttribute('style', 'background-color: ' + data['bg_color'] + '; color:' + data['color'])
 
+    section_container.appendChild(make_element('BR', null, null))
+    
     let timeline_container = document.createElement('UL')
     timeline_container.setAttribute('class', 'timeline')
 
@@ -112,6 +114,7 @@ $.getJSON('./files/education.json', function(json_data) {
     timeline_container.appendChild(inst_container)
 
     section_container.appendChild(make_element('BR', null, null))
+    
     section_container.appendChild(timeline_container)
 
     container[0].appendChild(section_container)

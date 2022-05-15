@@ -41,38 +41,43 @@ function make_link(klass, text, link) {
 }
 
 function fill_card(card, exp, data) {
-  // Equip thumbnail
-  card.appendChild(make_element('P', 'timeline-event-thumbnail', data['time']))
 
-  // Equip expitute name
-  card.appendChild(make_element('H3', null, exp))
-
-  // Equip expitute image
-  if (data['image'] != null) card.appendChild(make_img('h5em', data['image']))
-
-  if (data['image'] != null && data['website'] != null) {
-    card.appendChild(document.createElement('BR'))
-    card.appendChild(document.createElement('BR'))
-  }
-  
-  // Equip website 
-  if (data['website'] != null) card.appendChild(make_link(null, data['website'], data['website']))
-
-  let divider = document.createElement('DIV')
-  divider.setAttribute('style', 'margin-top: 5px; border-top: 3px dotted #bbb;')
-  card.appendChild(divider)
+  let timeline_container = document.createElement('UL')
+  timeline_container.setAttribute('class', 'timeline')
 
   for (position in data['positions']) {
-    pos_data = data['positions'][position]    
-    if (pos_data['title'] != null) card.appendChild(make_element('H4', null, pos_data['title']))
-    if (pos_data['time'] != null) card.appendChild(make_element('H5', null, pos_data['time']))
-    if (pos_data['desc'] != null) card.appendChild(make_element('P', null, pos_data['desc']))
+
+    pos_data = data['positions'][position]   
+
+    let exp_container = document.createElement('LI')
+    exp_container.setAttribute('class', 'timeline-event')
+
+    let label = document.createElement('LABEL')
+    label.setAttribute('class', 'timeline-event-icon')
+    label.setAttribute('style', 'outline: 10px solid ' + data['bg_color'])
+    exp_container.appendChild(label)
+    
+    let exp_info = document.createElement('DIV')
+    exp_info.setAttribute('class', 'timeline-event-copy')
+
+    // Equip thumbnail
+    let thumbnail = make_element('P', 'timeline-event-thumbnail', pos_data['time'])
+    thumbnail.setAttribute('style', 'outline: 10px solid ' + data['bg_color'])
+    exp_info.appendChild(thumbnail)
+
+    let divider = document.createElement('DIV')
+    divider.setAttribute('style', 'margin-top: 5px; border-top: 3px dotted #bbb;')
+    exp_info.appendChild(divider)
+ 
+    if (pos_data['title'] != null) exp_info.appendChild(make_element('H4', null, pos_data['title']))
+    // if (pos_data['time'] != null) exp_info.appendChild(make_element('H5', null, pos_data['time']))
+    if (pos_data['desc'] != null) exp_info.appendChild(make_element('P', null, pos_data['desc']))
 
     if (pos_data['desc_list'] != null) {
       for (set in pos_data['desc_list']) {
 
         let curr_set = pos_data['desc_list'][set]
-        if (curr_set['title'] != null) card.appendChild(make_element('P', null, curr_set['title'] + ':'))
+        if (curr_set['title'] != null) exp_info.appendChild(make_element('P', null, curr_set['title'] + ':'))
         let list = document.createElement('UL');
 
         for (index in curr_set['items']) {
@@ -81,34 +86,39 @@ function fill_card(card, exp, data) {
           list.appendChild(item)
         }
 
-        card.appendChild(list)
+        exp_info.appendChild(list)
       }
     }
 
-    card.appendChild(divider.cloneNode())
+    exp_container.appendChild(exp_info)
+    timeline_container.appendChild(exp_container)
   }
+
+  card.appendChild(timeline_container)
 }
 
 $.getJSON('./files/experience.json', function(json_data) {
-  let container = document.getElementsByClassName('timeline') 
+  let container = document.getElementsByClassName('dyna_container') 
 
   for (exp in json_data) {
     let data = json_data[exp]
-    let exp_container = document.createElement('LI')
-    exp_container.setAttribute('class', 'timeline-event')
 
-    let label = document.createElement('LABEL')
-    label.setAttribute('class', 'timeline-event-icon')
-    exp_container.appendChild(label)
-    
-    let exp_info = document.createElement('DIV')
-    exp_info.setAttribute('class', 'timeline-event-copy')
+    let section_container = document.createElement('DIV')
+    section_container.setAttribute('class', 'section shadow')
+    section_container.setAttribute('style', 'background-color: ' + data['bg_color'] + '; color:' + data['color'])
 
-    fill_card(exp_info, exp, data)
+    section_container.appendChild(make_element('BR', null, null))
+    section_container.appendChild(make_element('H3', null, exp))
+    if (data['image'] != null) section_container.appendChild(make_img('h5em', data['image']))
+    if (data['image'] != null) section_container.appendChild(make_element('BR', null, null))
+    if (data['website'] != null) section_container.appendChild(make_link(null, data['website'], data['website']))
+    section_container.appendChild(make_element('H4', null, data['time']))
 
-    exp_container.appendChild(exp_info)
+    fill_card(section_container, exp, data)
 
-    container[0].appendChild(exp_container)
+    container[0].appendChild(section_container)
+
+    container[0].appendChild(make_element('DIV', 'section', null).appendChild(make_element('DIV', 'divider', null)))
   }
 })
 
