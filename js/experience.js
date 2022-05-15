@@ -6,6 +6,14 @@ function make_element(type, klass, text) {
   return element
 }
 
+function make_img(klass, src) {
+  let element = document.createElement('IMG')
+  element.setAttribute('class', klass)
+  element.setAttribute('src', src)
+  
+  return element
+}
+
 function make_list(klass, header, items) {
   let element = document.createElement('DIV')
   element.setAttribute('class', klass)
@@ -38,6 +46,14 @@ function fill_card(card, exp, data) {
 
   // Equip expitute name
   card.appendChild(make_element('H3', null, exp))
+
+  // Equip expitute image
+  if (data['image'] != null) card.appendChild(make_img('h5em', data['image']))
+
+  if (data['image'] != null && data['website'] != null) {
+    card.appendChild(document.createElement('BR'))
+    card.appendChild(document.createElement('BR'))
+  }
   
   // Equip website 
   if (data['website'] != null) card.appendChild(make_link(null, data['website'], data['website']))

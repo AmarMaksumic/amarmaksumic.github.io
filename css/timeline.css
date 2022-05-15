@@ -5,7 +5,7 @@
   max-width: 60%;
   text-align: left;
   list-style-type: none;
-  color: #f5f7fa;
+  /* color: #f5f7fa; */
 }
   
 .timeline:before {
@@ -62,7 +62,7 @@
 .timeline-event-copy a {
   font-size: 1.1em;
   font-weight: 500;
-  color: #F38D11;
+  color: inherit;
 }
   
 /* .timeline-event-copy  p:not(.timeline-event-thumbnail) {
@@ -94,11 +94,17 @@
   display: inline-block;
   margin-bottom: 1.2em;
   padding: 0.25em 1em 0.2em 1em;
+  outline: 10px solid #008AD8;
+}
+
+.h5em {
+  max-height: 5em;
+  max-width: 100%;
 }
 
 @media screen and (max-width: 600px) {
   .timeline:before {left: 1.5em; /*display: none*/}
-  .timeline-event-thumbnail {margin-left: -1em; outline: 10px solid #008AD8;}
+  .timeline-event-thumbnail {margin-left: -1em}
   .timeline {max-width: 100%; margin: 0% auto; padding-right: 40px;}
   .timeline-event-copy {padding: 0em; left: 0em; position: relative; width: 100%}
   .timeline-event-icon {display: none}

@@ -101,18 +101,19 @@ function fill_card(card, project, data) {
   card.appendChild(make_tags(data['tags']));
 }
 
-function dynamic_render() {
-  console.log(projects);
+$.getJSON('./files/projects.json', function(json_data) {
 
   let container = document.getElementsByClassName('dynamic content');
 
-  for (project in projects) {
-    let data = projects[project];
+  for (project in json_data) {
+    let data = json_data[project];
     let card_container = document.createElement('DIV');
     card_container.setAttribute('class', 'card_column three');
     
     let card = document.createElement('DIV');
     card.setAttribute('class', 'card');
+
+    console.log(data)
 
     fill_card(card, project, data)
 
@@ -120,6 +121,4 @@ function dynamic_render() {
 
     container[0].appendChild(card_container);
   }
-}
-
-// dynamic_render()
+})

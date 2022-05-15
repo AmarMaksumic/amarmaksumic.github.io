@@ -1,5 +1,6 @@
 {
   "Rensselaer Motorsport": {
+    "image": "img/rm-modified.png",
     "time": "Mar '22 - Present",
     "desc": null,
     "website": "http://www.formularpi.org/",
@@ -37,6 +38,7 @@
     ]
   },
   "FRC 2601 - Steel Hawks": {
+    "image": "img/steelhawks.svg",
     "time": "Sep '17 - Jul '21",
     "desc": null,    
     "website": "https://steelhawks.net/#/",

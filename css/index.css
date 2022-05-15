@@ -25,25 +25,23 @@ body {
   text-align: center;
   position: relative;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .section.azure {
   background-color: #008AD8;
   height: auto;
-  border-radius: 10px;
 }
 
 .section.cone {
   background-color: #F38D11;
   height: auto;
-  border-radius: 10px;
 }
 
 .section.grey {
   background-color: #696969;
   color: #f5f7fa;
   height: auto;
-  border-radius: 10px;
 }
 
 .section.full {

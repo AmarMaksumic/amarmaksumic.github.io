@@ -1,5 +1,8 @@
 {
   "Rensselaer Polytechnic Institute": {
+    "bg_color": "#d6001c",
+    "color": "#ffffff",
+    "image": "img/rpi.png",
     "time": "Aug '21 - Dec '24",
     "gpa": 3.95,
     "degree": "Bachelor of Science in Computer Science and Computer & Systems Engineering",
@@ -26,6 +29,9 @@
     "website": "https://www.rpi.edu/"
   },
   "CUNY - Queens College": {
+    "bg_color": "#ffffff",
+    "color": "hsl(0,100%,45%)",
+    "image": "img/qc.png",
     "time": "Aug '20 - May '21",
     "gpa": "4.00",
     "degree": null,
@@ -41,6 +47,9 @@
     "website": "https://www.qc.cuny.edu/"
   },
   "Townsend Harris High School": {
+    "bg_color": "#9D2235",
+    "color": "#f5f7fa",
+    "image": "img/thhs.jpg",
     "time": "Sep '17 - Jun '21",
     "gpa": "4.00 // 99.17% UW",
     "degree": "Advanced Regents Diploma with Honors in Math and Science",

@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+.card_column {
+  margin-bottom: 15px;
+}
+
+/* Float four columns side by side */
+.card_column.one {
+  float: left;
+  width: calc(100%/1);
+  padding: 0 10px;
+}
+
+.card_column.two {
+  float: left;
+  width: calc(100%/2);
+  padding: 0 10px;
+}
+
+.card_column.three {
+  float: left;
+  width: calc(100%/3);
+  padding: 0 10px;
+}
+
+.card_column.four {
+  float: left;
+  width: calc(100%/4);
+  padding: 0 10px;
+}
+
+/* Clear floats after the columns */
+.card_row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px 16px 0px 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  color: black;
+  border-radius: 10px;
+  height: 50vh;
+  overflow-y: auto;
+}
+
+.card > h1, h2, h3, h4, h5, h6 {
+  text-align: left;
+}
+
+.tag_text {
+  background-color: #54585a;
+  color: white;
+  padding: 3px;
+  margin: 5px;
+  border-radius: 5px;
+  display: block;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .card_column {
+    width: 100% !important;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    height: auto;
+    overflow: hidden;
+  }
+}
