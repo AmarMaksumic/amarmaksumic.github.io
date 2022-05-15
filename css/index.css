@@ -175,3 +175,8 @@ body {
 .cvres_button .text:hover {
   background-position: 0 100%;
 }
+
+@media screen and (max-width: 600px) {
+  .content {padding: 100px 0px 100px 0px;}
+  /* .pad15 {padding: 0px;} */
+}

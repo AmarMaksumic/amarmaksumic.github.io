@@ -17,9 +17,6 @@ function make_list(klass, header, items) {
     course.innerHTML = items[i]
     list.appendChild(course)
   }
-
-  console.log(list)
-
   element.innerHTML = header + '\n <ul>' + list.innerHTML;
   
   return element
@@ -45,12 +42,34 @@ function fill_card(card, exp, data) {
   // Equip website 
   if (data['website'] != null) card.appendChild(make_link(null, data['website'], data['website']))
 
+  let divider = document.createElement('DIV')
+  divider.setAttribute('style', 'margin-top: 5px; border-top: 3px dotted #bbb;')
+  card.appendChild(divider)
+
   for (position in data['positions']) {
-    pos_data = data['positions'][position]
-    
+    pos_data = data['positions'][position]    
     if (pos_data['title'] != null) card.appendChild(make_element('H4', null, pos_data['title']))
     if (pos_data['time'] != null) card.appendChild(make_element('H5', null, pos_data['time']))
     if (pos_data['desc'] != null) card.appendChild(make_element('P', null, pos_data['desc']))
+
+    if (pos_data['desc_list'] != null) {
+      for (set in pos_data['desc_list']) {
+
+        let curr_set = pos_data['desc_list'][set]
+        if (curr_set['title'] != null) card.appendChild(make_element('P', null, curr_set['title'] + ':'))
+        let list = document.createElement('UL');
+
+        for (index in curr_set['items']) {
+          let item = document.createElement('LI');
+          item.innerHTML = curr_set['items'][index]
+          list.appendChild(item)
+        }
+
+        card.appendChild(list)
+      }
+    }
+
+    card.appendChild(divider.cloneNode())
   }
 }
 

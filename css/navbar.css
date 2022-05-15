@@ -59,8 +59,30 @@
   display: none;
 }
 
+/* The progress container (grey background) */
+.progress-container {
+  height: 8px;
+  z-index: 10;
+  position: fixed;
+  width: 65%; 
+  top: 2vh;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: #F38D11;
+  width: 0%;
+  border-radius: 10px 10px 0px 0px;
+}
+
 @media screen and (max-width: 600px) {
   .topnav {width: 90%}
+  .progress-container {width: 90%}
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
@@ -84,26 +106,4 @@
     left: 0;
     right: auto !important;
   }
-}
-
-
-/* The progress container (grey background) */
-.progress-container {
-  height: 8px;
-  z-index: 10;
-  position: fixed;
-  width: 65%; 
-  top: 2vh;
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto; 
-}
-
-/* The progress bar (scroll indicator) */
-.progress-bar {
-  height: 8px;
-  background: #F38D11;
-  width: 0%;
-  border-radius: 10px 10px 0px 0px;
 }

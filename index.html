@@ -16,15 +16,16 @@
   <script src='//code.jquery.com/jquery-1.10.2.js'></script>
   <script> 
   $(function(){
-    $('#navbar').load('html/navbar.html'); 
-    $('#cont').load('html/home.html'); 
-    $('#footer').load('html/footer.html'); 
+    $('#navbar_cont').load('html/navbar.html')
+    if (window.matchMedia("(max-width: 600px)").matches) $('#cont').load('html/m_home.html')
+    else $('#cont').load('html/home.html')
+    $('#footer').load('html/footer.html')
   });
 </script> 
 </head>
 <body>
   <div id='page_stripe' style='height: 100%; display: block; position: absolute;'></div>
-  <div id='navbar'></div>
+  <div id='navbar_cont'></div>
   <center>
     <div id='page_cont'>
       <div id='cont'></div>

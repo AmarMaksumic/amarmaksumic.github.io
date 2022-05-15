@@ -1,15 +1,14 @@
 function nav_menu() {
   var x = document.getElementById('navbar')
   if (x.className === 'topnav') {
-    //x.className += ' responsive';
     x.classList.add('responsive')
     console.log('r')
   } else {
-    //x.className = 'topnav';
     x.classList.remove('responsive')
     console.log('x')
   }
 }
+
 async function switchTab (switchTo) {
   console.log(switchTo)
   for (let i = 1; i < 5; i++) {
@@ -28,7 +27,8 @@ async function switchTab (switchTo) {
 
       switch(switchTo) {
         case 1:
-          $('#cont').load('html/home.html')
+          if (window.matchMedia("(max-width: 600px)").matches) $('#cont').load('html/m_home.html')
+          else $('#cont').load('html/home.html')
           break;
         case 2:
           $('#cont').load('html/education.html')
@@ -43,7 +43,8 @@ async function switchTab (switchTo) {
           $('#cont').load('html/about.html')
           break;
         default:
-          $('#cont').load('html/home.html')
+          if (window.matchMedia("(max-width: 600px)").matches) $('#cont').load('html/m_home.html')
+          else $('#cont').load('html/home.html')
       }
 
       document.getElementById('page_stripe').style.right = '0px';

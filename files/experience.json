@@ -5,9 +5,19 @@
     "website": "http://www.formularpi.org/",
     "positions": [
       {
-        "title": "Software Electricla Engineer",
+        "title": "Software Electrical Engineer",
         "time": "Mar '22 - Present",
-        "desc": "- Working on ECU firmware programming and tuning. <br>- Working on wiring harnesses for the front and rear of the car. <br>- Working on wireless communication between car and pit dashboard. <br>- Working on strain gauge implementation on the car for measuring various forces (i.e. downforce, centripetal forces, etc.) on each corner of the car. <br>- Learning how to use various machinery and tools like band saws, hot wire cutters, vertical mills, tracer controlled mills, spline shaft mills, etc.  <br>- Will be working on track recording and simulation using canny edge detection."
+        "desc_list": [
+          {
+            "items": [
+              "Working on ECU firmware programming and tuning. <br>- Working on wiring harnesses for the front and rear of the car.",
+              "Working on wireless communication between car and pit dashboard.",
+              "Working on strain gauge implementation on the car for measuring various forces (i.e. downforce, centripetal forces, etc.) on each corner of the car.",
+              "Learning how to use various machinery and tools like band saws, hot wire cutters, vertical mills, tracer controlled mills, spline shaft mills, etc.",
+              "Will be working on track recording and simulation using canny edge detection."
+            ]
+          }
+        ]
       }
     ]
   },
@@ -39,12 +49,50 @@
       {
         "title": "Vice President of Fabrication and Software Engineering",
         "time": "Jul '20 - Jun '21",
-        "desc": "Initiated and led several team-wide projects => <br> - ML-CV (Machine Learning - Computer Vision): Detects game pieces and special field markings from the 2021 FRC game \"Infinite Recharge.\" Target data is relayed to robot and driver, with 120 reads per second from a dual camera system. A hybrid Machine Learning-based and Filter & Mask-based system is used to detect the game pieces and field markings, with each system nullifying the weakness of the opposing system. This led to an increase in accuracy and reliability in comparison to Hawkeye (2020 Computer Vision System). The system is written in Python using Websocket, OpenCV, Tornado, and TensorFlow libraries, and uses a Jetson Nano with a Google Coral chip for processing and web-server hosting. <br>- PTO (Power Take-Off Gearbox): Designed and assembled a Power Take-Off Gearbox with Power Shuttle for the robot's drivetrain. Allows the power from the drivetrain to be redirected to or shared with another subsystem on the robot, while having the ability to instantaneously reverse output power for the auxiliary system without changing drivetrain direction. <br>- Telescoping Climber: Helped a teammate design a telescoping climber prototype for the robot. The telescoping climber utilized a steel tape system to extend and retract the climbing mechanism, keeping the subsystem compact and low-maintenance. <br>- Hawk Talks: Planned the team's annual Hawk Talk, where we hold around a dozen presentations discussing various aspects of running a First Robotics Competition team. <br><br>Led several team-wide projects => <br>- Upgrade to team's Scouting Application: After our Scouting App. team proposed the idea to add a dark mode to the app's UI, I helped them overcome various barriers that stumped their progress. <br>- Hawk Tank: Assisted groups in the mechanical subteam who participated in the team's Shark Tank spinoff. <br><br>Initiated and led coding training for the 2021 FRC season => <br>-Designed a team-wide calendar and outline for teaching incoming rookies."
+        "desc_list": [
+          {
+            "title": "Initiated and led several team-wide projects",
+            "items": [
+              "ML-CV (Machine Learning - Computer Vision): Detects game pieces and special field markings from the 2021 FRC game \"Infinite Recharge.\" Target data is relayed to robot and driver, with 120 reads per second from a dual camera system. A hybrid Machine Learning-based and Filter & Mask-based system is used to detect the game pieces and field markings, with each system nullifying the weakness of the opposing system. This led to an increase in accuracy and reliability in comparison to Hawkeye (2020 Computer Vision System). The system is written in Python using Websocket, OpenCV, Tornado, and TensorFlow libraries, and uses a Jetson Nano with a Google Coral chip for processing and web-server hosting.",
+              "PTO (Power Take-Off Gearbox): Designed and assembled a Power Take-Off Gearbox with Power Shuttle for the robot's drivetrain. Allows the power from the drivetrain to be redirected to or shared with another subsystem on the robot, while having the ability to instantaneously reverse output power for the auxiliary system without changing drivetrain direction.",
+              "Telescoping Climber: Helped a teammate design a telescoping climber prototype for the robot. The telescoping climber utilized a steel tape system to extend and retract the climbing mechanism, keeping the subsystem compact and low-maintenance.",
+              "Hawk Talks: Planned the team's annual Hawk Talk, where we hold around a dozen presentations discussing various aspects of running a First Robotics Competition team."
+            ]
+          },
+          {
+            "title": "Led several team-wide projects",
+            "items": [
+              "Upgrade to team's Scouting Application: After our Scouting App. team proposed the idea to add a dark mode to the app's UI, I helped them overcome various barriers that stumped their progress.",
+              "Hawk Tank: Assisted groups in the mechanical subteam who participated in the team's Shark Tank spinoff."
+            ]
+          },
+          {
+            "title": "Initiated and led coding training for the 2021 FRC season",
+            "items": [
+              "Designed a team-wide calendar and outline for teaching incoming rookies."
+            ]
+          }
+        ]
       },
       {
         "title": "Lead Software Engineer",
         "time": "Jul '19 - Jun '20",
-        "desc": "Initiated and led several coding projects => <br>- RUT (Robot Utility Tools): a suite of development tools and libraries for making writing robot code easier. <br>- Hawkeye Computer Vision System: Detects game pieces and special field markings from the 2020 FRC game \"Infinite Recharge.\" Target data is relayed to robot and driver, with 120 reads per second from a dual camera system. The system is written in Python using Websocket, OpenCV, and Tornado libraries, and uses a Jetson Nano for processing and web-server hosting. <br>- PathCorder Autonomous System: Records driving paths and replays them with programmable interjections for intaking, shooting, etc. during the autonomous period of the 2020 FRC game \"Infinite Recharge.\" The system is written in Java using custom Algorithms to record and replay driver input with programmed interventions. <br><br>Led rookie coding training for the 2020 FRC season => <br>- Designed lessons and hands-on activities with fellow teammates for rookie members entering software engineering."
+        "desc_list": [
+          {
+            "title": "Initiated and led several coding projects",
+            "items": [
+              "RUT (Robot Utility Tools): a suite of development tools and libraries for making writing robot code easier.",
+              "Hawkeye Computer Vision System: Detects game pieces and special field markings from the 2020 FRC game \"Infinite Recharge.\" Target data is relayed to robot and driver, with 120 reads per second from a dual camera system. The system is written in Python using Websocket, OpenCV, and Tornado libraries, and uses a Jetson Nano for processing and web-server hosting.",
+              "PathCorder Autonomous System: Records driving paths and replays them with programmable interjections for intaking, shooting, etc. during the autonomous period of the 2020 FRC game \"Infinite Recharge.\" The system is written in Java using custom Algorithms to record and replay driver input with programmed interventions."
+            ]
+          },
+          {
+            "title": "Led rookie coding training for the 2020 FRC season",
+            "items": [
+              "Designed lessons and hands-on activities with fellow teammates for rookie members entering software engineering."
+            ]
+          }
+        ]
       },
       {
         "title": "Software Engineer",

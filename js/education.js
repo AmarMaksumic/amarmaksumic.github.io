@@ -18,8 +18,6 @@ function make_list(klass, header, items) {
     list.appendChild(course)
   }
 
-  console.log(list)
-
   element.innerHTML = header + '\n <ul>' + list.innerHTML;
   
   return element
@@ -52,7 +50,7 @@ function fill_card(card, inst, data) {
   if (data['gpa'] != null) card.appendChild(make_element('P', null, '<strong>GPA:</strong> ' + data['gpa']))
 
   // Equip socs_and_acts 
-  if (data['socs_and_acts'] != null) card.appendChild(make_list(null, '<strong>Socities & Acitivites:</strong> ', data['socs_and_acts']))
+  if (data['socs_and_acts'] != null) card.appendChild(make_list(null, '<strong>Socities & Activities:</strong> ', data['socs_and_acts']))
   
   // Equip hons_and_awds 
   if (data['hons_and_awds'] != null) card.appendChild(make_list(null, '<strong>Honors & Awards:</strong> ', data['hons_and_awds']))
