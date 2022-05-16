@@ -27,7 +27,7 @@ async function switchTab (switchTo) {
 
       switch(switchTo) {
         case 1:
-          if (window.matchMedia("(max-width: 600px)").matches) $('#cont').load('html/m_home.html')
+          if (window.matchMedia("(max-width: 1000px)").matches) $('#cont').load('html/m_home.html')
           else $('#cont').load('html/home.html')
           break;
         case 2:
@@ -43,7 +43,7 @@ async function switchTab (switchTo) {
           $('#cont').load('html/about.html')
           break;
         default:
-          if (window.matchMedia("(max-width: 600px)").matches) $('#cont').load('html/m_home.html')
+          if (window.matchMedia("(max-width: 1000px)").matches) $('#cont').load('html/m_home.html')
           else $('#cont').load('html/home.html')
       }
 

@@ -1,3 +1,5 @@
+let first = true
+
 function make_element(type, klass, text) {
   let element = document.createElement(type);
   element.setAttribute('class', klass);
@@ -78,47 +80,88 @@ function make_tags(tags) {
   return tags_container;
 }
 
-function fill_card(card, project, data) {
+function fill_card(card, era, data) {
   // Equip title
-  card.appendChild(make_element('H3', 'title', project));
-
-  // Equip time span of project
-  card.appendChild(make_element('H4', 'time_span', data['start_date'] + ' - ' + data['end_date']));
-
-  // Equip description of project
-  card.appendChild(make_element('P', 'description', data['description']));
-
-  // Equip divider
-  card.appendChild(make_element('HR', 'solid', ''));
-
-  // Equip resources of project
-  card.appendChild(make_resources(data['resources']))
+  card.appendChild(make_element('H3', 'title', era));
   
-  // Equip divider
-  card.appendChild(make_element('HR', 'solid', ''));
+  let options_container = document.createElement('DIV')
+  options_container.setAttribute('class', 'options')
 
-  // Equip tags of project
-  card.appendChild(make_tags(data['tags']));
+  for (project in data) {
+
+    proj_data = data[project]
+
+    let option = document.createElement('DIV')
+    if (first) {
+      first = false
+      option.setAttribute('class', 'option active')
+    } else {
+      option.setAttribute('class', 'option')
+    }
+    option.setAttribute('style', '--optionBackground:url(../' + proj_data['img'] +');')
+
+    shadow = document.createElement('DIV')
+    shadow.setAttribute('class', 'shadow')
+
+    option.appendChild(shadow)
+
+    label = document.createElement('DIV')
+    label.setAttribute('class', 'label')
+
+    icon = document.createElement('DIV')
+    icon.setAttribute('class', 'icon')
+    icon.innerHTML = proj_data['4_letter']
+
+    label.appendChild(icon)
+
+    info = document.createElement('DIV')
+    info.setAttribute('class', 'info')
+
+    main = document.createElement('DIV')
+    main.setAttribute('class', 'main')
+    main.innerHTML = project
+
+    info.appendChild(main)
+    label.appendChild(info)
+
+    option.appendChild(label)
+
+    options_container.appendChild(option)
+  }
+
+  card.appendChild(options_container)
 }
 
-$.getJSON('./files/projects.json', function(json_data) {
+$.getJSON('./files/projects2.json', function(json_data) {
 
   let container = document.getElementsByClassName('dynamic content');
 
-  for (project in json_data) {
-    let data = json_data[project];
-    let card_container = document.createElement('DIV');
-    card_container.setAttribute('class', 'card_column three');
-    
-    let card = document.createElement('DIV');
-    card.setAttribute('class', 'card');
+  for (era in json_data) {
 
+    let data = json_data[era];
+    console.log(era)
     console.log(data)
 
-    fill_card(card, project, data)
+    let section_container = document.createElement('DIV')
+    section_container.setAttribute('class', 'section cone shadow')
 
-    card_container.appendChild(card);
+    let content_container = document.createElement('DIV')
+    content_container.setAttribute('class', 'content')
+    content_container.setAttribute('style', 'padding-top: 0px; padding-bottom: 15px;')
 
-    container[0].appendChild(card_container);
+    fill_card(content_container, era, data)
+
+    section_container.appendChild(content_container)
+
+    container[0].appendChild(section_container)
+
+    container[0].appendChild(make_element('DIV', 'section', null).appendChild(make_element('DIV', 'divider', null)))
   }
+
+  
+  $(".option").click(function(){
+    $(".option").removeClass("active");
+    $(this).addClass("active");
+    
+  });
 })

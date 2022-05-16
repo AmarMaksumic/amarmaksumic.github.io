@@ -102,7 +102,7 @@ a {
   max-width: 100%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .timeline:before {left: 1.5em; /*display: none*/}
   .timeline-event-thumbnail {margin-left: -1.5em}
   .timeline {max-width: 100%; margin: 0% auto; padding-right: 40px;}

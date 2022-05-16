@@ -1,0 +1,129 @@
+{
+  "In-Progress": {
+    "VeZa": {
+      "4_letter": "VeZa",
+      "img": "img/projects/veza.jpg",
+      "description": "Web service using topology and knot theory for management and viewing of family trees. Utilizes D3 Tree to render family trees, and a flask server on Repl.it to store user and tree data.",
+      "time": "Feb '21 - WIP",
+      "resources": {
+        "github": "https://github.com/AmarMaksumic/VeZa",
+        "website": "https://amarmaksumic.github.io/VeZa/web/index.html"
+      },
+      "tags": ["Web App"]
+    }
+  },
+  "Year: 2022": {
+    "Power Take-Off Gearbox v2.0": {
+      "4_letter": "PTO V2",
+      "img": "img/projects/ptov2.jpg",
+      "description": "Drop-in replacement for VexPro Three CIM Ball Shifter, while providing independent outputs to two mechanisms. All electronics and pneumatics are located to one side (to prevent interference with wheels and chassis), and the second output is fitted with a power shuttle to reverse output direction (in the case that both outputs run at the same time).",
+      "time": "Nov '21 - Feb '22",
+      "resources": {},
+      "tags": ["Mechanical Engineering"]
+    }
+  },
+  "Year: 2021": {
+    "BlueComms": {
+      "4_letter": "BC",
+      "img": "img/projects/place_hold.jpg",
+      "description": "Cross-Computer communication for functions like copy, paste, cut, etc. using Bluetooth. Currently working on designing an installer for the code so that it can run as a background program instead of a script that must be manually executed on machine startup.",
+      "time": "Jan '21",
+      "resources": {
+        "github": "https://github.com/AmarMaksumic/BlueComms"
+      },
+      "tags": ["IoT & Networking"]
+    },
+    "Power Take-Off Gearbox v1.0": {
+      "4_letter": "PTO V1",
+      "img": "img/projects/ptov1.jpg",
+      "description": "Drop-in replacement for VexPro Three CIM Ball Shifter, while providing independent outputs to two mechanisms. All electronics and pneumatics are located to one side (to prevent interference with wheels and chassis), and the second output is fitted with a power shuttle to reverse output direction (in the case that both outputs run at the same time).",
+      "time": "Mar '20 - Jul '21",
+      "resources": {},
+      "tags": ["Mechanical Engineering"]
+    },
+    "Aquila Heavy": {
+      "4_letter": "QLA HVY",
+      "img": "img/projects/aquila_heavy.jpg",
+      "description": "Thrust Vector Controlled model rocket using a dual Arduino telemetry and control system. Can recorded flight data like altitude, pitch, yaw, and roll along with camera feed.",
+      "time": "Dec '20 - Jun '21",
+      "resources": {
+        "cad": "https://cad.onshape.com/documents/4e32d9f36a97adf58a6869c2/w/24def73a5e4a5848b79d8d09/e/69e1de1bbc6c503f41a5028c",
+        "github": "https://github.com/AmarMaksumic/AquilaHeavy"
+      },
+      "tags": ["Control Systems", "Rocketry", "Mechanical Engineering"]
+    },
+    "ML-CV": {
+      "4_letter": "ML CV",
+      "img": "img/projects/mlcv.jpg",
+      "description": "Hybrid Computer Vision System coded in Python for the 2020/21 FRC game. Utilizes OpenCV algorithms alongside a Transfer Trained MobileNet SSD model for video processing and error correction. Uses Tornado and Websockets for relaying data to the robot and driver.",
+      "time": "Mar '20 - Feb '21",
+      "resources": {
+        "github": "https://github.com/AmarMaksumic/ML-CV"
+      },
+      "tags": ["Computer Vision", "Machine Learning", "IoT & Networking"]
+    }
+  },
+  "Year: 2020": {
+    "MerryMachine": {
+      "4_letter": ".\\m",
+      "img": "img/projects/merrymach.png",
+      "description": "A competition entry for the 2020 Bay Area Hacks. This is a website with a Heroku Server that uses machine learning to classify news articles from various sources into sections (i.e. positive, negative, political). Each article is displayed on a card, in its appropriate section, that links to the site where the user can read the text.",
+      "time": "Jul '20",
+      "resources": {
+        "github": "https://github.com/halihuang/Merry-Machine",
+        "website": "https://halihuang.github.io/Merry-Machine/official_site/index.html"
+      },
+      "tags": ["Web App", "Machine Learning"]
+    },
+    "Aquila Lite": {
+      "4_letter": "QLA lite",
+      "img": "img/projects/aquila_lite.jpg",
+      "description": "Model rocket that collects flight data like altitude and camera feed. Introduction to rocketry and preparation for building Aquila Heavy(er).",
+      "time": "Sep '20 - Dec '20",
+      "resources": {
+        "cad": "https://cad.onshape.com/documents/6ce2d0160148c9bd051cd5e0/w/9f6abab1c3739a3fb5c6e2a1/e/1f2ff3f5dbbd4623a367679c",
+        "github": "https://github.com/AmarMaksumic/AquilaLite"
+      },
+      "tags": ["Control Systems", "Rocketry", "Mechanical Engineering"]
+    },
+    "THHS AMA Website": {
+      "4_letter": "thhs ama",
+      "img": "img/projects/place_hold.jpg",
+      "description": "Website for Townsend Harris High School election simulation.",
+      "time": "Sep '20 - Nov '20",
+      "resources": {
+        "github": "https://github.com/AmarMaksumic/thhsama",
+        "website": "https://amarmaksumic.github.io/thhsama/"
+      },
+      "tags": []
+    },
+    "Day.io": {
+      "4_letter": "Day .io",
+      "img": "img/projects/place_hold.jpg",
+      "description": "A simple meeting and assignment organizer for students. Has integration for Google Calendar events and Google Classroom assignments.",
+      "time": "Apr '20",
+      "resources": {
+        "github": "https://github.com/AmarMaksumic/SVH"
+      },
+      "tags": ["Application"]
+    },
+    "HawkEye": {
+      "4_letter": "hwk eye",
+      "img": "img/projects/hawk_eye.jpg",
+      "description": "Computer Vision System coded in Python for the 2020 FRC game. Utilizes OpenCV, Tornado, and Websockets for video processing and relaying data to the robot and driver.",
+      "time": "Jan '20 - Mar '20",
+      "resources": {},
+      "tags": ["Computer Vision", "IoT & Networking"]
+    }
+  },
+  "Year: 2019": {
+    "2019 Vision": {
+      "4_letter": "2019 Viz",
+      "img": "img/projects/place_hold.jpg",
+      "description": "Computer Vision System coded in C++ for the 2018 and 2019 FRC games. Utilizes OpenCV, Gstreamer, and Network Tables for video processing and relaying data to the robot and driver.",
+      "start_date": "Feb '18 - May '19",
+      "resources": {},
+      "tags": ["Computer Vision", "IoT & Networking"]
+    }
+  }
+}

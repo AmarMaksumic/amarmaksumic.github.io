@@ -80,7 +80,7 @@
   border-radius: 10px 10px 0px 0px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .topnav {width: 90%}
   .progress-container {width: 90%}
   .topnav a:not(:first-child) {display: none;}
@@ -90,7 +90,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   /* .topnav.responsive {position: relative;} */
   .topnav.responsive .icon {
     position: absolute;

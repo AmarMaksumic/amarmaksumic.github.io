@@ -47,11 +47,20 @@
   color: black;
   border-radius: 10px;
   height: 50vh;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .card > h1, h2, h3, h4, h5, h6 {
   text-align: left;
+}
+
+.tag_text {
+  background-color: #54585a;
+  color: white;
+  padding: 3px;
+  margin: 5px;
+  border-radius: 5px;
+  display: block;
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */

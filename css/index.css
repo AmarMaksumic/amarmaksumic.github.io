@@ -19,8 +19,8 @@ body {
 }
 
 .section {
-  min-width: 75%;
-  max-width: 1080px;
+  width: 75%;
+  max-width: 1300px;
   margin: auto;
   text-align: center;
   position: relative;
@@ -174,7 +174,7 @@ body {
   background-position: 0 100%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1700px) {
   .content {padding: 100px 0px 100px 0px;}
   /* .pad15 {padding: 0px;} */
 }

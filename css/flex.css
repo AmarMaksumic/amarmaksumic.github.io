@@ -15,7 +15,7 @@
   clear: both;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .flex-box {
     width: 100%;
   }
