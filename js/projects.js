@@ -1,4 +1,4 @@
-let first = true
+let first = false
 
 function make_element(type, klass, text) {
   let element = document.createElement(type);
@@ -121,8 +121,19 @@ function fill_card(card, era, data) {
     main.setAttribute('class', 'main')
     main.innerHTML = project
 
+    sub_date = document.createElement('DIV')
+    sub_date.setAttribute('class', 'sub')
+    sub_date.innerHTML = proj_data['time']
+
     info.appendChild(main)
+    info.appendChild(sub_date)
+
     label.appendChild(info)
+    
+    desc = document.createElement('DIV')
+    desc.setAttribute('class', 'desc')
+    desc.innerHTML = proj_data['description']
+    option.appendChild(desc)
 
     option.appendChild(label)
 
@@ -164,4 +175,14 @@ $.getJSON('./files/projects2.json', function(json_data) {
     $(this).addClass("active");
     
   });
+
+  if(window.innerHeight > window.innerWidth){
+    alert("Please use Landscape!");
+  }
+
+  setInterval(function() {
+    if(window.innerHeight > window.innerWidth){
+      alert("Please use Landscape!");
+    } 
+  }, 5000);
 })

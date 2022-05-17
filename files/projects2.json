@@ -10,6 +10,14 @@
         "website": "https://amarmaksumic.github.io/VeZa/web/index.html"
       },
       "tags": ["Web App"]
+    },
+    "Track Scanner": {
+      "4_letter": "TRK SCN",
+      "img": "img/projects/lanetrack.png",
+      "description": "Simple computer vision script to track and record Formula SAE Endurance tracks. Uses canny edge detection to analyze road markings and cones.",
+      "time": "May '22 - WIP",
+      "resources": {},
+      "tags": []
     }
   },
   "Year: 2022": {
@@ -20,14 +28,32 @@
       "time": "Nov '21 - Feb '22",
       "resources": {},
       "tags": ["Mechanical Engineering"]
+    },
+    "Modular Web Design": {
+      "4_letter": "MOD WEB",
+      "img": "img/projects/modweb.jpg",
+      "description": "Development of a modular website layout utilizing HTML modules and dynamic JS scripts to convert JSON file data into webpage content.",
+      "time": "May '22",
+      "resources": {},
+      "tags": ["Mechanical Engineering"]
     }
   },
   "Year: 2021": {
     "BlueComms": {
       "4_letter": "BC",
-      "img": "img/projects/place_hold.jpg",
+      "img": "img/projects/bluecomm.jpg",
       "description": "Cross-Computer communication for functions like copy, paste, cut, etc. using Bluetooth. Currently working on designing an installer for the code so that it can run as a background program instead of a script that must be manually executed on machine startup.",
       "time": "Jan '21",
+      "resources": {
+        "github": "https://github.com/AmarMaksumic/BlueComms"
+      },
+      "tags": ["IoT & Networking"]
+    },
+    "Cluster Maker": {
+      "4_letter": "CLS MKR",
+      "img": "img/projects/clustermaker.jpg",
+      "description": "Simple Node.js application for reading in location data from a CSV file and turning the data into clusters on a map.",
+      "time": "Apr '21",
       "resources": {
         "github": "https://github.com/AmarMaksumic/BlueComms"
       },
@@ -64,17 +90,6 @@
     }
   },
   "Year: 2020": {
-    "MerryMachine": {
-      "4_letter": ".\\m",
-      "img": "img/projects/merrymach.png",
-      "description": "A competition entry for the 2020 Bay Area Hacks. This is a website with a Heroku Server that uses machine learning to classify news articles from various sources into sections (i.e. positive, negative, political). Each article is displayed on a card, in its appropriate section, that links to the site where the user can read the text.",
-      "time": "Jul '20",
-      "resources": {
-        "github": "https://github.com/halihuang/Merry-Machine",
-        "website": "https://halihuang.github.io/Merry-Machine/official_site/index.html"
-      },
-      "tags": ["Web App", "Machine Learning"]
-    },
     "Aquila Lite": {
       "4_letter": "QLA lite",
       "img": "img/projects/aquila_lite.jpg",
@@ -86,26 +101,34 @@
       },
       "tags": ["Control Systems", "Rocketry", "Mechanical Engineering"]
     },
-    "THHS AMA Website": {
-      "4_letter": "thhs ama",
-      "img": "img/projects/place_hold.jpg",
-      "description": "Website for Townsend Harris High School election simulation.",
-      "time": "Sep '20 - Nov '20",
+    "MerryMachine": {
+      "4_letter": ".\\m",
+      "img": "img/projects/merrymach.png",
+      "description": "A competition entry for the 2020 Bay Area Hacks. This is a website with a Heroku Server that uses machine learning to classify news articles from various sources into sections (i.e. positive, negative, political). Each article is displayed on a card, in its appropriate section, that links to the site where the user can read the text.",
+      "time": "Jul '20",
       "resources": {
-        "github": "https://github.com/AmarMaksumic/thhsama",
-        "website": "https://amarmaksumic.github.io/thhsama/"
+        "github": "https://github.com/halihuang/Merry-Machine",
+        "website": "https://halihuang.github.io/Merry-Machine/official_site/index.html"
       },
-      "tags": []
+      "tags": ["Web App", "Machine Learning"]
     },
     "Day.io": {
       "4_letter": "Day .io",
-      "img": "img/projects/place_hold.jpg",
+      "img": "img/projects/dayio.jpg",
       "description": "A simple meeting and assignment organizer for students. Has integration for Google Calendar events and Google Classroom assignments.",
       "time": "Apr '20",
       "resources": {
         "github": "https://github.com/AmarMaksumic/SVH"
       },
       "tags": ["Application"]
+    },
+    "Robot Utility Tools": {
+      "4_letter": "RUT",
+      "img": "img/projects/rut.jpg",
+      "description": "Developed a set of tools and packages to make coding a WPILIB command based robot easier. This included template classes for various subsystems (mechanical, sensory, and netowkring) along with tools for autonomous movement and control system input.",
+      "time": "Mar '20 - Aug '20",
+      "resources": {},
+      "tags": ["Control Systems"]
     },
     "HawkEye": {
       "4_letter": "hwk eye",
@@ -119,11 +142,37 @@
   "Year: 2019": {
     "2019 Vision": {
       "4_letter": "2019 Viz",
-      "img": "img/projects/place_hold.jpg",
-      "description": "Computer Vision System coded in C++ for the 2018 and 2019 FRC games. Utilizes OpenCV, Gstreamer, and Network Tables for video processing and relaying data to the robot and driver.",
-      "start_date": "Feb '18 - May '19",
+      "img": "img/projects/19viz.png",
+      "description": "Computer Vision System coded in C++ for the 2019 FRC game. Utilizes OpenCV, Gstreamer, and Network Tables for video processing and relaying data to the robot and driver.",
+      "time": "Jan '19 - May '19",
       "resources": {},
       "tags": ["Computer Vision", "IoT & Networking"]
+    },
+    "Swerve Drive": {
+      "4_letter": "SWE RVE",
+      "img": "img/projects/swerve.jpg",
+      "description": "Worked on the development of a swerve drivetrain prototype for my FRC team. I fabricated CAD models for the modules and the chassis of a swerve drive. Additionally, I developed the code for controlling the four swerve modules on the chassis in both a robot orientated and field orientated fashion. This required developing trigonometric algorithms to calculate individual module rotation and speed to prevent drivetrain skid and tension.",
+      "time": "Sep '19 - Dec '19",
+      "resources": {},
+      "tags": ["Mechanical Engineering"]
+    }
+  },
+  "Year: 2018": {
+    "2018 Vision": {
+      "4_letter": "2018 Viz",
+      "img": "img/projects/19viz.png",
+      "description": "Computer Vision System coded in C++ for the 2018 FRC game. Utilizes OpenCV, Gstreamer, and Network Tables for video processing and relaying data to the robot and driver.",
+      "time": "Feb '18 - May '18",
+      "resources": {},
+      "tags": ["Computer Vision", "IoT & Networking"]
+    },
+    "Steel Hawks Power Up ScoutApp": {
+      "4_letter": "SCT APP",
+      "img": "img/projects/scoutapp.png",
+      "description": "Worked on the server-side of my robotics team's scouting application for the 2018 season. I primarly worked on rendring processed data into graphs and tables.",
+      "time": "Jan '18 - Feb '18",
+      "resources": {},
+      "tags": []
     }
   }
 }

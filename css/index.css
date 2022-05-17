@@ -174,7 +174,8 @@ body {
   background-position: 0 100%;
 }
 
-@media screen and (max-width: 1700px) {
+@media screen and (max-width: 1600px) {
+  .section {width: 100%}
   .content {padding: 100px 0px 100px 0px;}
   /* .pad15 {padding: 0px;} */
 }
