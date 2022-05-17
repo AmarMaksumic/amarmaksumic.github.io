@@ -176,12 +176,12 @@ $.getJSON('./files/projects2.json', function(json_data) {
     
   });
 
-  if(window.innerHeight > window.innerWidth){
+  if ( (window.matchMedia("(max-width: 700px)").matches) && window.innerHeight > window.innerWidth) {
     alert("Please use Landscape!");
   }
 
   setInterval(function() {
-    if(window.innerHeight > window.innerWidth){
+    if ( (window.matchMedia("(max-width: 700px)").matches) && window.innerHeight > window.innerWidth) {
       alert("Please use Landscape!");
     } 
   }, 5000);
