@@ -143,7 +143,7 @@ function fill_card(card, era, data) {
   card.appendChild(options_container)
 }
 
-$.getJSON('./files/projects2.json', function(json_data) {
+$.getJSON('./files/projects.json', function(json_data) {
 
   let container = document.getElementsByClassName('dynamic content');
 
