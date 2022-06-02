@@ -13,7 +13,8 @@
         "desc_list": [
           {
             "items": [
-              "Working on ECU firmware programming and tuning. <br>- Working on wiring harnesses for the front and rear of the car.",
+              "Working on ECU firmware programming and tuning.",
+              "Working on wiring harnesses for the front and rear of the car.",
               "Working on wireless communication between car and pit dashboard.",
               "Working on strain gauge implementation on the car for measuring various forces (i.e. downforce, centripetal forces, etc.) on each corner of the car.",
               "Learning how to use various machinery and tools like band saws, hot wire cutters, vertical mills, tracer controlled mills, spline shaft mills, etc.",
@@ -33,11 +34,13 @@
     "positions": [
       {
         "title": "Media & PR Lead",
-        "time": "Apr '22 - Present"
+        "time": "Apr '22 - Present",
+        "desc": "Manage social media accounts and outreach for events within the college."
       },
       {
         "title": "Software Engineer",
-        "time": "Aug '21 - Present"
+        "time": "Aug '21 - Present",
+        "desc": "Working on various software projects utilizing ROS and ROS2."
       }
     ]
   },
@@ -105,7 +108,16 @@
       {
         "title": "Software Engineer",
         "time": "Sep '17 - Jun '19",
-        "desc": null
+        "desc_list": [
+          {
+            "title": "Worked on various technologies for robot control systems, computer vision systems, and for data gathering and analytics",
+            "items": [
+              "2018 and 2019 robot control systems",
+              "2018 and 2019 computer vision systems",
+              "2018 scouting application"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -117,7 +129,17 @@
     "positions": [
       {
         "title": "Computer Repair Technician",
-        "time": "Jun '18 - Aug '18"
+        "time": "Jun '18 - Aug '18",
+        "desc_list": [
+          {
+            "items": [
+              "Worked on various software and hardware repairs.",
+              "Worked on various hardware upgrades for machines.",
+              "Built personal machines and company machines for clients.",
+              "Supported outreach efforts to educate people on basic computer software tools."
+            ]
+          }
+        ]
       }
     ]
   }

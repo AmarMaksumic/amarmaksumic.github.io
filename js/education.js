@@ -77,7 +77,7 @@ function fill_card(card, inst, data) {
   if (data['hons_and_awds'] != null) card.appendChild(make_list(null, '<strong>Honors & Awards:</strong> ', data['hons_and_awds']))
   
   // Equip classes 
-  if (data['courses'] != null) card.appendChild(make_list(null, '<strong>Classes:</strong>', data['courses']))
+  if (data['courses'] != null) card.appendChild(make_list(null, '<strong>Significant Courses:</strong>', data['courses']))
   if (data['courses'] != null) card.appendChild(make_element('P', null, ''))
 }
 

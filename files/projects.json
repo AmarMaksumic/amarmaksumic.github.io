@@ -73,6 +73,16 @@
       },
       "tags": ["IoT & Networking"]
     },
+    "ML-CV": {
+      "4_letter": "ML CV",
+      "img": "img/projects/mlcv.jpg",
+      "description": "Hybrid Computer Vision System coded in Python for the 2020/21 FRC game. Utilizes OpenCV algorithms alongside a Transfer Trained MobileNet SSD model for video processing and error correction. Uses Tornado and Websockets for relaying data to the robot and driver.",
+      "time": "Mar '20 - Feb '21",
+      "resources": {
+        "github": "https://github.com/AmarMaksumic/ML-CV"
+      },
+      "tags": ["Computer Vision", "Machine Learning", "IoT & Networking"]
+    },
     "Cluster Maker": {
       "4_letter": "CLS MKR",
       "img": "img/projects/clustermaker.jpg",
@@ -82,14 +92,6 @@
         "github": "https://github.com/AmarMaksumic/BlueComms"
       },
       "tags": ["IoT & Networking"]
-    },
-    "Power Take-Off Gearbox v1.0": {
-      "4_letter": "PTO V1",
-      "img": "img/projects/ptov1.jpg",
-      "description": "Drop-in replacement for VexPro Three CIM Ball Shifter, while providing independent outputs to two mechanisms. All electronics and pneumatics are located to one side (to prevent interference with wheels and chassis), and the second output is fitted with a power shuttle to reverse output direction (in the case that both outputs run at the same time).",
-      "time": "Mar '20 - Jul '21",
-      "resources": {},
-      "tags": ["Mechanical Engineering"]
     },
     "Aquila Heavy": {
       "4_letter": "QLA HVY",
@@ -102,28 +104,41 @@
       },
       "tags": ["Control Systems", "Rocketry", "Mechanical Engineering"]
     },
-    "ML-CV": {
-      "4_letter": "ML CV",
-      "img": "img/projects/mlcv.jpg",
-      "description": "Hybrid Computer Vision System coded in Python for the 2020/21 FRC game. Utilizes OpenCV algorithms alongside a Transfer Trained MobileNet SSD model for video processing and error correction. Uses Tornado and Websockets for relaying data to the robot and driver.",
-      "time": "Mar '20 - Feb '21",
-      "resources": {
-        "github": "https://github.com/AmarMaksumic/ML-CV"
-      },
-      "tags": ["Computer Vision", "Machine Learning", "IoT & Networking"]
+    "Power Take-Off Gearbox v1.0": {
+      "4_letter": "PTO V1",
+      "img": "img/projects/ptov1.jpg",
+      "description": "Drop-in replacement for VexPro Three CIM Ball Shifter, while providing independent outputs to two mechanisms. All electronics and pneumatics are located to one side (to prevent interference with wheels and chassis), and the second output is fitted with a power shuttle to reverse output direction (in the case that both outputs run at the same time).",
+      "time": "Mar '20 - Jul '21",
+      "resources": {},
+      "tags": ["Mechanical Engineering"]
     }
   },
   "Year: 2020": {
-    "Aquila Lite": {
-      "4_letter": "QLA lite",
-      "img": "img/projects/aquila_lite.jpg",
-      "description": "Model rocket that collects flight data like altitude and camera feed. Introduction to rocketry and preparation for building Aquila Heavy(er).",
-      "time": "Sep '20 - Dec '20",
+    "FRC 2601 - 2K20 Robot": {
+      "4_letter": "SH '20",
+      "img": "img/projects/sh2k20.jpg",
+      "description": "Worked on various software systems with other engineers on the team for FRC Team 2601's 2020 robot.",
+      "time": "Jan '20 - Mar '20",
+      "resources": {},
+      "tags": ["Control Systems"]
+    },
+    "HawkEye": {
+      "4_letter": "hwk eye",
+      "img": "img/projects/hawk_eye.jpg",
+      "description": "Computer Vision System coded in Python for the 2020 FRC game. Utilizes OpenCV, Tornado, and Websockets for video processing and relaying data to the robot and driver.",
+      "time": "Jan '20 - Mar '20",
+      "resources": {},
+      "tags": ["Computer Vision", "IoT & Networking"]
+    },
+    "Day.io": {
+      "4_letter": "Day .io",
+      "img": "img/projects/dayio.jpg",
+      "description": "A simple meeting and assignment organizer for students. Has integration for Google Calendar events and Google Classroom assignments.",
+      "time": "Apr '20",
       "resources": {
-        "cad": "https://cad.onshape.com/documents/6ce2d0160148c9bd051cd5e0/w/9f6abab1c3739a3fb5c6e2a1/e/1f2ff3f5dbbd4623a367679c",
-        "github": "https://github.com/AmarMaksumic/AquilaLite"
+        "github": "https://github.com/AmarMaksumic/SVH"
       },
-      "tags": ["Control Systems", "Rocketry", "Mechanical Engineering"]
+      "tags": ["Application"]
     },
     "MerryMachine": {
       "4_letter": ".\\m",
@@ -136,24 +151,6 @@
       },
       "tags": ["Web App", "Machine Learning"]
     },
-    "Day.io": {
-      "4_letter": "Day .io",
-      "img": "img/projects/dayio.jpg",
-      "description": "A simple meeting and assignment organizer for students. Has integration for Google Calendar events and Google Classroom assignments.",
-      "time": "Apr '20",
-      "resources": {
-        "github": "https://github.com/AmarMaksumic/SVH"
-      },
-      "tags": ["Application"]
-    },
-    "FRC 2601 - 2K20 Robot": {
-      "4_letter": "SH '20",
-      "img": "img/projects/sh2k20.jpg",
-      "description": "Worked on various software systems with other engineers on the team for FRC Team 2601's 2020 robot.",
-      "time": "Jan '20 - Apr '20",
-      "resources": {},
-      "tags": ["Control Systems"]
-    },
     "Robot Utility Tools": {
       "4_letter": "RUT",
       "img": "img/projects/rut.jpg",
@@ -162,13 +159,16 @@
       "resources": {},
       "tags": ["Control Systems"]
     },
-    "HawkEye": {
-      "4_letter": "hwk eye",
-      "img": "img/projects/hawk_eye.jpg",
-      "description": "Computer Vision System coded in Python for the 2020 FRC game. Utilizes OpenCV, Tornado, and Websockets for video processing and relaying data to the robot and driver.",
-      "time": "Jan '20 - Mar '20",
-      "resources": {},
-      "tags": ["Computer Vision", "IoT & Networking"]
+    "Aquila Lite": {
+      "4_letter": "QLA lite",
+      "img": "img/projects/aquila_lite.jpg",
+      "description": "Model rocket that collects flight data like altitude and camera feed. Introduction to rocketry and preparation for building Aquila Heavy(er).",
+      "time": "Sep '20 - Dec '20",
+      "resources": {
+        "cad": "https://cad.onshape.com/documents/6ce2d0160148c9bd051cd5e0/w/9f6abab1c3739a3fb5c6e2a1/e/1f2ff3f5dbbd4623a367679c",
+        "github": "https://github.com/AmarMaksumic/AquilaLite"
+      },
+      "tags": ["Control Systems", "Rocketry", "Mechanical Engineering"]
     }
   },
   "Year: 2019": {
@@ -184,7 +184,7 @@
       "4_letter": "2019 Viz",
       "img": "img/projects/19viz.jpg",
       "description": "Computer Vision System coded in C++ for the 2019 FRC game. Utilizes OpenCV, Gstreamer, and Network Tables for video processing and relaying data to the robot and driver.",
-      "time": "Jan '19 - May '19",
+      "time": "Jan '19 - Apr '19",
       "resources": {},
       "tags": ["Computer Vision", "IoT & Networking"]
     },
@@ -206,11 +206,19 @@
     }
   },
   "Year: 2018": {
+    "Steel Hawks Power Up ScoutApp": {
+      "4_letter": "SCT APP",
+      "img": "img/projects/scoutapp.png",
+      "description": "Worked on the server-side of my robotics team's scouting application for the 2018 season. I primarly worked on rendring processed data into graphs and tables.",
+      "time": "Jan '18 - Feb '18",
+      "resources": {},
+      "tags": []
+    },
     "FRC 2601 - Steel Hawking": {
       "4_letter": "SH '18",
       "img": "img/projects/sh2k18.jpg",
       "description": "Worked on various software systems with other engineers on the team for FRC Team 2601's 2018 robot.",
-      "time": "Jan '18 - Apr '18",
+      "time": "Jan '18 - May '18",
       "resources": {},
       "tags": ["Control Systems"]
     },
@@ -221,14 +229,6 @@
       "time": "Feb '18 - May '18",
       "resources": {},
       "tags": ["Computer Vision", "IoT & Networking"]
-    },
-    "Steel Hawks Power Up ScoutApp": {
-      "4_letter": "SCT APP",
-      "img": "img/projects/scoutapp.png",
-      "description": "Worked on the server-side of my robotics team's scouting application for the 2018 season. I primarly worked on rendring processed data into graphs and tables.",
-      "time": "Jan '18 - Feb '18",
-      "resources": {},
-      "tags": []
     }
   }
 }
