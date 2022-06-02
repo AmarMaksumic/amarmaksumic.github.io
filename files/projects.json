@@ -27,10 +27,10 @@
       "resources": {},
       "tags": []
     },
-    "Aurora E6-X": {
+    "Aurora F1-X": {
       "4_letter": "AUR F1-X",
       "img": "img/projects/mcl-mx2.jpg",
-      "description": "Model car with suspension and steering, formula 1-ish style. Will use a 4 in-wheel motor system with traction control, torque vectoring, and plans for simple autonomous driving. (McLaren MX2 render by Wobbly Works for reference)",
+      "description": "Model car with suspension and steering, formula 1-ish style. Will use a 4 in-wheel motor system with traction control and torque vectoring. May feature simple autonomous driving. (McLaren MX2 render by Wobbly Works for reference)",
       "time": "Jun '22 - WIP",
       "resources": {},
       "tags": ["Mechanical Engineering"]
