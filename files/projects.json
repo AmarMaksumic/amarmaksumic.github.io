@@ -19,14 +19,6 @@
       "resources": {},
       "tags": []
     },
-    "Lego Mack F700": {
-      "4_letter": "mack f700",
-      "img": "img/projects/mackf700mk2.png",
-      "description": "Working on designing a mock 1:17 scale Mack F700 with working suspension, steering, engine, et cetera using the lego building system.",
-      "time": "May '22 - WIP",
-      "resources": {},
-      "tags": []
-    },
     "Aurora F1-X": {
       "4_letter": "AUR F1-X",
       "img": "img/projects/mcl-mx2.jpg",
@@ -60,6 +52,14 @@
       "time": "May '22",
       "resources": {},
       "tags": ["Mechanical Engineering"]
+    },
+    "Lego Mack F700": {
+      "4_letter": "mack f700",
+      "img": "img/projects/mackf700mk3.png",
+      "description": "Designed a mock 1:17 scale Mack F700 with working suspension, steering, engine, et cetera using the lego building system.",
+      "time": "May '22 - Jun '22",
+      "resources": {},
+      "tags": []
     }
   },
   "Year: 2021": {
