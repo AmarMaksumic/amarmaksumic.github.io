@@ -20,6 +20,11 @@
     if (window.matchMedia("(max-width: 1000px)").matches) $('#cont').load('html/m_home.html')
     else $('#cont').load('html/home.html')
     $('#footer').load('html/footer.html')
+    let total = 6;
+    var num = Math.ceil( Math.random() * total );
+    document.body.background = 'img/background/'+num+'.webp';
+    document.body.style.backgroundRepeat = 'repeat';
+    document.body.style.backgroundAttachment = 'fixed';
   });
 </script> 
 </head>
