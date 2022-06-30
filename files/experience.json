@@ -8,17 +8,20 @@
     "website": "http://www.formularpi.org/",
     "positions": [
       {
-        "title": "Software Electrical Engineer",
+        "title": "Powertrain Lead",
+        "time": "Jun '22 - Present",
+        "desc": "Work on motor control/powertrain electronics and software for Rensselaer Motorsport's transition to EV."
+      },
+      {
+        "title": "Full Time Member (Software Electrical Engineer)",
         "time": "Mar '22 - Present",
         "desc_list": [
           {
             "items": [
-              "Working on ECU firmware programming and tuning.",
-              "Working on wiring harnesses for the front and rear of the car.",
-              "Working on wireless communication between car and pit dashboard.",
-              "Working on strain gauge implementation on the car for measuring various forces (i.e. downforce, centripetal forces, etc.) on each corner of the car.",
-              "Learning how to use various machinery and tools like band saws, hot wire cutters, vertical mills, tracer controlled mills, spline shaft mills, etc.",
-              "Will be working on track recording and simulation using canny edge detection."
+              "Worked on ECU firmware programming and tuning.",
+              "Worked on wiring harnesses for the front and rear of the car.",
+              "Worked on wireless communication between car and pit dashboard.",
+              "Worked on strain gauge implementation on the car for measuring various forces (i.e. downforce, centripetal forces, etc.) on each corner of the car."
             ]
           }
         ]

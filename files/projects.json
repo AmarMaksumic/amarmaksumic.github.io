@@ -26,6 +26,13 @@
       "time": "Jun '22 - WIP",
       "resources": {},
       "tags": ["Mechanical Engineering"]
+    },
+    "Rensselaer Motorsport - RM26": {
+      "4_letter": "RM 26",
+      "img": "img/projects/rm26.jpg",
+      "description": "Powertrain Lead on Rensselaer Motorsport's first electric vehicle. I will mostly work on motor control systems.",
+      "time": "Jun '22 - WIP",
+      "resources": {}
     }
   },
   "Year: 2022": {
