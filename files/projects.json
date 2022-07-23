@@ -11,21 +11,13 @@
       },
       "tags": ["Web App"]
     },
-    "Track Scanner": {
-      "4_letter": "TRK SCN",
-      "img": "img/projects/lanetrack.png",
-      "description": "Simple computer vision script to track and record Formula SAE Endurance tracks. Uses canny edge detection to analyze road markings and cones.",
-      "time": "May '22 - WIP",
+    "Clothes Line": {
+      "4_letter": "Line",
+      "img": "img/projects/line.jpg",
+      "description": "Web app and mobile app for keeping track of user's clothing, shoes, and other items. The user can match and develop outfit sets, and a ML algorithm can rate/edit the sets. Will utilize Node.js and TypeScript to render the app, and a Flask server on Heroku to store user data.",
+      "time": "Jul '22 - WIP",
       "resources": {},
       "tags": []
-    },
-    "Aurora F1-X": {
-      "4_letter": "AUR F1-X",
-      "img": "img/projects/mcl-mx2.jpg",
-      "description": "Model car with suspension and steering, formula 1-ish style. Will use a 4 in-wheel motor system with traction control and torque vectoring. May feature simple autonomous driving. (McLaren MX2 render by Wobbly Works for reference)",
-      "time": "Jun '22 - WIP",
-      "resources": {},
-      "tags": ["Mechanical Engineering"]
     },
     "Rensselaer Motorsport - RM26": {
       "4_letter": "RM 26",
@@ -65,6 +57,14 @@
       "img": "img/projects/mackf700mk3.png",
       "description": "Designed a mock 1:17 scale Mack F700 with working suspension, steering, engine, et cetera using the lego building system.",
       "time": "May '22 - Jun '22",
+      "resources": {},
+      "tags": []
+    },
+    "Track Scanner": {
+      "4_letter": "TRK SCN",
+      "img": "img/projects/lanetrack.png",
+      "description": "Simple computer vision script to track and record Formula SAE Endurance tracks. Uses canny edge detection to analyze road markings and cones.",
+      "time": "May '22 - Jul '22",
       "resources": {},
       "tags": []
     }

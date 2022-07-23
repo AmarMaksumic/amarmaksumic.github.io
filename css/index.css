@@ -93,6 +93,7 @@ body {
 
 .left > .white {
   color: #f5f7fa;
+  text-shadow: 5px 5px #008AD8;
 }
 
 .left > .cone {
