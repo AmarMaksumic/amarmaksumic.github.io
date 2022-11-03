@@ -109,9 +109,17 @@ $.getJSON('./files/experience.json', function(json_data) {
 
     section_container.appendChild(make_element('BR', null, null))
     section_container.appendChild(make_element('H3', null, exp))
-    if (data['image'] != null) section_container.appendChild(make_img('h5em', data['image']))
+    var img_container;
+    if (data['image'] != null) img_container = make_img('h5em', data['image'])
+    if (data['website'] != null) {
+      let link = make_link(null, null, data['website'])
+      link.appendChild(img_container)
+      console.log(link)
+      section_container.appendChild(link)
+    }
+    if (data['website'] != null && data['image'] == null) section_container.appendChild(make_link(null, data['website'], data['website']))
+    if (data['website'] == null && data['image'] != null) section_container.appendChild(img_container)
     if (data['image'] != null) section_container.appendChild(make_element('BR', null, null))
-    if (data['website'] != null) section_container.appendChild(make_link(null, data['website'], data['website']))
     section_container.appendChild(make_element('H4', null, data['time']))
 
     fill_card(section_container, exp, data)

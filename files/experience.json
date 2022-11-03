@@ -1,4 +1,40 @@
 {
+  "Rensselaer Polytechnic Institute": {
+    "bg_color": "#d6001c",
+    "color": "#ffffff",
+    "image": "img/rpi.png",
+    "time": "Oct '22 - Present",
+    "desc": null,
+    "website": "https://www.rpi.edu/",
+    "positions": [
+      {
+        "title": "Powertrain Lead",
+        "time": "Jun '22 - Present",
+        "desc_list": [
+          {
+            "title": "Work on motor control/powertrain electronics and software for Rensselaer Motorsport's transition to EV",
+            "items": [
+              "Leading development of RM’s first electric powertrain: EMRAX 228 motor with a Cascadia RMS PM100DX motor controller",
+              "Developing the hardware and control systems (Traction Control, Launch Control, Regen Braking) for the powertrain",
+              "Implementing the Battery Management System for our custom accumulator (Orion BMS 2)",
+              "Working alongside chassis, cooling, and drivetrain subsystems to develop a high‑performance car that meets competition regulations"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Full Time Member (Software Electrical Engineer)",
+        "time": "Mar '22 - Present",
+        "desc_list": [
+          {
+            "items": [
+              "Worked on the wiring harness and data acquisition (wireless telemetry and strain gauge sensory kit) for RM25."
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "Rensselaer Motorsport": {
     "bg_color": "#ffffff",
     "color": "#b2282e",
@@ -10,7 +46,17 @@
       {
         "title": "Powertrain Lead",
         "time": "Jun '22 - Present",
-        "desc": "Work on motor control/powertrain electronics and software for Rensselaer Motorsport's transition to EV."
+        "desc_list": [
+          {
+            "title": "Work on motor control/powertrain electronics and software for Rensselaer Motorsport's transition to EV",
+            "items": [
+              "Leading development of RM’s first electric powertrain: EMRAX 228 motor with a Cascadia RMS PM100DX motor controller",
+              "Developing the hardware and control systems (Traction Control, Launch Control, Regen Braking) for the powertrain",
+              "Implementing the Battery Management System for our custom accumulator (Orion BMS 2)",
+              "Working alongside chassis, cooling, and drivetrain subsystems to develop a high‑performance car that meets competition regulations"
+            ]
+          }
+        ]
       },
       {
         "title": "Full Time Member (Software Electrical Engineer)",
@@ -18,10 +64,7 @@
         "desc_list": [
           {
             "items": [
-              "Worked on ECU firmware programming and tuning.",
-              "Worked on wiring harnesses for the front and rear of the car.",
-              "Worked on wireless communication between car and pit dashboard.",
-              "Worked on strain gauge implementation on the car for measuring various forces (i.e. downforce, centripetal forces, etc.) on each corner of the car."
+              "Worked on the wiring harness and data acquisition (wireless telemetry and strain gauge sensory kit) for RM25."
             ]
           }
         ]
@@ -31,19 +74,36 @@
   "RPI Robotics": {
     "bg_color": "#696969",
     "color": "#ffffff",
+    "image": "img/rpi_robotics.png",
     "time": "Aug '21 - Present",
     "desc": null,
-    "website": null,
+    "website": "https://sites.ecse.rpi.edu/roboticsclub/",
     "positions": [
       {
         "title": "Media & PR Lead",
         "time": "Apr '22 - Present",
-        "desc": "Manage social media accounts and outreach for events within the college."
+        "desc_list": [
+          {
+            "items": [
+              "Help to lead general team meetings and events related to programming subteam",
+              "Manage social media accounts and website for the team",
+              "Leading the development of a Robotic Art Installation at RPI"
+            ]
+          }
+        ]
       },
       {
         "title": "Software Engineer",
         "time": "Aug '21 - Present",
-        "desc": "Working on various software projects utilizing ROS and ROS2."
+        "desc_list": [
+          {
+            "title": "Working on various software projects utilizing ROS and ROS2",
+            "items": [
+              "Laser Tag Roombas",
+              "Inverse Kinematics with Stretch RE1"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -55,11 +115,6 @@
     "desc": null,    
     "website": "https://steelhawks.net/#/",
     "positions": [
-      {
-        "title": "Carbon Challenge Project Manager",
-        "time": "Apr '21 - Jul '21",
-        "desc": "Helped kickstart prototyping and registration for my robotics team's involvement in Elon Musk's \"Carbon Challenge.\""
-      },
       {
         "title": "Vice President of Fabrication and Software Engineering",
         "time": "Jul '20 - Jun '21",

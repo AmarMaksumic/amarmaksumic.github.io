@@ -1,16 +1,5 @@
 {
   "In-Progress": {
-    "VeZa": {
-      "4_letter": "VeZa",
-      "img": "img/projects/veza.jpg",
-      "description": "Web service using topology and knot theory for management and viewing of family trees. Utilizes D3 Tree to render family trees, and a flask server on Repl.it to store user and tree data.",
-      "time": "Feb '21 - WIP",
-      "resources": {
-        "github": "https://github.com/AmarMaksumic/VeZa",
-        "website": "https://amarmaksumic.github.io/VeZa/web/index.html"
-      },
-      "tags": ["Web App"]
-    },
     "Clothes Line": {
       "4_letter": "Line",
       "img": "img/projects/line.jpg",
@@ -67,6 +56,17 @@
       "time": "May '22 - Jul '22",
       "resources": {},
       "tags": []
+    },
+    "VeZa": {
+      "4_letter": "VeZa",
+      "img": "img/projects/veza.jpg",
+      "description": "Web service using topology and knot theory for management and viewing of family trees. Utilizes D3 Tree to render family trees, and a flask server on Repl.it to store user and tree data.",
+      "time": "Feb '21 - Oct '22",
+      "resources": {
+        "github": "https://github.com/AmarMaksumic/VeZa",
+        "website": "https://amarmaksumic.github.io/VeZa/web/index.html"
+      },
+      "tags": ["Web App"]
     }
   },
   "Year: 2021": {
