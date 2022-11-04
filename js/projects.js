@@ -13,6 +13,7 @@ function make_link(klass, text, link, icon_type) {
   element.setAttribute('class', klass);
   element.setAttribute('href', link);
   element.setAttribute('target', '_blank');
+  element.setAttribute('style', 'color: white')
 
   var icon;
 
@@ -30,7 +31,7 @@ function make_link(klass, text, link, icon_type) {
 function make_resources(resources) {
   
   let resources_container = document.createElement('DIV');
-  resources_container.setAttribute('class', 'resources');
+  // resources_container.setAttribute('class', 'resources');
 
   let content_exists = false;
 
@@ -55,6 +56,9 @@ function make_resources(resources) {
     resources_container.appendChild(make_link('contact_for_info', 'Contact for info', 'mailto:amarmaksumich@gmail.com', 'envelope'));
   }
 
+  resources_container.appendChild(make_element('BR', 'break', ''));
+  resources_container.appendChild(make_element('BR', 'break', ''));
+
   return resources_container;
 }
 
@@ -66,11 +70,9 @@ function make_tags(tags) {
   let content_exists = false;
 
   for (tag in tags) {
+    if (content_exists == true) tags_container.innerHTML += ',';
     content_exists = true;
-    let tag_element = document.createElement('SPAN');
-    tag_element.setAttribute('class', 'tag_text');
-    tag_element.innerHTML = tags[tag];
-    tags_container.appendChild(tag_element);
+    tags_container.innerHTML += ' ' + tags[tag];
   }
 
   if (content_exists == false) {
@@ -80,78 +82,45 @@ function make_tags(tags) {
   return tags_container;
 }
 
-function fill_card(card, era, data) {
-  // Equip title
-  card.appendChild(make_element('H3', 'title', era));
+function make_img(klass, src) {
+  let element = document.createElement('IMG')
+  element.setAttribute('class', klass)
+  element.setAttribute('src', src)
   
-  let options_container = document.createElement('DIV')
-  options_container.setAttribute('class', 'options')
+  return element
+}
 
-  for (project in data) {
+function fill_card(card, project, data) {
+  // Equip title
+  card.appendChild(make_element('H3', 'title', project));
 
-    proj_data = data[project]
+  let flex_container = document.createElement('DIV');
+  flex_container.setAttribute('class', 'flex-container');
 
-    let option = document.createElement('DIV')
-    if (first) {
-      first = false
-      option.setAttribute('class', 'option active')
-    } else {
-      option.setAttribute('class', 'option')
-    }
-    option.setAttribute('style', '--optionBackground:url(../' + proj_data['img'] +');')
+  let flex_item_left = document.createElement('DIV');
+  flex_item_left.setAttribute('class', 'flex-item-left');
 
-    shadow = document.createElement('DIV')
-    shadow.setAttribute('class', 'shadow')
+  flex_item_left.appendChild(make_img(null, data['img']));
 
-    option.appendChild(shadow)
+  let flex_item_right = document.createElement('DIV');
+  flex_item_right.setAttribute('class', 'flex-item-right');
 
-    label = document.createElement('DIV')
-    label.setAttribute('class', 'label')
+  flex_item_right.appendChild(make_element('H4', 'time', 'Time Span: ' + data['time']));
+  flex_item_right.appendChild(make_element('H4', 'description', data['description']));
+  flex_item_right.appendChild(make_resources(data['resources']));
+  flex_item_right.appendChild(make_tags(data['tags']));
 
-    icon = document.createElement('DIV')
-    icon.setAttribute('class', 'icon')
-    icon.innerHTML = proj_data['4_letter']
-
-    label.appendChild(icon)
-
-    info = document.createElement('DIV')
-    info.setAttribute('class', 'info')
-
-    main = document.createElement('DIV')
-    main.setAttribute('class', 'main')
-    main.innerHTML = project
-
-    sub_date = document.createElement('DIV')
-    sub_date.setAttribute('class', 'sub')
-    sub_date.innerHTML = proj_data['time']
-
-    info.appendChild(main)
-    info.appendChild(sub_date)
-
-    label.appendChild(info)
-    
-    desc = document.createElement('DIV')
-    desc.setAttribute('class', 'desc')
-    desc.innerHTML = proj_data['description']
-    option.appendChild(desc)
-
-    option.appendChild(label)
-
-    options_container.appendChild(option)
-  }
-
-  card.appendChild(options_container)
+  flex_container.appendChild(flex_item_left);
+  flex_container.appendChild(flex_item_right);
+  card.appendChild(flex_container);
 }
 
 $.getJSON('./files/projects.json', function(json_data) {
 
   let container = document.getElementsByClassName('dynamic content');
 
-  for (era in json_data) {
-
-    let data = json_data[era];
-    console.log(era)
-    console.log(data)
+  for (project in json_data) {
+    let data = json_data[project];
 
     let section_container = document.createElement('DIV')
     section_container.setAttribute('class', 'section cone shadow')
@@ -160,7 +129,7 @@ $.getJSON('./files/projects.json', function(json_data) {
     content_container.setAttribute('class', 'content')
     content_container.setAttribute('style', 'padding-top: 0px; padding-bottom: 15px;')
 
-    fill_card(content_container, era, data)
+    fill_card(content_container, project, data)
 
     section_container.appendChild(content_container)
 
@@ -170,19 +139,19 @@ $.getJSON('./files/projects.json', function(json_data) {
   }
 
   
-  $(".option").click(function(){
-    $(".option").removeClass("active");
-    $(this).addClass("active");
+  // $(".option").click(function(){
+  //   $(".option").removeClass("active");
+  //   $(this).addClass("active");
     
-  });
+  // });
 
-  if ( (window.matchMedia("(max-width: 700px)").matches) && window.innerHeight > window.innerWidth) {
-    alert("Please use Landscape!");
-  }
+  // if ( (window.matchMedia("(max-width: 700px)").matches) && window.innerHeight > window.innerWidth) {
+  //   alert("Please use Landscape!");
+  // }
 
-  setInterval(function() {
-    if ( (window.matchMedia("(max-width: 700px)").matches) && window.innerHeight > window.innerWidth) {
-      alert("Please use Landscape!");
-    } 
-  }, 5000);
+  // setInterval(function() {
+  //   if ( (window.matchMedia("(max-width: 700px)").matches) && window.innerHeight > window.innerWidth) {
+  //     alert("Please use Landscape!");
+  //   } 
+  // }, 5000);
 })

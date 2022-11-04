@@ -1,241 +1,197 @@
 {
-  "In-Progress": {
-    "Clothes Line": {
-      "4_letter": "Line",
-      "img": "img/projects/line.jpg",
-      "description": "Web app and mobile app for keeping track of user's clothing, shoes, and other items. The user can match and develop outfit sets, and a ML algorithm can rate/edit the sets. Will utilize Node.js and TypeScript to render the app, and a Flask server on Heroku to store user data.",
-      "time": "Jul '22 - WIP",
-      "resources": {},
-      "tags": []
-    },
-    "Rensselaer Motorsport - RM26": {
-      "4_letter": "RM 26",
-      "img": "img/projects/rm26.jpg",
-      "description": "Powertrain Lead on Rensselaer Motorsport's first electric vehicle. I will mostly work on motor control systems.",
-      "time": "Jun '22 - WIP",
-      "resources": {}
-    }
+  "Clothes Line": {
+    "4_letter": "Line",
+    "img": "img/projects/line.jpg",
+    "description": "Web app and mobile app for keeping track of user's clothing, shoes, and other items. The user can match and develop outfit sets, and a ML algorithm can rate/edit the sets. Will utilize Node.js and TypeScript to render the app, and a Flask server on Heroku to store user data.",
+    "time": "Jul '22 - WIP",
+    "resources": {},
+    "tags": []
   },
-  "Year: 2022": {
-    "Power Take-Off Gearbox v2.0": {
-      "4_letter": "PTO V2",
-      "img": "img/projects/ptov2.jpg",
-      "description": "Drop-in replacement for VexPro Three CIM Ball Shifter, while providing independent outputs to two mechanisms. All electronics and pneumatics are located to one side (to prevent interference with wheels and chassis), and the second output is fitted with a power shuttle to reverse output direction (in the case that both outputs run at the same time).",
-      "time": "Nov '21 - Feb '22",
-      "resources": {},
-      "tags": ["Mechanical Engineering"]
-    },
-    "Rensselaer Motorsport - RM25": {
-      "4_letter": "RM 25",
-      "img": "img/projects/rm25.jpg",
-      "description": "Worked on software and electric systems for Rensselaer Motorsport's 25th Formula SAE car, RM25.",
-      "time": "Mar '22 - May '22",
-      "resources": {},
-      "tags": ["Mechanical Engineering"]
-    },
-    "Modular Web Design": {
-      "4_letter": "MOD WEB",
-      "img": "img/projects/modweb.jpg",
-      "description": "Development of a modular website layout utilizing HTML modules and dynamic JS scripts to convert JSON file data into webpage content.",
-      "time": "May '22",
-      "resources": {},
-      "tags": ["Mechanical Engineering"]
-    },
-    "Lego Mack F700": {
-      "4_letter": "mack f700",
-      "img": "img/projects/mackf700mk3.png",
-      "description": "Designed a mock 1:17 scale Mack F700 with working suspension, steering, engine, et cetera using the lego building system.",
-      "time": "May '22 - Jun '22",
-      "resources": {},
-      "tags": []
-    },
-    "Track Scanner": {
-      "4_letter": "TRK SCN",
-      "img": "img/projects/lanetrack.png",
-      "description": "Simple computer vision script to track and record Formula SAE Endurance tracks. Uses canny edge detection to analyze road markings and cones.",
-      "time": "May '22 - Jul '22",
-      "resources": {},
-      "tags": []
-    },
-    "VeZa": {
-      "4_letter": "VeZa",
-      "img": "img/projects/veza.jpg",
-      "description": "Web service using topology and knot theory for management and viewing of family trees. Utilizes D3 Tree to render family trees, and a flask server on Repl.it to store user and tree data.",
-      "time": "Feb '21 - Oct '22",
-      "resources": {
-        "github": "https://github.com/AmarMaksumic/VeZa",
-        "website": "https://amarmaksumic.github.io/VeZa/web/index.html"
-      },
-      "tags": ["Web App"]
-    }
+  "Rensselaer Motorsport - RM26": {
+    "4_letter": "RM 26",
+    "img": "img/projects/rm26.jpg",
+    "description": "Powertrain Lead on Rensselaer Motorsport's first electric vehicle. I will mostly work on motor control systems.",
+    "time": "Jun '22 - WIP",
+    "resources": {}
   },
-  "Year: 2021": {
-    "BlueComms": {
-      "4_letter": "BC",
-      "img": "img/projects/bluecomm.jpg",
-      "description": "Cross-Computer communication for functions like copy, paste, cut, etc. using Bluetooth. Currently working on designing an installer for the code so that it can run as a background program instead of a script that must be manually executed on machine startup.",
-      "time": "Jan '21",
-      "resources": {
-        "github": "https://github.com/AmarMaksumic/BlueComms"
-      },
-      "tags": ["IoT & Networking"]
+  "VeZa": {
+    "4_letter": "VeZa",
+    "img": "img/projects/veza.jpg",
+    "description": "Web service using topology and knot theory for management and viewing of family trees. Utilizes D3 Tree to render family trees, and a flask server on Repl.it to store user and tree data.",
+    "time": "Feb '21 - Oct '22",
+    "resources": {
+      "github": "https://github.com/AmarMaksumic/VeZa",
+      "website": "https://amarmaksumic.github.io/VeZa/web/index.html"
     },
-    "ML-CV": {
-      "4_letter": "ML CV",
-      "img": "img/projects/mlcv.jpg",
-      "description": "Hybrid Computer Vision System coded in Python for the 2020/21 FRC game. Utilizes OpenCV algorithms alongside a Transfer Trained MobileNet SSD model for video processing and error correction. Uses Tornado and Websockets for relaying data to the robot and driver.",
-      "time": "Mar '20 - Feb '21",
-      "resources": {
-        "github": "https://github.com/AmarMaksumic/ML-CV"
-      },
-      "tags": ["Computer Vision", "Machine Learning", "IoT & Networking"]
-    },
-    "Cluster Maker": {
-      "4_letter": "CLS MKR",
-      "img": "img/projects/clustermaker.jpg",
-      "description": "Simple Node.js application for reading in location data from a CSV file and turning the data into clusters on a map.",
-      "time": "Apr '21",
-      "resources": {
-        "github": "https://github.com/AmarMaksumic/BlueComms"
-      },
-      "tags": ["IoT & Networking"]
-    },
-    "Aquila Heavy": {
-      "4_letter": "QLA HVY",
-      "img": "img/projects/aquila_heavy.jpg",
-      "description": "Thrust Vector Controlled model rocket using a dual Arduino telemetry and control system. Can recorded flight data like altitude, pitch, yaw, and roll along with camera feed.",
-      "time": "Dec '20 - Jun '21",
-      "resources": {
-        "cad": "https://cad.onshape.com/documents/4e32d9f36a97adf58a6869c2/w/24def73a5e4a5848b79d8d09/e/69e1de1bbc6c503f41a5028c",
-        "github": "https://github.com/AmarMaksumic/AquilaHeavy"
-      },
-      "tags": ["Control Systems", "Rocketry", "Mechanical Engineering"]
-    },
-    "Power Take-Off Gearbox v1.0": {
-      "4_letter": "PTO V1",
-      "img": "img/projects/ptov1.jpg",
-      "description": "Drop-in replacement for VexPro Three CIM Ball Shifter, while providing independent outputs to two mechanisms. All electronics and pneumatics are located to one side (to prevent interference with wheels and chassis), and the second output is fitted with a power shuttle to reverse output direction (in the case that both outputs run at the same time).",
-      "time": "Mar '20 - Jul '21",
-      "resources": {},
-      "tags": ["Mechanical Engineering"]
-    }
+    "tags": ["Web App"]
   },
-  "Year: 2020": {
-    "FRC 2601 - 2K20 Robot": {
-      "4_letter": "SH '20",
-      "img": "img/projects/sh2k20.jpg",
-      "description": "Worked on various software systems with other engineers on the team for FRC Team 2601's 2020 robot.",
-      "time": "Jan '20 - Mar '20",
-      "resources": {},
-      "tags": ["Control Systems"]
-    },
-    "HawkEye": {
-      "4_letter": "hwk eye",
-      "img": "img/projects/hawk_eye.jpg",
-      "description": "Computer Vision System coded in Python for the 2020 FRC game. Utilizes OpenCV, Tornado, and Websockets for video processing and relaying data to the robot and driver.",
-      "time": "Jan '20 - Mar '20",
-      "resources": {},
-      "tags": ["Computer Vision", "IoT & Networking"]
-    },
-    "Day.io": {
-      "4_letter": "Day .io",
-      "img": "img/projects/dayio.jpg",
-      "description": "A simple meeting and assignment organizer for students. Has integration for Google Calendar events and Google Classroom assignments.",
-      "time": "Apr '20",
-      "resources": {
-        "github": "https://github.com/AmarMaksumic/SVH"
-      },
-      "tags": ["Application"]
-    },
-    "MerryMachine": {
-      "4_letter": ".\\m",
-      "img": "img/projects/merrymach.png",
-      "description": "A competition entry for the 2020 Bay Area Hacks. This is a website with a Heroku Server that uses machine learning to classify news articles from various sources into sections (i.e. positive, negative, political). Each article is displayed on a card, in its appropriate section, that links to the site where the user can read the text.",
-      "time": "Jul '20",
-      "resources": {
-        "github": "https://github.com/halihuang/Merry-Machine",
-        "website": "https://halihuang.github.io/Merry-Machine/official_site/index.html"
-      },
-      "tags": ["Web App", "Machine Learning"]
-    },
-    "Robot Utility Tools": {
-      "4_letter": "RUT",
-      "img": "img/projects/rut.jpg",
-      "description": "Developed a set of tools and packages to make coding a WPILIB command based robot easier. This included template classes for various subsystems (mechanical, sensory, and netowkring) along with tools for autonomous movement and control system input.",
-      "time": "Mar '20 - Aug '20",
-      "resources": {},
-      "tags": ["Control Systems"]
-    },
-    "Aquila Lite": {
-      "4_letter": "QLA lite",
-      "img": "img/projects/aquila_lite.jpg",
-      "description": "Model rocket that collects flight data like altitude and camera feed. Introduction to rocketry and preparation for building Aquila Heavy(er).",
-      "time": "Sep '20 - Dec '20",
-      "resources": {
-        "cad": "https://cad.onshape.com/documents/6ce2d0160148c9bd051cd5e0/w/9f6abab1c3739a3fb5c6e2a1/e/1f2ff3f5dbbd4623a367679c",
-        "github": "https://github.com/AmarMaksumic/AquilaLite"
-      },
-      "tags": ["Control Systems", "Rocketry", "Mechanical Engineering"]
-    }
+  "Track Scanner": {
+    "4_letter": "TRK SCN",
+    "img": "img/projects/lanetrack.png",
+    "description": "Simple computer vision script to track and record Formula SAE Endurance tracks. Uses canny edge detection to analyze road markings and cones.",
+    "time": "May '22 - Jul '22",
+    "resources": {},
+    "tags": []
   },
-  "Year: 2019": {
-    "FRC 2601 - Cygnus": {
-      "4_letter": "SH '19",
-      "img": "img/projects/sh2k19.jpg",
-      "description": "Worked on various software systems with other engineers on the team for FRC Team 2601's 2019 robot.",
-      "time": "Jan '19 - Apr '19",
-      "resources": {},
-      "tags": ["Control Systems"]
-    },
-    "2019 Vision": {
-      "4_letter": "2019 Viz",
-      "img": "img/projects/19viz.jpg",
-      "description": "Computer Vision System coded in C++ for the 2019 FRC game. Utilizes OpenCV, Gstreamer, and Network Tables for video processing and relaying data to the robot and driver.",
-      "time": "Jan '19 - Apr '19",
-      "resources": {},
-      "tags": ["Computer Vision", "IoT & Networking"]
-    },
-    "Swerve Drive": {
-      "4_letter": "SWE RVE",
-      "img": "img/projects/swerve.jpg",
-      "description": "Worked on the development of a swerve drivetrain prototype for my FRC team. I fabricated CAD models for the modules and the chassis of a swerve drive. Additionally, I developed the code for controlling the four swerve modules on the chassis in both a robot orientated and field orientated fashion. This required developing trigonometric algorithms to calculate individual module rotation and speed to prevent drivetrain skid and tension.",
-      "time": "Sep '19 - Dec '19",
-      "resources": {},
-      "tags": ["Mechanical Engineering"]
-    },
-    "Aurora E6-X": {
-      "4_letter": "AUR E6-X",
-      "img": "img/projects/e6x.jpg",
-      "description": "CADed a model car with suspension and steering. Developed electrical schematics and software with simple traction control and torque vectoring for the 6 motor drivetrain (2 front, 4 rear).",
-      "time": "Jun '18 - Dec '19",
-      "resources": {},
-      "tags": ["Mechanical Engineering"]
-    }
+  "Rensselaer Motorsport - RM25": {
+    "4_letter": "RM 25",
+    "img": "img/projects/rm25.jpg",
+    "description": "Worked on software and electric systems for Rensselaer Motorsport's 25th Formula SAE car, RM25.",
+    "time": "Mar '22 - May '22",
+    "resources": {},
+    "tags": ["Mechanical Engineering"]
   },
-  "Year: 2018": {
-    "Steel Hawks Power Up ScoutApp": {
-      "4_letter": "SCT APP",
-      "img": "img/projects/scoutapp.png",
-      "description": "Worked on the server-side of my robotics team's scouting application for the 2018 season. I primarly worked on rendring processed data into graphs and tables.",
-      "time": "Jan '18 - Feb '18",
-      "resources": {},
-      "tags": []
+  "Power Take-Off Gearbox v2.0": {
+    "4_letter": "PTO V2",
+    "img": "img/projects/ptov2.jpg",
+    "description": "Drop-in replacement for VexPro Three CIM Ball Shifter, while providing independent outputs to two mechanisms. All electronics and pneumatics are located to one side (to prevent interference with wheels and chassis), and the second output is fitted with a power shuttle to reverse output direction (in the case that both outputs run at the same time).",
+    "time": "Nov '21 - Feb '22",
+    "resources": {},
+    "tags": ["Mechanical Engineering"]
+  },
+  "Power Take-Off Gearbox v1.0": {
+    "4_letter": "PTO V1",
+    "img": "img/projects/ptov1.jpg",
+    "description": "Drop-in replacement for VexPro Three CIM Ball Shifter, while providing independent outputs to two mechanisms. All electronics and pneumatics are located to one side (to prevent interference with wheels and chassis), and the second output is fitted with a power shuttle to reverse output direction (in the case that both outputs run at the same time).",
+    "time": "Mar '20 - Jul '21",
+    "resources": {},
+    "tags": ["Mechanical Engineering"]
+  },
+  "Aquila Heavy": {
+    "4_letter": "QLA HVY",
+    "img": "img/projects/aquila_heavy.jpg",
+    "description": "Thrust Vector Controlled model rocket using a dual Arduino telemetry and control system. Can recorded flight data like altitude, pitch, yaw, and roll along with camera feed.",
+    "time": "Dec '20 - Jun '21",
+    "resources": {
+      "cad": "https://cad.onshape.com/documents/4e32d9f36a97adf58a6869c2/w/24def73a5e4a5848b79d8d09/e/69e1de1bbc6c503f41a5028c",
+      "github": "https://github.com/AmarMaksumic/AquilaHeavy"
     },
-    "FRC 2601 - Steel Hawking": {
-      "4_letter": "SH '18",
-      "img": "img/projects/sh2k18.jpg",
-      "description": "Worked on various software systems with other engineers on the team for FRC Team 2601's 2018 robot.",
-      "time": "Jan '18 - May '18",
-      "resources": {},
-      "tags": ["Control Systems"]
+    "tags": ["Control Systems", "Rocketry", "Mechanical Engineering"]
+  },
+  "Cluster Maker": {
+    "4_letter": "CLS MKR",
+    "img": "img/projects/clustermaker.jpg",
+    "description": "Simple Node.js application for reading in location data from a CSV file and turning the data into clusters on a map.",
+    "time": "Apr '21",
+    "resources": {
+      "github": "https://github.com/AmarMaksumic/BlueComms"
     },
-    "2018 Vision": {
-      "4_letter": "2018 Viz",
-      "img": "img/projects/18viz.png",
-      "description": "Computer Vision System coded in C++ for the 2018 FRC game. Utilizes OpenCV, Gstreamer, and Network Tables for video processing and relaying data to the robot and driver.",
-      "time": "Feb '18 - May '18",
-      "resources": {},
-      "tags": ["Computer Vision", "IoT & Networking"]
-    }
+    "tags": ["IoT & Networking"]
+  },
+  "ML-CV": {
+    "4_letter": "ML CV",
+    "img": "img/projects/mlcv.jpg",
+    "description": "Hybrid Computer Vision System coded in Python for the 2020/21 FRC game. Utilizes OpenCV algorithms alongside a Transfer Trained MobileNet SSD model for video processing and error correction. Uses Tornado and Websockets for relaying data to the robot and driver.",
+    "time": "Mar '20 - Feb '21",
+    "resources": {
+      "github": "https://github.com/AmarMaksumic/ML-CV"
+    },
+    "tags": ["Computer Vision", "Machine Learning", "IoT & Networking"]
+  },
+  "BlueComms": {
+    "4_letter": "BC",
+    "img": "img/projects/bluecomm.jpg",
+    "description": "Cross-Computer communication for functions like copy, paste, cut, etc. using Bluetooth. Currently working on designing an installer for the code so that it can run as a background program instead of a script that must be manually executed on machine startup.",
+    "time": "Jan '21",
+    "resources": {
+      "github": "https://github.com/AmarMaksumic/BlueComms"
+    },
+    "tags": ["IoT & Networking"]
+  },
+  "Aquila Lite": {
+    "4_letter": "QLA lite",
+    "img": "img/projects/aquila_lite.jpg",
+    "description": "Model rocket that collects flight data like altitude and camera feed. Introduction to rocketry and preparation for building Aquila Heavy(er).",
+    "time": "Sep '20 - Dec '20",
+    "resources": {
+      "cad": "https://cad.onshape.com/documents/6ce2d0160148c9bd051cd5e0/w/9f6abab1c3739a3fb5c6e2a1/e/1f2ff3f5dbbd4623a367679c",
+      "github": "https://github.com/AmarMaksumic/AquilaLite"
+    },
+    "tags": ["Control Systems", "Rocketry", "Mechanical Engineering"]
+  },
+  "MerryMachine": {
+    "4_letter": ".\\m",
+    "img": "img/projects/merrymach.png",
+    "description": "A competition entry for the 2020 Bay Area Hacks. This is a website with a Heroku Server that uses machine learning to classify news articles from various sources into sections (i.e. positive, negative, political). Each article is displayed on a card, in its appropriate section, that links to the site where the user can read the text.",
+    "time": "Jul '20",
+    "resources": {
+      "github": "https://github.com/halihuang/Merry-Machine",
+      "website": "https://halihuang.github.io/Merry-Machine/official_site/index.html"
+    },
+    "tags": ["Web App", "Machine Learning"]
+  },
+  "Day.io": {
+    "4_letter": "Day .io",
+    "img": "img/projects/dayio.jpg",
+    "description": "A simple meeting and assignment organizer for students. Has integration for Google Calendar events and Google Classroom assignments.",
+    "time": "Apr '20",
+    "resources": {
+      "github": "https://github.com/AmarMaksumic/SVH"
+    },
+    "tags": ["Application"]
+  },
+  "HawkEye": {
+    "4_letter": "hwk eye",
+    "img": "img/projects/hawk_eye.jpg",
+    "description": "Computer Vision System coded in Python for the 2020 FRC game. Utilizes OpenCV, Tornado, and Websockets for video processing and relaying data to the robot and driver.",
+    "time": "Jan '20 - Mar '20",
+    "resources": {},
+    "tags": ["Computer Vision", "IoT & Networking"]
+  },
+  "FRC 2601 - 2K20 Robot": {
+    "4_letter": "SH '20",
+    "img": "img/projects/sh2k20.jpg",
+    "description": "Worked on various software systems with other engineers on the team for FRC Team 2601's 2020 robot.",
+    "time": "Jan '20 - Mar '20",
+    "resources": {},
+    "tags": ["Control Systems"]
+  },
+  "Swerve Drive": {
+    "4_letter": "SWE RVE",
+    "img": "img/projects/swerve.jpg",
+    "description": "Worked on the development of a swerve drivetrain prototype for my FRC team. I fabricated CAD models for the modules and the chassis of a swerve drive. Additionally, I developed the code for controlling the four swerve modules on the chassis in both a robot orientated and field orientated fashion. This required developing trigonometric algorithms to calculate individual module rotation and speed to prevent drivetrain skid and tension.",
+    "time": "Sep '19 - Dec '19",
+    "resources": {},
+    "tags": ["Mechanical Engineering"]
+  },
+  "2019 Vision": {
+    "4_letter": "2019 Viz",
+    "img": "img/projects/19viz.jpg",
+    "description": "Computer Vision System coded in C++ for the 2019 FRC game. Utilizes OpenCV, Gstreamer, and Network Tables for video processing and relaying data to the robot and driver.",
+    "time": "Jan '19 - Apr '19",
+    "resources": {},
+    "tags": ["Computer Vision", "IoT & Networking"]
+  },
+  "FRC 2601 - Cygnus": {
+    "4_letter": "SH '19",
+    "img": "img/projects/sh2k19.jpg",
+    "description": "Worked on various software systems with other engineers on the team for FRC Team 2601's 2019 robot.",
+    "time": "Jan '19 - Apr '19",
+    "resources": {},
+    "tags": ["Control Systems"]
+  },
+  "2018 Vision": {
+    "4_letter": "2018 Viz",
+    "img": "img/projects/18viz.png",
+    "description": "Computer Vision System coded in C++ for the 2018 FRC game. Utilizes OpenCV, Gstreamer, and Network Tables for video processing and relaying data to the robot and driver.",
+    "time": "Feb '18 - May '18",
+    "resources": {},
+    "tags": ["Computer Vision", "IoT & Networking"]
+  },
+  "FRC 2601 - Steel Hawking": {
+    "4_letter": "SH '18",
+    "img": "img/projects/sh2k18.jpg",
+    "description": "Worked on various software systems with other engineers on the team for FRC Team 2601's 2018 robot.",
+    "time": "Jan '18 - May '18",
+    "resources": {},
+    "tags": ["Control Systems"]
+  },
+  "Steel Hawks Power Up ScoutApp": {
+    "4_letter": "SCT APP",
+    "img": "img/projects/scoutapp.png",
+    "description": "Worked on the server-side of my robotics team's scouting application for the 2018 season. I primarly worked on rendring processed data into graphs and tables.",
+    "time": "Jan '18 - Feb '18",
+    "resources": {},
+    "tags": []
   }
 }
