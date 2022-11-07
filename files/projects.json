@@ -25,14 +25,6 @@
     },
     "tags": ["Web App"]
   },
-  "Track Scanner": {
-    "4_letter": "TRK SCN",
-    "img": "img/projects/lanetrack.png",
-    "description": "Simple computer vision script to track and record Formula SAE Endurance tracks. Uses canny edge detection to analyze road markings and cones.",
-    "time": "May '22 - Jul '22",
-    "resources": {},
-    "tags": []
-  },
   "Rensselaer Motorsport - RM25": {
     "4_letter": "RM 25",
     "img": "img/projects/rm25.jpg",
