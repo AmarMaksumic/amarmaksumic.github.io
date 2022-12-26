@@ -3,32 +3,18 @@
     "bg_color": "#d6001c",
     "color": "#ffffff",
     "image": "img/rpi.png",
-    "time": "Oct '22 - Present",
+    "time": "Sep '22 - Present",
     "desc": null,
     "website": "https://www.rpi.edu/",
     "positions": [
       {
-        "title": "Powertrain Lead",
-        "time": "Jun '22 - Present",
-        "desc_list": [
-          {
-            "title": "Work on motor control/powertrain electronics and software for Rensselaer Motorsport's transition to EV",
-            "items": [
-              "Leading development of RM’s first electric powertrain: EMRAX 228 motor with a Cascadia RMS PM100DX motor controller",
-              "Developing the hardware and control systems (Traction Control, Launch Control, Regen Braking) for the powertrain",
-              "Implementing the Battery Management System for our custom accumulator (Orion BMS 2)",
-              "Working alongside chassis, cooling, and drivetrain subsystems to develop a high‑performance car that meets competition regulations"
-            ]
-          }
-        ]
-      },
-      {
-        "title": "Full Time Member (Software Electrical Engineer)",
-        "time": "Mar '22 - Present",
+        "title": "Undergraduate Research Assistant",
+        "time": "Sep '22 - Present",
         "desc_list": [
           {
             "items": [
-              "Worked on the wiring harness and data acquisition (wireless telemetry and strain gauge sensory kit) for RM25."
+              " Working on porting over Matlab code to C++ for implementation of subproblem solutions from \"Canonical Subproblems for Robot Inverse Kinematics.\"",
+              "Setting up and experimenting with Hello Robot Stretch RE1 to test our implementation in the real world"
             ]
           }
         ]
