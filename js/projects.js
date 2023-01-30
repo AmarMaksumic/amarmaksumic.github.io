@@ -108,7 +108,7 @@ function fill_card(card, project, data) {
   flex_item_right.appendChild(make_element('H4', 'time', 'Time Span: ' + data['time']));
   flex_item_right.appendChild(make_element('H4', 'description', data['description']));
   flex_item_right.appendChild(make_resources(data['resources']));
-  flex_item_right.appendChild(make_tags(data['tags']));
+  // flex_item_right.appendChild(make_tags(data['tags']));
 
   flex_container.appendChild(flex_item_left);
   flex_container.appendChild(flex_item_right);

@@ -1,51 +1,35 @@
 {
-  "Clothes Line": {
+  "RPI Robotic Art Installation": {
     "4_letter": "Line",
-    "img": "img/projects/line.jpg",
-    "description": "Web app and mobile app for keeping track of user's clothing, shoes, and other items. The user can match and develop outfit sets, and a ML algorithm can rate/edit the sets. Will utilize Node.js and TypeScript to render the app, and a Flask server on Heroku to store user data.",
-    "time": "Jul '22 - WIP",
+    "img": "img/projects/RAI.jpg",
+    "description": "Art installation for the RPI campus. Will be comprised of several dozen origami units that open and close in response to user stimulus from a computer vision system. Serving as the Team Lead for the project, helping out with programming and electrical work.",
+    "time": "Dec '22 - WIP",
     "resources": {},
     "tags": []
   },
   "Rensselaer Motorsport - RM26": {
     "4_letter": "RM 26",
     "img": "img/projects/rm26.jpg",
-    "description": "Powertrain Lead on Rensselaer Motorsport's first electric vehicle. I will mostly work on motor control systems.",
+    "description": "Powertrain Lead for Rensselaer Motorsport's first electric vehicle. I worked on decision matrices and design reviews in favor of implementing an EMRAX 228 motor with Cascadia Rinehart PM100DX motor controller for our powertrain. I am currently working on the implementation, control systems, and high voltage routing for this configuration. I am also working on the battery management system for our accumulator battery.",
     "time": "Jun '22 - WIP",
-    "resources": {}
-  },
-  "VeZa": {
-    "4_letter": "VeZa",
-    "img": "img/projects/veza.jpg",
-    "description": "Web service using topology and knot theory for management and viewing of family trees. Utilizes D3 Tree to render family trees, and a flask server on Repl.it to store user and tree data.",
-    "time": "Feb '21 - Oct '22",
-    "resources": {
-      "github": "https://github.com/AmarMaksumic/VeZa",
-      "website": "https://amarmaksumic.github.io/VeZa/web/index.html"
-    },
-    "tags": ["Web App"]
+    "resources": {},
+    "tags": []
   },
   "Rensselaer Motorsport - RM25": {
     "4_letter": "RM 25",
     "img": "img/projects/rm25.jpg",
     "description": "Worked on software and electric systems for Rensselaer Motorsport's 25th Formula SAE car, RM25.",
     "time": "Mar '22 - May '22",
-    "resources": {},
+    "resources": {
+      "website": "http://www.formularpi.org/rollout-2022/"
+    },
     "tags": ["Mechanical Engineering"]
   },
-  "Power Take-Off Gearbox v2.0": {
-    "4_letter": "PTO V2",
+  "Power Take-Off Gearbox": {
+    "4_letter": "PTO",
     "img": "img/projects/ptov2.jpg",
     "description": "Drop-in replacement for VexPro Three CIM Ball Shifter, while providing independent outputs to two mechanisms. All electronics and pneumatics are located to one side (to prevent interference with wheels and chassis), and the second output is fitted with a power shuttle to reverse output direction (in the case that both outputs run at the same time).",
-    "time": "Nov '21 - Feb '22",
-    "resources": {},
-    "tags": ["Mechanical Engineering"]
-  },
-  "Power Take-Off Gearbox v1.0": {
-    "4_letter": "PTO V1",
-    "img": "img/projects/ptov1.jpg",
-    "description": "Drop-in replacement for VexPro Three CIM Ball Shifter, while providing independent outputs to two mechanisms. All electronics and pneumatics are located to one side (to prevent interference with wheels and chassis), and the second output is fitted with a power shuttle to reverse output direction (in the case that both outputs run at the same time).",
-    "time": "Mar '20 - Jul '21",
+    "time": "Mar '20 - Jun '21",
     "resources": {},
     "tags": ["Mechanical Engineering"]
   },
@@ -59,16 +43,6 @@
       "github": "https://github.com/AmarMaksumic/AquilaHeavy"
     },
     "tags": ["Control Systems", "Rocketry", "Mechanical Engineering"]
-  },
-  "Cluster Maker": {
-    "4_letter": "CLS MKR",
-    "img": "img/projects/clustermaker.jpg",
-    "description": "Simple Node.js application for reading in location data from a CSV file and turning the data into clusters on a map.",
-    "time": "Apr '21",
-    "resources": {
-      "github": "https://github.com/AmarMaksumic/BlueComms"
-    },
-    "tags": ["IoT & Networking"]
   },
   "ML-CV": {
     "4_letter": "ML CV",
@@ -90,100 +64,52 @@
     },
     "tags": ["IoT & Networking"]
   },
-  "Aquila Lite": {
-    "4_letter": "QLA lite",
-    "img": "img/projects/aquila_lite.jpg",
-    "description": "Model rocket that collects flight data like altitude and camera feed. Introduction to rocketry and preparation for building Aquila Heavy(er).",
-    "time": "Sep '20 - Dec '20",
-    "resources": {
-      "cad": "https://cad.onshape.com/documents/6ce2d0160148c9bd051cd5e0/w/9f6abab1c3739a3fb5c6e2a1/e/1f2ff3f5dbbd4623a367679c",
-      "github": "https://github.com/AmarMaksumic/AquilaLite"
-    },
-    "tags": ["Control Systems", "Rocketry", "Mechanical Engineering"]
-  },
-  "MerryMachine": {
-    "4_letter": ".\\m",
-    "img": "img/projects/merrymach.png",
-    "description": "A competition entry for the 2020 Bay Area Hacks. This is a website with a Heroku Server that uses machine learning to classify news articles from various sources into sections (i.e. positive, negative, political). Each article is displayed on a card, in its appropriate section, that links to the site where the user can read the text.",
-    "time": "Jul '20",
-    "resources": {
-      "github": "https://github.com/halihuang/Merry-Machine",
-      "website": "https://halihuang.github.io/Merry-Machine/official_site/index.html"
-    },
-    "tags": ["Web App", "Machine Learning"]
-  },
-  "Day.io": {
-    "4_letter": "Day .io",
-    "img": "img/projects/dayio.jpg",
-    "description": "A simple meeting and assignment organizer for students. Has integration for Google Calendar events and Google Classroom assignments.",
-    "time": "Apr '20",
-    "resources": {
-      "github": "https://github.com/AmarMaksumic/SVH"
-    },
-    "tags": ["Application"]
-  },
   "HawkEye": {
     "4_letter": "hwk eye",
     "img": "img/projects/hawk_eye.jpg",
     "description": "Computer Vision System coded in Python for the 2020 FRC game. Utilizes OpenCV, Tornado, and Websockets for video processing and relaying data to the robot and driver.",
     "time": "Jan '20 - Mar '20",
-    "resources": {},
+    "resources": {
+      "github": "https://github.com/steelhawks/2020Vision"
+    },
     "tags": ["Computer Vision", "IoT & Networking"]
   },
-  "FRC 2601 - 2K20 Robot": {
+  "FRC 2601 - 2K20 Robot, Hylo Wren": {
     "4_letter": "SH '20",
     "img": "img/projects/sh2k20.jpg",
     "description": "Worked on various software systems with other engineers on the team for FRC Team 2601's 2020 robot.",
     "time": "Jan '20 - Mar '20",
-    "resources": {},
+    "resources": {
+      "website": "https://steelhawks.net/robots"
+    },
     "tags": ["Control Systems"]
   },
   "Swerve Drive": {
     "4_letter": "SWE RVE",
     "img": "img/projects/swerve.jpg",
-    "description": "Worked on the development of a swerve drivetrain prototype for my FRC team. I fabricated CAD models for the modules and the chassis of a swerve drive. Additionally, I developed the code for controlling the four swerve modules on the chassis in both a robot orientated and field orientated fashion. This required developing trigonometric algorithms to calculate individual module rotation and speed to prevent drivetrain skid and tension.",
+    "description": "Worked on the development of a swerve drivetrain prototype for my FRC team. I designed CAD models for the modules and chassis of a swerve drive. In addition, I developed the control systems for both robot orientated and field orientated control of the swerve.",
     "time": "Sep '19 - Dec '19",
     "resources": {},
     "tags": ["Mechanical Engineering"]
   },
-  "2019 Vision": {
-    "4_letter": "2019 Viz",
-    "img": "img/projects/19viz.jpg",
-    "description": "Computer Vision System coded in C++ for the 2019 FRC game. Utilizes OpenCV, Gstreamer, and Network Tables for video processing and relaying data to the robot and driver.",
-    "time": "Jan '19 - Apr '19",
-    "resources": {},
-    "tags": ["Computer Vision", "IoT & Networking"]
-  },
-  "FRC 2601 - Cygnus": {
+  "FRC 2601 - 2K19 Robot, Cygnus": {
     "4_letter": "SH '19",
     "img": "img/projects/sh2k19.jpg",
     "description": "Worked on various software systems with other engineers on the team for FRC Team 2601's 2019 robot.",
     "time": "Jan '19 - Apr '19",
-    "resources": {},
+    "resources": {
+      "website": "https://steelhawks.net/robots"
+    },
     "tags": ["Control Systems"]
   },
-  "2018 Vision": {
-    "4_letter": "2018 Viz",
-    "img": "img/projects/18viz.png",
-    "description": "Computer Vision System coded in C++ for the 2018 FRC game. Utilizes OpenCV, Gstreamer, and Network Tables for video processing and relaying data to the robot and driver.",
-    "time": "Feb '18 - May '18",
-    "resources": {},
-    "tags": ["Computer Vision", "IoT & Networking"]
-  },
-  "FRC 2601 - Steel Hawking": {
+  "FRC 2601 - 2K18 Robot, Steel Hawking": {
     "4_letter": "SH '18",
     "img": "img/projects/sh2k18.jpg",
     "description": "Worked on various software systems with other engineers on the team for FRC Team 2601's 2018 robot.",
     "time": "Jan '18 - May '18",
-    "resources": {},
+    "resources": {
+      "website": "https://steelhawks.net/robots"
+    },
     "tags": ["Control Systems"]
-  },
-  "Steel Hawks Power Up ScoutApp": {
-    "4_letter": "SCT APP",
-    "img": "img/projects/scoutapp.png",
-    "description": "Worked on the server-side of my robotics team's scouting application for the 2018 season. I primarly worked on rendring processed data into graphs and tables.",
-    "time": "Jan '18 - Feb '18",
-    "resources": {},
-    "tags": []
   }
 }

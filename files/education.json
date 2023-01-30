@@ -22,14 +22,20 @@
       "CSCI 1200 - Data Structures", 
       "CSCI 2200 - Foundations of CS",
       "CSCI 2300 - Intro to Algorithms",
+      "CSCI 4150 - Intro to AI (IP)",
       "ECSE 1010 - Intro to Electrical, Computer, & Systems Engineering", 
+      "ECSE 2010 - Electric Circuits (IP)",
       "ECSE 2610 - Computer Components and Operations", 
+      "ECSE 2660 - Computer Architecture, Networks, and Operating Systems (IP)",
+      "ECSE 2900 - Enrichment Seminar (IP)",
       "ENGR 1200 - Engineering Graphics & CAD", 
       "ENGR 2350 - Embedded Control", 
+      "MATH 2010 - Multivariable Calculus & Linear Algebra", 
+      "MATH 2400 - Intro to Differential Equations",
+      "PSYC 1200 - Intro to Psychology",
       "IHSS 1550 - Fiction: From Film to the Internet",
       "LITR 2110 - Intro to Literature",
-      "MATH 2010 - Multivariable Calculus & Linear Algebra", 
-      "MATH 2400 - Intro to Differential Equations"
+      "COMM 4780 - Interactive Narrative"
     ],
     "website": "https://www.rpi.edu/"
   },
