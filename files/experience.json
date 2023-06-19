@@ -8,13 +8,25 @@
     "website": "https://www.rpi.edu/",
     "positions": [
       {
-        "title": "Undergraduate Research Assistant",
-        "time": "Sep '22 - Present",
+        "title": "Undergraduate Research Assistant: Inverse Kinematics (ECSE Department)",
+        "time": "Sep '22 - May '23",
         "desc_list": [
           {
             "items": [
-              "Converting subproblem solutions from \"Canonical Subproblems for Robot Inverse Kinematics\" to C++ with PhD student Alex Elias",
-              "Testing subproblem efficiency with bench‑marking and testing subproblem efficacy with various robots on campus"
+              "Converted subproblem solutions from \"Canonical Subproblems for Robot Inverse Kinematics\" to C++ with PhD student Alex Elias",
+              "Tested subproblem efficiency with bench‑marking and testing subproblem efficacy with various robots on campus"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Undergraduate Research Assistant: Photonic Chips (ECSE Department)",
+        "time": "Jun '23 - Present",
+        "desc_list": [
+          {
+            "items": [
+              "Taking measurements of various photonic chips manufactured by AIM Photoics, designed by Amir Begović",
+              "Looking for correlations between the design of the photonic chips and the performance of structures with metrics of wavelength spectrum, loss, and group index"
             ]
           }
         ]

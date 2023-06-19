@@ -1,4 +1,12 @@
 {
+  "Rensselaer Motorsport - Control Systems Unit": {
+    "4_letter": "RM CSU",
+    "img": "img/projects/rm_holder.jpg",
+    "description": "Developing a new ECU for Rensselaer Motorsport's RM27. The ECU will be based on the Jetson Nano microcontroller and will be used to control the vehicle's powertrain and other systems. I am currently leading a design team for the hardware design and software implementation of the ECU with a team at Rensselaer's Center for Open Source. I am actively working on the Control Systems models in MATLAB, on the side.",
+    "time": "May '23 - WIP",
+    "resources": {},
+    "tags": []
+  },
   "RPI Robotic Art Installation": {
     "4_letter": "Line",
     "img": "img/projects/RAI.jpg",
@@ -11,8 +19,18 @@
     "4_letter": "RM 26",
     "img": "img/projects/rm26.jpg",
     "description": "Powertrain Lead for Rensselaer Motorsport's first electric vehicle. I worked on decision matrices and design reviews in favor of implementing an EMRAX 228 motor with Cascadia Rinehart PM100DX motor controller for our powertrain. I am currently working on the implementation, control systems, and high voltage routing for this configuration. I am also working on the battery management system for our accumulator battery.",
-    "time": "Jun '22 - WIP",
+    "time": "Jun '22 - Jun '23",
     "resources": {},
+    "tags": []
+  },
+  "RPI Ungergrad Research: Inverse Kinematics": {
+    "4_letter": "IK URP",
+    "img": "img/projects/ik_urp.png",
+    "description": "Worked on C++ implementation of subproblem solutions using a linear algebra approach from \"Canonical Subproblems for Robot Inverse Kinematics\"",
+    "time": "Sep '22 - May '23",
+    "resources": {
+      "github": "https://github.com/rpiRobotics/linear-subproblem-solutions"
+    },
     "tags": []
   },
   "Rensselaer Motorsport - RM25": {
