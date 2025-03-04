@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+/* Container for flexboxes */
+section {
+  padding: 20px;
+}
+
+article {
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+/* Style the navigation menu */
+/* nav {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: #ccc;
+  padding: 20px;
+} */
+ 
+#portfolio {
+  /* display: flex;
+  flex-direction: column; */
+  align-items: center;
+}
+
+#canvas {
+  width: 800px;
+  height: 600px;
+  border: 1px solid #ddd;
+}
+
+.azure {
+  background: #008AD8;
+  color: #f5f7fa;
+}
+
+.orange {
+  background: #F38D11;
+  color: #f5f7fa;
+}
+
+.grey {
+  background-color: #696969;
+  color: #f5f7fa;
+}
+
+.black {
+  background: black;
+  color: white;
+} 

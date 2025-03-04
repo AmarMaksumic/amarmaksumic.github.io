@@ -1,41 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Home | Amar Maksumić</title>
-  <meta name='author' content='Amar Maksumić'>
-  <meta charset='utf-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-
-  <link rel='preconnect' href='https://fonts.googleapis.com'>
-  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
-  <link href='https://fonts.googleapis.com/css2?family=Raleway&display=swap' rel='stylesheet'>
-
-  <link rel='stylesheet' type='text/css' href='css/index.css'>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-
-  <script src='//code.jquery.com/jquery-1.10.2.js'></script>
-  <script> 
-  $(function(){
-    $('#navbar_cont').load('html/navbar.html')
-    if (window.matchMedia("(max-width: 1000px)").matches) $('#cont').load('html/m_home.html')
-    else $('#cont').load('html/home.html')
-    $('#footer').load('html/footer.html')
-    let total = 6;
-    var num = Math.ceil( Math.random() * total );
-    document.body.background = 'img/background/'+num+'.webp';
-    document.body.style.backgroundRepeat = 'repeat';
-    document.body.style.backgroundAttachment = 'fixed';
-  });
-</script> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Systems Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <script src='https://code.jquery.com/jquery-1.10.2.js'></script>
+    <script> 
+        $(function(){
+          let total = 6;
+          var num = Math.ceil( Math.random() * total );
+          document.body.background = 'img/background/'+num+'.webp';
+          document.body.style.backgroundRepeat = 'repeat';
+          document.body.style.backgroundAttachment = 'fixed';
+        });
+      </script> 
+    <script src="https://d3js.org/d3.v6.min.js"></script>
 </head>
 <body>
-  <div id='page_stripe' style='height: 100%; display: block; position: absolute;'></div>
-  <div id='navbar_cont'></div>
-  <center>
-    <div id='page_cont'>
-      <div id='cont'></div>
-      <div id='footer'></div>
-    </div>
-  </center>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li id="reset-btn" class="reset">Reset</li>
+            <li>...</li>
+        </ul>
+    </nav>
+    <section>
+        <article class="azure">
+            <h1>Embedded Systems Portfolio</h1>
+            <p>This is a portfolio of embedded systems projects.</p>
+            <p>Click on the Portfolio link in the navigation bar to see the projects.</p>       
+        </article>
+        <article id="portfolio" class="grey">
+            <h2>Portfolio</h2>
+            <svg id="canvas"></svg>
+            <div id="details"></div>
+        </article>
+        <article>
+            another section
+        </article>
+    </section>
+    <footer>
+        &copy; 2021 Embedded Systems Portfolio
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
