@@ -1,13 +1,39 @@
 function nav_menu() {
   var x = document.getElementById('navbar')
-  if (x.className === 'topnav') {
-    x.classList.add('responsive')
-    console.log('r')
-  } else {
+  if (x.classList.contains('responsive')) {
     x.classList.remove('responsive')
-    console.log('x')
+  } else {
+    x.classList.add('responsive')
   }
 }
+
+// Modern scroll detection for navbar
+let lastScrollTop = 0;
+let scrollTimeout;
+
+window.addEventListener('scroll', function() {
+  const navbar = document.getElementById('navbar');
+  if (!navbar) return;
+  
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+  // Add scrolled class when scrolling
+  if (scrollTop > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+  
+  // Close mobile menu when scrolling
+  if (navbar.classList.contains('responsive')) {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      navbar.classList.remove('responsive');
+    }, 150);
+  }
+  
+  lastScrollTop = scrollTop;
+});
 
 async function switchTab (switchTo) {
   console.log(switchTo)

@@ -1,12 +1,29 @@
-let first = false
+// Simple Projects JavaScript - follows same pattern as education.js and experience.js
 
-function make_element(type, klass, text) {
-  let element = document.createElement(type);
-  element.setAttribute('class', klass);
-  element.innerHTML = text;
+$(document).ready(function() {
+  console.log('📁 Projects.js loaded - starting initialization');
   
-  return element;
-}
+  // Load projects from JSON
+  fetch('./files/projects.json')
+    .then(response => {
+      console.log('📥 Projects JSON fetch response:', response.status);
+      return response.json();
+    })
+    .then(projects => {
+      console.log('✅ Projects data loaded:', Object.keys(projects).length, 'projects');
+      displayProjects(projects);
+    })
+    .catch(error => {
+      console.error('❌ Error loading projects:', error);
+      $('#projects-container').html('<p>Error loading projects data.</p>');
+    });
+});
+
+function displayProjects(projects) {
+  console.log('🎨 Rendering projects...');
+  
+  let html = '<h2>Featured Projects</h2>';
+  html += '<div class="projects-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">';
 
 function make_link(klass, text, link, icon_type) {
   let element = document.createElement('A');
@@ -118,6 +135,10 @@ function fill_card(card, project, data) {
 $.getJSON('./files/projects.json', function(json_data) {
 
   let container = document.getElementsByClassName('dynamic content');
+  if (container.length === 0) {
+    console.log('Projects: dynamic content container not found, skipping initialization');
+    return;
+  }
 
   for (project in json_data) {
     let data = json_data[project];
@@ -135,7 +156,9 @@ $.getJSON('./files/projects.json', function(json_data) {
 
     container[0].appendChild(section_container)
 
-    container[0].appendChild(make_element('DIV', 'section', null).appendChild(make_element('DIV', 'divider', null)))
+    let sectionDiv = make_element('DIV', 'section', null);
+    sectionDiv.appendChild(make_element('DIV', 'divider', null));
+    container[0].appendChild(sectionDiv);
   }
 
   

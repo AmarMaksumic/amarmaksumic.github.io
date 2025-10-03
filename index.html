@@ -1,41 +1,481 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Home | Amar Maksumić</title>
+  <title>Amar Maksumić | // Easter egg: D // Developer Easter egg message
+    console.log('%c🚀 Portfolio by Amar Maksumić', 'color: #f97316; font-size: 16px; font-weight: bold;');
+    console.log('%c🐛 Developer Easter Egg: Type \"debug\" or press Ctrl+Shift+D for layout analysis!', 'color: #3b82f6;
+    font-size: 12px;');
+
+    // Test function will be available after modern.js loads
+    console.log('%c💡 To test projects directly, type: testProjects() after page loads', 'color: #10b981; font-size:
+    12px;');g mode toggle
+    initializeDebugMode();
+
+    // Auto-calculate stats from JSON data immediately
+    calculateStatsFromJSON();
+
+    // Developer Easter egg message
+    console.log('%c🚀 Portfolio by Amar Maksumić', 'color: #f97316; font-size: 16px; font-weight: bold;');
+    console.log('%c🐛 Developer Easter Egg: Type \"debug\" or press Ctrl+Shift+D for layout analysis!', 'color: #3b82f6;
+    font-size: 12px;');otive & Embedded Systems Engineer</title>
   <meta name='author' content='Amar Maksumić'>
   <meta charset='utf-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+
+  <!-- SEO & Social Media Meta Tags -->
+  <meta name="description"
+    content="Master's student in Computer & Systems Engineering specializing in automotive systems, embedded control, and autonomous vehicle development at Rensselaer Polytechnic Institute.">
+  <meta name="keywords"
+    content="automotive engineering, embedded systems, control systems, autonomous vehicles, Formula SAE, computer vision, machine learning">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://amarmaksumic.github.io/">
+  <meta property="og:title" content="Amar Maksumić | Automotive & Embedded Systems Engineer">
+  <meta property="og:description"
+    content="Master's student specializing in automotive systems and embedded control at RPI">
+  <meta property="og:image" content="https://amarmaksumic.github.io/img/7.jpg">
 
   <link rel='preconnect' href='https://fonts.googleapis.com'>
   <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
-  <link href='https://fonts.googleapis.com/css2?family=Raleway&display=swap' rel='stylesheet'>
+  <link
+    href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap'
+    rel='stylesheet'>
 
+  <link rel='stylesheet' type='text/css' href='css/modern.css'>
   <link rel='stylesheet' type='text/css' href='css/index.css'>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel='stylesheet' type='text/css' href='css/projects-modern.css'>
+  <style>
+    body {
+      padding-top: 80px !important;
+      margin: 0;
+    }
 
-  <script src='//code.jquery.com/jquery-1.10.2.js'></script>
-  <script> 
-  $(function(){
-    $('#navbar_cont').load('html/navbar.html')
-    if (window.matchMedia("(max-width: 1000px)").matches) $('#cont').load('html/m_home.html')
-    else $('#cont').load('html/home.html')
-    $('#footer').load('html/footer.html')
-    let total = 6;
-    var num = Math.ceil( Math.random() * total );
-    document.body.background = 'img/background/'+num+'.webp';
-    document.body.style.backgroundRepeat = 'repeat';
-    document.body.style.backgroundAttachment = 'fixed';
-  });
-</script> 
+    .old-topnav,
+    .topnav:not(.navbar-modern) {
+      display: none !important;
+    }
+
+    .navbar-modern {
+      display: block !important;
+    }
+
+    #page_cont {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+
+  <!-- Performance Optimizations -->
+  <link rel='dns-prefetch' href='//fonts.googleapis.com'>
+  <link rel='dns-prefetch' href='//cdnjs.cloudflare.com'>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(function () {
+      // Load components with better error handling
+      Promise.all([
+        loadComponent('#navbar_cont', 'html/navbar.html'),
+        loadComponent('#cont', window.matchMedia("(max-width: 1000px)").matches ? 'html/m_home.html' : 'html/home.html'),
+        loadComponent('#footer', 'html/footer.html')
+      ]).then(() => {
+        console.log('All components loaded successfully');
+        // Debug: Check if content exists
+        const contElement = document.getElementById('cont');
+        console.log('Content container:', contElement);
+        console.log('Content HTML:', contElement ? contElement.innerHTML.substring(0, 200) : 'No content');
+        console.log('Content children:', contElement ? contElement.children.length : 0);
+
+        // Easter egg: Debug mode toggle
+        initializeDebugMode();
+
+        // Developer Easter egg message
+        console.log('%c🚀 Portfolio by Amar Maksumić', 'color: #f97316; font-size: 16px; font-weight: bold;');
+        console.log('%c🐛 Developer Easter Egg: Type "debug" or press Ctrl+Shift+D for layout analysis!', 'color: #3b82f6; font-size: 12px;');
+        // Initialize modern features after all content loads
+        initializeModernFeatures();
+        // Hide loading screen with smooth transition
+        setTimeout(() => {
+          const loadingElement = document.getElementById('loading');
+          if (loadingElement) {
+            loadingElement.style.opacity = '0';
+            loadingElement.style.transition = 'opacity 0.3s ease-out';
+            setTimeout(() => {
+              loadingElement.style.display = 'none';
+            }, 300);
+          }
+        }, 500);
+      }).catch((error) => {
+        console.error('Error loading components:', error);
+        // Hide loading screen even if there's an error
+        setTimeout(() => {
+          const loadingElement = document.getElementById('loading');
+          if (loadingElement) {
+            loadingElement.style.display = 'none';
+          }
+        }, 1000);
+      });
+
+      // Set random background
+      setRandomBackground();
+    });
+
+    function loadComponent(selector, url) {
+      return new Promise((resolve, reject) => {
+        console.log(`Loading ${url} into ${selector}`);
+        $(selector).load(url, function (response, status, xhr) {
+          if (status === "error") {
+            console.error(`Error loading ${url}: ${xhr.status} ${xhr.statusText}`);
+            reject(new Error(`Failed to load ${url}`));
+          } else {
+            console.log(`Successfully loaded ${url}`);
+            resolve();
+          }
+        });
+      });
+    }
+
+    function setRandomBackground() {
+      let total = 6;
+      var num = Math.ceil(Math.random() * total);
+      document.body.style.background = `url('img/background/${num}.webp')`;
+      document.body.style.backgroundRepeat = 'repeat';
+      document.body.style.backgroundAttachment = 'fixed';
+      document.body.style.backgroundSize = 'cover';
+    }
+
+    function initializeModernFeatures() {
+      // Initialize scroll animations
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('fade-in-up');
+            }
+          });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section').forEach(section => {
+          observer.observe(section);
+        });
+      }
+
+      // Initialize progress bar
+      window.addEventListener('scroll', updateProgressBar);
+    }
+
+    function initializeDebugMode() {
+      let debugActive = false;
+      let keySequence = [];
+      const debugCode = ['d', 'e', 'b', 'u', 'g'];
+
+      // Easter egg: Type "debug" to toggle debug view
+      document.addEventListener('keydown', (e) => {
+        keySequence.push(e.key.toLowerCase());
+        keySequence = keySequence.slice(-5); // Keep only last 5 keys
+
+        if (keySequence.join('') === debugCode.join('')) {
+          debugActive = !debugActive;
+          toggleDebugView(debugActive);
+          keySequence = []; // Reset sequence
+        }
+      });
+
+      // Also allow Ctrl+Shift+D for quick access
+      document.addEventListener('keydown', (e) => {
+        if (e.ctrlKey && e.shiftKey && e.key === 'D') {
+          e.preventDefault();
+          debugActive = !debugActive;
+          toggleDebugView(debugActive);
+        }
+      });
+    }
+
+    function toggleDebugView(active) {
+      if (active) {
+        // Create and add debug stylesheet
+        if (!document.getElementById('debug-styles')) {
+          const debugLink = document.createElement('link');
+          debugLink.id = 'debug-styles';
+          debugLink.rel = 'stylesheet';
+          debugLink.href = 'debug-visibility.css';
+          document.head.appendChild(debugLink);
+        }
+        console.log('🐛 Debug mode ACTIVATED! Layout boxes visible.');
+        // Show a subtle notification
+        showDebugNotification('Debug Mode ON', '#00ff00');
+      } else {
+        // Remove debug stylesheet
+        const debugLink = document.getElementById('debug-styles');
+        if (debugLink) {
+          debugLink.remove();
+        }
+        console.log('🐛 Debug mode DEACTIVATED! Normal view restored.');
+        showDebugNotification('Debug Mode OFF', '#ff6b6b');
+      }
+    }
+
+    function showDebugNotification(message, color) {
+      const notification = document.createElement('div');
+      notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: ${color};
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-family: monospace;
+        font-size: 14px;
+        z-index: 10000;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+      `;
+      notification.textContent = message;
+      document.body.appendChild(notification);
+
+      // Slide in
+      setTimeout(() => {
+        notification.style.transform = 'translateX(0)';
+      }, 10);
+
+      // Slide out and remove
+      setTimeout(() => {
+        notification.style.transform = 'translateX(100%)';
+        setTimeout(() => {
+          if (notification.parentNode) {
+            notification.parentNode.removeChild(notification);
+          }
+        }, 300);
+      }, 2000);
+    }
+
+    function updateProgressBar() {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      const progressBar = document.getElementById('myBar');
+      if (progressBar) {
+        progressBar.style.width = scrolled + '%';
+      }
+    }
+
+    async function calculateStatsFromJSON() {
+      try {
+        // Calculate years of experience from experience.json
+        const experienceData = await fetch('./files/experience.json').then(r => r.json());
+        let totalYears = 0;
+
+        // Calculate experience duration
+        Object.values(experienceData).forEach(exp => {
+          if (exp.time) {
+            // Parse time strings like "2022-2024" or "2023-Present"
+            const timeStr = exp.time.toString();
+            const currentYear = new Date().getFullYear();
+
+            if (timeStr.includes('-')) {
+              const [start, end] = timeStr.split('-');
+              const startYear = parseInt(start);
+              const endYear = end.toLowerCase().includes('present') ? currentYear : parseInt(end);
+              if (!isNaN(startYear) && !isNaN(endYear)) {
+                totalYears += (endYear - startYear);
+              }
+            }
+          }
+        });
+
+        // Calculate projects from projects.json
+        const projectsData = await fetch('./files/projects.json').then(r => r.json());
+        const projectCount = Object.keys(projectsData).length;
+
+        // For now, keep papers at 2 (you can update this or create a papers.json)
+        const paperCount = 2;
+
+        // Update the stat counters with animation immediately
+        setTimeout(() => {
+          updateStatCounter('span[data-counter="3"]', Math.max(totalYears, 3));
+          updateStatCounter('span[data-counter="15"]', projectCount);
+          updateStatCounter('span[data-counter="2"]', paperCount);
+        }, 100); // Just a tiny delay to ensure DOM is ready
+
+        console.log(`📊 Auto-calculated stats: ${totalYears} years experience, ${projectCount} projects, ${paperCount} papers`);
+
+      } catch (error) {
+        console.log('Could not auto-calculate stats from JSON files:', error);
+        // Fallback: use default values if JSON loading fails
+        setTimeout(() => {
+          updateStatCounter('span[data-counter="3"]', 3);
+          updateStatCounter('span[data-counter="15"]', 15);
+          updateStatCounter('span[data-counter="2"]', 2);
+        }, 200);
+      }
+    }
+
+    // Additional fallback - run counter animation quickly if not already done
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        // Check if counters haven't been animated yet
+        const counter1 = document.querySelector('span[data-counter="3"]');
+        const counter2 = document.querySelector('span[data-counter="15"]');
+        const counter3 = document.querySelector('span[data-counter="2"]');
+
+        if (counter1 && counter1.textContent === '0') {
+          console.log('Running immediate fallback counter animation');
+          updateStatCounter('span[data-counter="3"]', 3);
+          updateStatCounter('span[data-counter="15"]', 15);
+          updateStatCounter('span[data-counter="2"]', 2);
+        }
+      }, 500); // Much faster fallback
+    });
+
+    function updateStatCounter(selector, targetValue) {
+      const element = document.querySelector(selector);
+      if (!element) {
+        console.log('Counter element not found:', selector);
+        return;
+      }
+
+      console.log('Animating counter:', selector, 'to value:', targetValue);
+      let current = 0;
+      const increment = targetValue / 60; // Smoother animation
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= targetValue) {
+          current = targetValue;
+          clearInterval(timer);
+        }
+        element.textContent = Math.floor(current);
+      }, 25);
+    }
+  </script>
+  <!-- Critical CSS for loading screen -->
+  <style>
+    .loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      font-family: Inter, sans-serif;
+    }
+
+    .loading-content {
+      text-align: center;
+    }
+
+    .loading-spinner {
+      width: 40px;
+      height: 40px;
+      border: 4px solid #e5e7eb;
+      border-top: 4px solid #2563eb;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 16px;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .loading-text {
+      color: #6b7280;
+      font-size: 14px;
+    }
+  </style>
 </head>
+
 <body>
-  <div id='page_stripe' style='height: 100%; display: block; position: absolute;'></div>
+  <!-- Loading Screen -->
+  <div id='loading' class='loading'>
+    <div class='loading-content'>
+      <div class='loading-spinner'></div>
+      <div class='loading-text'>Loading Portfolio...</div>
+    </div>
+  </div>
+
+  <!-- Page Transition Stripe -->
+  <div id='page_stripe'
+    style='height: 100vh; display: block; position: fixed; top: 0; left: 0; width: 0%; background-color: #f97316; z-index: 9998; pointer-events: none;'>
+  </div>
+
+  <!-- Navigation -->
   <div id='navbar_cont'></div>
-  <center>
+
+  <!-- Main Content -->
+  <main>
     <div id='page_cont'>
       <div id='cont'></div>
       <div id='footer'></div>
     </div>
-  </center>
+  </main>
+
+  <!-- Load JavaScript after all content is ready -->
+  <script>
+    // Wait for all components to be loaded before initializing other scripts
+    $(document).ready(function () {
+      // Small delay to ensure all dynamic content is loaded
+      setTimeout(function () {
+        // Load core modern.js script
+        const scriptsToLoad = ['js/modern.js'];
+        let loadedScripts = 0;
+
+        scriptsToLoad.forEach(function (src) {
+          const script = document.createElement('script');
+          script.src = src;
+          script.onload = function () {
+            loadedScripts++;
+            console.log(`Loaded: ${src}`);
+            if (loadedScripts === scriptsToLoad.length) {
+              console.log('All additional scripts loaded successfully');
+
+              // Add test function for projects after modern.js is loaded
+              window.testProjects = function () {
+                console.log('🧪 Testing projects page directly...');
+
+                // Check if PortfolioManager is initialized
+                if (window.portfolioManager && typeof switchTab === 'function') {
+                  console.log('✅ PortfolioManager found, calling switchTab(4)');
+                  switchTab(4);
+                } else {
+                  console.log('⏳ PortfolioManager not ready yet, waiting...');
+                  // Wait for PortfolioManager to initialize
+                  const checkReady = () => {
+                    if (window.portfolioManager && typeof switchTab === 'function') {
+                      console.log('✅ PortfolioManager now ready, calling switchTab(4)');
+                      switchTab(4);
+                    } else {
+                      console.log('⏳ Still waiting for PortfolioManager...');
+                      setTimeout(checkReady, 100);
+                    }
+                  };
+                  checkReady();
+                }
+              };
+              console.log('%c💡 To test projects directly, type: testProjects()', 'color: #10b981; font-size: 12px;');
+            }
+          };
+          script.onerror = function () {
+            console.error(`Failed to load: ${src}`);
+          };
+          document.head.appendChild(script);
+        });
+      }, 1000); // Wait 1 second after DOM ready
+    });
+  </script>
 </body>
+
 </html>

@@ -97,8 +97,14 @@ function fill_card(card, exp, data) {
   card.appendChild(timeline_container)
 }
 
-$.getJSON('./files/experience.json', function(json_data) {
-  let container = document.getElementsByClassName('dyna_container') 
+// Function to initialize experience content
+function initializeExperience() {
+  $.getJSON('./files/experience.json', function(json_data) {
+    let container = document.getElementsByClassName('dyna_container');
+    if (container.length === 0) {
+      console.log('Experience: dyna_container not found, skipping initialization');
+      return;
+    }
 
   for (exp in json_data) {
     let data = json_data[exp]
@@ -126,8 +132,16 @@ $.getJSON('./files/experience.json', function(json_data) {
 
     container[0].appendChild(section_container)
 
-    container[0].appendChild(make_element('DIV', 'section', null).appendChild(make_element('DIV', 'divider', null)))
+    let sectionDiv = make_element('DIV', 'section', null);
+    sectionDiv.appendChild(make_element('DIV', 'divider', null));
+    container[0].appendChild(sectionDiv);
   }
-})
+});
+}
+
+// Auto-initialize if dyna_container exists (for direct page loads)
+if (document.getElementsByClassName('dyna_container').length > 0) {
+  initializeExperience();
+}
 
   

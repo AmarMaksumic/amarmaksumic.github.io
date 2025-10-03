@@ -1,45 +1,84 @@
-<div class='section cone shadow full'>
-  <div class='content' style='padding-bottom: 10px'>
-    <img src='img/7.jpg' style='width: 90%; border-radius: 10px;'>
-    <center>
-      <div class='white' style='font-size: 70px; width: 90%;'>
-        Hello. <br>
-        I'm Amar Maksumić
-      </div>
-      <div style='font-size: 35px; width: 90%;'>
-        Aspiring automotive and embedded systems engineer.
-      </div> 
-    </center>
-  </div>
-</div>
-
-<div class='section'>
-  <div class='divider'>
-    
-  </div>
-</div>
-
-<div class='section cone shadow'>
-  <div class='content' style='padding: 0px; margin: auto;'>
-    <div class='t3 light pad15'>
-      Diligent, communicative second‑year Computer Science + Computer Systems Engineering (CS+CSE) student. Experienced in methodical development of embedded control systems and software using
-      Machine Learning, Computer Vision, and Control Systems concepts. Seeking an automotive, robotics, or embedded systems related internship.
+<div class='section cone shadow full mobile-hero'>
+  <div class='content mobile-hero-content'>
+    <div class='mobile-image-container'>
+      <img src='img/7.jpg' alt='Amar Maksumić - Automotive Engineer' class='mobile-hero-image'>
     </div>
-    <br>
-    <br>
-    <button class='cvres_button' onclick='window.open("files/Amar_Maksumic_Resume.pdf")'>
-      <div class='text'>
-        Download CV/Resume
+    <div class='mobile-text-content'>
+      <div class='mobile-greeting'>
+        Hello.
       </div>
-    </button>
-    <br>
-    <br>
+      <div class='mobile-title'>
+        I'm <span class='mobile-highlight'>Amar Maksumić</span>
+      </div>
+      <div class='mobile-subtitle'>
+        Automotive and embedded systems engineer pursuing my Master's at RPI.
+      </div>
+      <div class='mobile-stats'>
+        <div class='mobile-stat'>
+          <span class='mobile-stat-number' data-counter='3'>0</span>
+          <span class='mobile-stat-label'>Years</span>
+        </div>
+        <div class='mobile-stat'>
+          <span class='mobile-stat-number' data-counter='15'>0</span>
+          <span class='mobile-stat-label'>Projects</span>
+        </div>
+        <div class='mobile-stat'>
+          <span class='mobile-stat-number' data-counter='2'>0</span>
+          <span class='mobile-stat-label'>Research</span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
 <div class='section'>
   <div class='divider'>
-    
+
+  </div>
+</div>
+
+<div class='section azure shadow mobile-bio'>
+  <div class='content mobile-bio-content'>
+    <h2 class='mobile-bio-title'>About Me</h2>
+    <div class='mobile-bio-text'>
+      Master's student in Computer & Systems Engineering with proven expertise in embedded control systems, autonomous
+      vehicle development, and advanced robotics. Currently developing ECU systems for Formula SAE racing and
+      researching photonic chip optimization.
+    </div>
+    <div class='mobile-highlights'>
+      <div class='mobile-highlight-item'>
+        <i class='fas fa-car'></i>
+        <span>Automotive Systems</span>
+      </div>
+      <div class='mobile-highlight-item'>
+        <i class='fas fa-microchip'></i>
+        <span>Embedded Control</span>
+      </div>
+      <div class='mobile-highlight-item'>
+        <i class='fas fa-robot'></i>
+        <span>Advanced Robotics</span>
+      </div>
+      <div class='mobile-highlight-item'>
+        <i class='fas fa-graduation-cap'></i>
+        <span>Research</span>
+      </div>
+    </div>
+    <div class='mobile-actions'>
+      <button class='btn-mobile primary' onclick='window.open("files/Amar_Maksumic_Resume.pdf")'>
+        <i class='fas fa-download'></i>
+        Download Resume
+      </button>
+      <button class='btn-mobile outline' onclick='scrollToMobileContact()'>
+        <i class='fas fa-envelope'></i>
+        Get In Touch
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='divider'>
+
   </div>
 </div>
 
@@ -61,6 +100,50 @@
 
 <div class='section'>
   <div class='divider'>
-    
+
   </div>
 </div>
+
+<link rel="stylesheet" type="text/css" href="css/mobile-modern.css">
+<script>
+  function scrollToMobileContact() {
+    document.querySelector('.contact-section').scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+
+  // Initialize mobile counter animations
+  document.addEventListener('DOMContentLoaded', function () {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target.querySelector('[data-counter]');
+          if (counter) {
+            animateMobileCounter(counter);
+          }
+        }
+      });
+    });
+
+    document.querySelectorAll('.mobile-stat').forEach(item => {
+      observer.observe(item);
+    });
+  });
+
+  function animateMobileCounter(element) {
+    const target = parseInt(element.getAttribute('data-counter'));
+    const duration = 2000;
+    const increment = target / (duration / 16);
+    let current = 0;
+
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        current = target;
+        clearInterval(timer);
+      }
+      element.textContent = Math.floor(current);
+    }, 16);
+  }
+</script>

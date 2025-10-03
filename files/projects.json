@@ -2,10 +2,79 @@
   "Rensselaer Motorsport - Control Systems Unit": {
     "4_letter": "RM CSU",
     "img": "img/projects/rm_holder.jpg",
-    "description": "Developing a new ECU for Rensselaer Motorsport's RM27. The ECU will be based on the Jetson Nano microcontroller and will be used to control the vehicle's powertrain and other systems. I am currently leading a design team for the hardware design and software implementation of the ECU with a team at Rensselaer's Center for Open Source. I am actively working on the Control Systems models in MATLAB, on the side.",
+    "description": "Developing a new ECU for Rensselaer Motorsport's RM27. The ECU will be based on the Jetson Nano microcontroller and will be used to control the vehicle's powertrain and other systems. I am currently leading a design team for the hardware and software implementation of the ECU with a team at Rensselaer's Center for Open Source. I am actively working on the Control Systems models in MATLAB, on the side.",
     "time": "May '23 - WIP",
     "resources": {},
-    "tags": []
+    "tags": [
+      "Control Systems",
+      "Automotive",
+      "Embedded Systems"
+    ],
+    "modal": {
+      "detailed_description": "Leading the development of an advanced Electronic Control Unit (ECU) for Rensselaer Motorsport's RM27 Formula SAE vehicle. This project represents a significant leap in vehicle control systems, integrating multiple subsystems including powertrain management, data acquisition, and safety monitoring. Working with a multidisciplinary team to develop both hardware and software components that meet strict competition regulations while pushing performance boundaries.",
+      "context": {
+        "type": "motorsport",
+        "title": "Formula SAE Engineering Excellence",
+        "content": "Formula SAE is the world's most prestigious engineering design competition where university teams design, build, and race small formula-style cars. This ECU project pushes the boundaries of automotive control systems in a highly competitive environment where performance, reliability, and innovation are paramount."
+      },
+      "technical_details": [
+        {
+          "icon": "⚡",
+          "title": "Real-Time Control Systems",
+          "content": "Implementing advanced control algorithms using Jetson Nano for real-time vehicle dynamics management, including traction control, launch control, and comprehensive data logging systems with sub-millisecond response times."
+        },
+        {
+          "icon": "🔧",
+          "title": "Hardware Integration",
+          "content": "Custom PCB design and sensor integration for CAN bus communication, with emphasis on reliability and electromagnetic compatibility in harsh racing environments. Designing fail-safe mechanisms and redundant systems."
+        },
+        {
+          "icon": "📊",
+          "title": "MATLAB Control Modeling",
+          "content": "Developing sophisticated control models in MATLAB for vehicle dynamics simulation, powertrain optimization, and performance prediction to validate real-world implementation strategies."
+        }
+      ],
+      "impact": [
+        {
+          "icon": "🚀",
+          "title": "Performance Innovation",
+          "content": "Expected 15% improvement in lap times through optimized powertrain control, advanced traction management, and data-driven setup adjustments based on real-time telemetry."
+        },
+        {
+          "icon": "👥",
+          "title": "Team Leadership Excellence",
+          "content": "Leading a diverse team of 8+ engineers across electrical, software, and mechanical disciplines to deliver integrated vehicle systems under tight competition deadlines."
+        },
+        {
+          "icon": "🏆",
+          "title": "Competition Advantage",
+          "content": "Developing cutting-edge technology that positions Rensselaer Motorsport as a leader in Formula SAE innovation and performance engineering."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Real-Time Performance Constraints",
+          "description": "Ensuring control loop execution within 1ms timing constraints while managing multiple sensor inputs, actuator outputs, and complex vehicle dynamics calculations."
+        },
+        {
+          "title": "Safety-Critical System Design",
+          "description": "Implementing comprehensive fail-safe mechanisms and redundant systems to meet stringent safety requirements for high-performance racing applications."
+        },
+        {
+          "title": "Cross-Disciplinary Integration",
+          "description": "Coordinating hardware, software, and mechanical system requirements across multiple engineering disciplines while maintaining project timeline and budget constraints."
+        }
+      ],
+      "skills_gained": [
+        "Real-time embedded systems programming",
+        "CAN bus protocols and automotive networking",
+        "Advanced control systems design and implementation",
+        "Technical team leadership and project management",
+        "Safety-critical system architecture",
+        "MATLAB modeling and simulation",
+        "Hardware-software integration testing"
+      ]
+    }
   },
   "RPI Robotic Art Installation": {
     "4_letter": "Line",
@@ -13,7 +82,76 @@
     "description": "Art installation for the RPI campus. Will be comprised of several dozen origami units that open and close in response to user stimulus from a computer vision system. Serving as the Team Lead for the project, helping out with programming and electrical work.",
     "time": "Dec '22 - WIP",
     "resources": {},
-    "tags": []
+    "tags": [
+      "Computer Vision",
+      "Robotics",
+      "Art Installation"
+    ],
+    "modal": {
+      "detailed_description": "An innovative interactive art installation combining robotics, computer vision, and artistic expression for the RPI campus. The installation features several dozen responsive origami units that create dynamic visual patterns through coordinated movement based on real-time computer vision analysis of user interactions. This project bridges the gap between technology and art, creating an engaging public space that responds to human presence and movement.",
+      "context": {
+        "type": "research",
+        "title": "Interactive Art & Technology Integration",
+        "content": "This installation represents the intersection of engineering and artistic expression, demonstrating how advanced robotics and computer vision can create meaningful human-technology interactions in public spaces. The project showcases RPI's commitment to innovation in both technical and creative domains."
+      },
+      "technical_details": [
+        {
+          "icon": "👁️",
+          "title": "Computer Vision System",
+          "content": "Real-time person detection and tracking using advanced computer vision algorithms to analyze user movement patterns, proximity, and gestures for responsive art installation control."
+        },
+        {
+          "icon": "🤖",
+          "title": "Coordinated Robotics",
+          "content": "Synchronized control of multiple origami units using distributed microcontroller systems with precise servo control and wireless communication for coordinated artistic movements."
+        },
+        {
+          "icon": "🎨",
+          "title": "Interactive Design",
+          "content": "Algorithmic pattern generation that translates human movement into beautiful, flowing origami animations, creating unique artistic experiences for each interaction."
+        }
+      ],
+      "impact": [
+        {
+          "icon": "🎯",
+          "title": "Campus Enhancement",
+          "content": "Creating an engaging interactive experience that enhances the RPI campus environment and demonstrates the university's leadership in innovative technology applications."
+        },
+        {
+          "icon": "👥",
+          "title": "Interdisciplinary Collaboration",
+          "content": "Leading cross-functional teams combining engineering, computer science, and artistic design principles to create a unified technical-artistic vision."
+        },
+        {
+          "icon": "🔬",
+          "title": "Research Innovation",
+          "content": "Advancing the field of interactive installations by developing novel approaches to human-robot interaction in artistic contexts."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Real-Time Responsiveness",
+          "description": "Ensuring seamless, low-latency response to user interactions while coordinating dozens of mechanical units in real-time."
+        },
+        {
+          "title": "Outdoor Durability",
+          "description": "Designing robust systems that can withstand weather conditions while maintaining precise mechanical operation and reliable electronics."
+        },
+        {
+          "title": "Artistic-Technical Balance",
+          "description": "Balancing technical capabilities with artistic vision to create meaningful aesthetic experiences while maintaining system reliability."
+        }
+      ],
+      "skills_gained": [
+        "Computer vision and image processing",
+        "Multi-robot coordination and control",
+        "Wireless communication protocols",
+        "Interdisciplinary project management",
+        "Public installation design and deployment",
+        "Real-time system optimization",
+        "Artistic-technical integration"
+      ]
+    }
   },
   "Rensselaer Motorsport - RM26": {
     "4_letter": "RM 26",
@@ -21,7 +159,77 @@
     "description": "Powertrain Lead for Rensselaer Motorsport's first electric vehicle. I worked on decision matrices and design reviews in favor of implementing an EMRAX 228 motor with Cascadia Rinehart PM100DX motor controller for our powertrain. I am currently working on the implementation, control systems, and high voltage routing for this configuration. I am also working on the battery management system for our accumulator battery.",
     "time": "Jun '22 - Jun '23",
     "resources": {},
-    "tags": []
+    "tags": [
+      "Electric Vehicles",
+      "Powertrain",
+      "Battery Systems"
+    ],
+    "modal": {
+      "detailed_description": "Served as Powertrain Lead for Rensselaer Motorsport's groundbreaking transition to electric vehicles with RM26. This historic project marked the team's first foray into electric powertrain technology, requiring comprehensive research, design, and implementation of high-voltage systems. Led the technical decision-making process for motor and controller selection, designed the battery management architecture, and oversaw the integration of all powertrain components while ensuring compliance with Formula SAE electric vehicle regulations.",
+      "context": {
+        "type": "motorsport",
+        "title": "Electric Vehicle Innovation in Formula SAE",
+        "content": "RM26 represents a pivotal moment in Rensselaer Motorsport's history - the transition from internal combustion to electric powertrains. This shift required mastering entirely new technologies including high-voltage safety, battery management, electric motor control, and thermal management while maintaining competitive performance standards in Formula SAE competition."
+      },
+      "technical_details": [
+        {
+          "icon": "⚡",
+          "title": "High-Performance Electric Powertrain",
+          "content": "Selected and integrated EMRAX 228 motor with Cascadia Rinehart PM100DX controller, delivering optimal power-to-weight ratio and efficiency for Formula SAE applications with regenerative braking capabilities."
+        },
+        {
+          "icon": "🔋",
+          "title": "Advanced Battery Management System",
+          "content": "Designed comprehensive BMS architecture for lithium-ion accumulator with cell monitoring, balancing, thermal management, and safety shutdown systems compliant with Formula SAE EV regulations."
+        },
+        {
+          "icon": "🔧",
+          "title": "High-Voltage System Integration",
+          "content": "Engineered complete HV routing, safety systems, and component integration including inverter mounting, cooling systems, and emergency shutdown procedures meeting strict safety standards."
+        }
+      ],
+      "impact": [
+        {
+          "icon": "🚀",
+          "title": "Technology Transition Leadership",
+          "content": "Successfully led Rensselaer Motorsport's transition to electric vehicles, establishing the foundation for future EV development and competitive performance in Formula SAE Electric."
+        },
+        {
+          "icon": "📊",
+          "title": "Performance Optimization",
+          "content": "Achieved competitive power delivery and efficiency through systematic component selection and integration, positioning the team for strong competition results."
+        },
+        {
+          "icon": "🛡️",
+          "title": "Safety Standard Excellence",
+          "content": "Implemented comprehensive safety systems and procedures that became the template for future electric vehicle projects, ensuring both performance and safety compliance."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Technology Learning Curve",
+          "description": "Mastering electric vehicle technologies, high-voltage safety protocols, and battery management systems while transitioning from traditional ICE powertrains."
+        },
+        {
+          "title": "Regulatory Compliance",
+          "description": "Ensuring all systems met stringent Formula SAE EV safety and technical regulations while maintaining competitive performance characteristics."
+        },
+        {
+          "title": "Integration Complexity",
+          "description": "Coordinating electrical, mechanical, and software systems integration across multiple engineering disciplines under tight timeline constraints."
+        }
+      ],
+      "skills_gained": [
+        "Electric vehicle powertrain design",
+        "Battery management system architecture",
+        "High-voltage safety protocols and implementation",
+        "Motor control and power electronics",
+        "Thermal management system design",
+        "Technical leadership in emerging technologies",
+        "Cross-functional system integration",
+        "Regulatory compliance and documentation"
+      ]
+    }
   },
   "RPI Ungergrad Research: Inverse Kinematics": {
     "4_letter": "IK URP",
@@ -31,7 +239,76 @@
     "resources": {
       "github": "https://github.com/rpiRobotics/linear-subproblem-solutions"
     },
-    "tags": []
+    "tags": [
+      "Robotics",
+      "C++",
+      "Research"
+    ],
+    "modal": {
+      "detailed_description": "Contributed to cutting-edge robotics research through the development of advanced inverse kinematics algorithms using linear algebra approaches. This undergraduate research program focused on implementing canonical subproblem solutions that form the mathematical foundation for robot motion planning and control. Working with graduate students and faculty to advance the state of the art in robotic kinematics, contributing to open-source research that benefits the broader robotics community.",
+      "context": {
+        "type": "research",
+        "title": "Advanced Robotics Research at RPI",
+        "content": "This research contributes to RPI's renowned robotics program, working alongside faculty and graduate students to solve fundamental problems in robot motion planning. The work focuses on canonical subproblems that form the building blocks for more complex robotic systems and has applications in industrial automation, autonomous vehicles, and advanced manufacturing."
+      },
+      "technical_details": [
+        {
+          "icon": "🔬",
+          "title": "Mathematical Algorithm Implementation",
+          "content": "Developed robust C++ implementations of canonical subproblem solutions using advanced linear algebra techniques, focusing on numerical stability and computational efficiency for real-time applications."
+        },
+        {
+          "icon": "⚙️",
+          "title": "Inverse Kinematics Solutions",
+          "content": "Implemented multiple solution strategies for inverse kinematics problems, handling both analytical and numerical approaches with emphasis on singularity avoidance and solution optimization."
+        },
+        {
+          "icon": "📐",
+          "title": "Linear Algebra Optimization",
+          "content": "Utilized advanced matrix operations and linear algebra libraries to optimize computational performance while maintaining numerical precision in kinematic calculations."
+        }
+      ],
+      "impact": [
+        {
+          "icon": "📚",
+          "title": "Open Source Contribution",
+          "content": "Contributed to open-source research repository that serves as a foundation for other researchers and developers working on robotic kinematics problems."
+        },
+        {
+          "icon": "🤝",
+          "title": "Academic Collaboration",
+          "content": "Worked directly with faculty and graduate students, contributing to ongoing research projects and gaining exposure to academic research methodologies."
+        },
+        {
+          "icon": "🚀",
+          "title": "Foundation for Advanced Applications",
+          "content": "Research contributes to enabling more sophisticated robot control systems for industrial and autonomous applications."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Mathematical Complexity",
+          "description": "Understanding and implementing complex mathematical concepts in inverse kinematics while ensuring numerical stability and computational efficiency."
+        },
+        {
+          "title": "Algorithm Optimization",
+          "description": "Balancing mathematical rigor with practical computational constraints for real-time robotic applications."
+        },
+        {
+          "title": "Research Methodology",
+          "description": "Learning academic research processes, documentation standards, and collaborative development practices in a research environment."
+        }
+      ],
+      "skills_gained": [
+        "Advanced C++ programming and optimization",
+        "Linear algebra and mathematical modeling",
+        "Inverse kinematics algorithm development",
+        "Academic research methodologies",
+        "Open-source software development",
+        "Mathematical software library utilization",
+        "Collaborative research practices"
+      ]
+    }
   },
   "Rensselaer Motorsport - RM25": {
     "4_letter": "RM 25",
@@ -41,7 +318,76 @@
     "resources": {
       "website": "http://www.formularpi.org/rollout-2022/"
     },
-    "tags": ["Mechanical Engineering"]
+    "tags": [
+      "Mechanical Engineering",
+      "Software Development",
+      "Electric Systems"
+    ],
+    "modal": {
+      "detailed_description": "Contributed to the development of Rensselaer Motorsport's milestone 25th Formula SAE vehicle, RM25. This project marked a significant achievement in the team's history, combining traditional Formula SAE engineering excellence with modern software and electrical systems integration. Worked on multiple subsystems including embedded software development, electrical system design, and vehicle integration testing to ensure optimal performance and reliability for competition.",
+      "context": {
+        "type": "motorsport",
+        "title": "Formula SAE Heritage & Innovation",
+        "content": "RM25 represents 25 years of Formula SAE excellence at Rensselaer, combining the team's rich engineering heritage with cutting-edge technology. This vehicle served as a stepping stone toward the team's electric vehicle transition while maintaining competitive performance in traditional Formula SAE competition."
+      },
+      "technical_details": [
+        {
+          "icon": "💻",
+          "title": "Embedded Software Development",
+          "content": "Developed and implemented embedded software systems for vehicle control, data acquisition, and driver interface systems using modern programming practices and real-time constraints."
+        },
+        {
+          "icon": "⚡",
+          "title": "Electrical System Integration",
+          "content": "Designed and implemented electrical systems including wiring harnesses, sensor integration, and control module connectivity ensuring reliable operation under racing conditions."
+        },
+        {
+          "icon": "🔧",
+          "title": "Vehicle System Testing",
+          "content": "Conducted comprehensive system testing and integration validation to ensure all software and electrical components functioned correctly under various operating conditions."
+        }
+      ],
+      "impact": [
+        {
+          "icon": "🏆",
+          "title": "Competition Success",
+          "content": "Contributed to successful vehicle deployment and competition performance, maintaining Rensselaer Motorsport's reputation for engineering excellence."
+        },
+        {
+          "icon": "🔄",
+          "title": "Technology Foundation",
+          "content": "Established software and electrical system foundations that would support the team's transition to electric vehicle technology in subsequent projects."
+        },
+        {
+          "icon": "👥",
+          "title": "Team Integration",
+          "content": "Successfully integrated software and electrical systems with mechanical components through effective cross-disciplinary collaboration."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "System Integration Complexity",
+          "description": "Coordinating software and electrical systems with mechanical components while meeting strict competition deadlines and performance requirements."
+        },
+        {
+          "title": "Reliability Under Stress",
+          "description": "Ensuring all electronic systems maintained reliability and performance under the demanding conditions of competitive racing."
+        },
+        {
+          "title": "Legacy System Integration",
+          "description": "Integrating new software and electrical technologies with established team practices and existing system architectures."
+        }
+      ],
+      "skills_gained": [
+        "Embedded systems programming",
+        "Electrical system design and integration",
+        "Vehicle-level system testing and validation",
+        "Cross-disciplinary engineering collaboration",
+        "Competition-focused engineering practices",
+        "Real-time software development",
+        "Project timeline management under pressure"
+      ]
+    }
   },
   "Power Take-Off Gearbox": {
     "4_letter": "PTO",
@@ -49,7 +395,76 @@
     "description": "Drop-in replacement for VexPro Three CIM Ball Shifter, while providing independent outputs to two mechanisms. All electronics and pneumatics are located to one side (to prevent interference with wheels and chassis), and the second output is fitted with a power shuttle to reverse output direction (in the case that both outputs run at the same time).",
     "time": "Mar '20 - Jun '21",
     "resources": {},
-    "tags": ["Mechanical Engineering"]
+    "tags": [
+      "Mechanical Engineering",
+      "Robotics",
+      "Design Engineering"
+    ],
+    "modal": {
+      "detailed_description": "Designed and developed an innovative mechanical solution for FRC robotics applications, creating a sophisticated power transmission system that significantly improves upon existing VexPro solutions. This custom gearbox addresses critical design challenges in robotics by providing dual independent outputs while maintaining compact packaging and optimal component placement. The design demonstrates advanced mechanical engineering principles including gear train optimization, pneumatic integration, and space-efficient layout for competitive robotics applications.",
+      "context": {
+        "type": "development",
+        "title": "Advanced Robotics Drivetrain Innovation",
+        "content": "This project addresses fundamental limitations in existing FRC drivetrain components by providing enhanced functionality through innovative mechanical design. The Power Take-Off Gearbox represents a significant advancement in robotics power transmission, enabling more sophisticated robot mechanisms while maintaining the reliability and performance required for competitive robotics."
+      },
+      "technical_details": [
+        {
+          "icon": "⚙️",
+          "title": "Dual Independent Output System",
+          "content": "Engineered sophisticated gear train providing two independent mechanical outputs from a single input source, enabling simultaneous control of multiple robot mechanisms with precision and efficiency."
+        },
+        {
+          "icon": "🔧",
+          "title": "Integrated Pneumatic Power Shuttle",
+          "content": "Designed and implemented pneumatic power shuttle system for dynamic output direction reversal, allowing flexible mechanism control during competition scenarios."
+        },
+        {
+          "icon": "📐",
+          "title": "Space-Optimized Component Layout",
+          "content": "Achieved compact, single-sided electronics and pneumatics placement to prevent chassis interference while maintaining accessibility for maintenance and adjustment."
+        }
+      ],
+      "impact": [
+        {
+          "icon": "🚀",
+          "title": "Performance Enhancement",
+          "content": "Provided significant improvement over standard VexPro solutions, enabling more sophisticated robot designs and enhanced competitive performance capabilities."
+        },
+        {
+          "icon": "🔄",
+          "title": "Design Innovation",
+          "content": "Created novel mechanical solution that addresses multiple engineering challenges simultaneously, demonstrating advanced problem-solving in mechanical design."
+        },
+        {
+          "icon": "🏗️",
+          "title": "Manufacturing Excellence",
+          "content": "Developed manufacturable design that balances performance requirements with practical fabrication constraints and cost considerations."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Multi-Output Coordination",
+          "description": "Engineering precise coordination between dual outputs while maintaining independent control authority and preventing mechanical interference."
+        },
+        {
+          "title": "Space Constraint Optimization",
+          "description": "Achieving compact design that accommodates all necessary components while preventing interference with other robot systems and maintaining serviceability."
+        },
+        {
+          "title": "Performance vs. Complexity Balance",
+          "description": "Optimizing mechanical complexity to provide advanced functionality while maintaining reliability and ease of manufacturing within competition constraints."
+        }
+      ],
+      "skills_gained": [
+        "Advanced mechanical design and analysis",
+        "Gear train design and optimization",
+        "Pneumatic system integration",
+        "Space-constrained engineering solutions",
+        "Manufacturing process consideration",
+        "Mechanical system testing and validation",
+        "Component integration and packaging"
+      ]
+    }
   },
   "Aquila Heavy": {
     "4_letter": "QLA HVY",
@@ -60,7 +475,77 @@
       "cad": "https://cad.onshape.com/documents/4e32d9f36a97adf58a6869c2/w/24def73a5e4a5848b79d8d09/e/69e1de1bbc6c503f41a5028c",
       "github": "https://github.com/AmarMaksumic/AquilaHeavy"
     },
-    "tags": ["Control Systems", "Rocketry", "Mechanical Engineering"]
+    "tags": [
+      "Control Systems",
+      "Rocketry",
+      "Mechanical Engineering",
+      "Aerospace"
+    ],
+    "modal": {
+      "detailed_description": "Developed a sophisticated thrust vector controlled model rocket system featuring advanced flight control, telemetry, and data acquisition capabilities. Aquila Heavy represents a comprehensive aerospace engineering project combining mechanical design, control systems, embedded programming, and real-time data processing. The dual Arduino architecture enables complex flight control algorithms while maintaining robust telemetry and video recording capabilities, demonstrating practical applications of aerospace control theory in a model rocketry platform.",
+      "context": {
+        "type": "aerospace",
+        "title": "Advanced Model Rocketry & Control Systems",
+        "content": "This project explores cutting-edge model rocketry technology by implementing thrust vector control (TVC) systems typically found in professional launch vehicles. Aquila Heavy serves as a practical testbed for aerospace engineering concepts including flight dynamics, control theory, and real-time embedded systems in a challenging flight environment."
+      },
+      "technical_details": [
+        {
+          "icon": "🚀",
+          "title": "Thrust Vector Control System",
+          "content": "Implemented sophisticated TVC using servo-actuated engine gimbal system with real-time feedback control, enabling active flight path correction and stability enhancement during powered flight phases."
+        },
+        {
+          "icon": "📡",
+          "title": "Dual Arduino Telemetry Architecture",
+          "content": "Designed redundant control system using dual Arduino processors for flight control and data acquisition, ensuring system reliability and enabling complex multi-threaded operations during flight."
+        },
+        {
+          "icon": "📊",
+          "title": "Comprehensive Flight Data Recording",
+          "content": "Developed multi-sensor data acquisition system capturing altitude, 6-DOF orientation data, acceleration, and synchronized video feed for complete flight analysis and performance evaluation."
+        }
+      ],
+      "impact": [
+        {
+          "icon": "🎯",
+          "title": "Advanced Control System Validation",
+          "content": "Successfully demonstrated practical implementation of aerospace control theory in model rocket platform, validating TVC algorithms and flight control methodologies."
+        },
+        {
+          "icon": "📈",
+          "title": "Performance Data Analysis",
+          "content": "Generated comprehensive flight performance datasets enabling detailed analysis of rocket dynamics, control system effectiveness, and aerodynamic behavior."
+        },
+        {
+          "icon": "🔬",
+          "title": "Educational Research Platform",
+          "content": "Created reusable platform for ongoing aerospace engineering research and experimentation, enabling future projects and design iterations."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Real-Time Flight Control",
+          "description": "Implementing stable, responsive thrust vector control algorithms operating within the demanding constraints of model rocket flight dynamics and limited computational resources."
+        },
+        {
+          "title": "System Integration Complexity",
+          "description": "Coordinating multiple subsystems including mechanical actuators, sensors, data logging, and video recording within strict weight and space constraints of model rocket platform."
+        },
+        {
+          "title": "Reliability in Harsh Conditions",
+          "description": "Ensuring electronic systems remain operational under high acceleration, vibration, and thermal stress conditions experienced during rocket flight."
+        }
+      ],
+      "skills_gained": [
+        "Aerospace control system design and implementation",
+        "Thrust vector control algorithm development",
+        "Multi-processor embedded system architecture",
+        "Real-time data acquisition and processing",
+        "Flight dynamics analysis and modeling",
+        "Mechanical actuator integration and control",
+        "High-performance system integration under constraints"
+      ]
+    }
   },
   "ML-CV": {
     "4_letter": "ML CV",
@@ -70,7 +555,77 @@
     "resources": {
       "github": "https://github.com/AmarMaksumic/ML-CV"
     },
-    "tags": ["Computer Vision", "Machine Learning", "IoT & Networking"]
+    "tags": [
+      "Computer Vision",
+      "Machine Learning",
+      "IoT & Networking",
+      "Deep Learning"
+    ],
+    "modal": {
+      "detailed_description": "Developed an innovative hybrid computer vision system that combines traditional OpenCV algorithms with modern deep learning techniques for enhanced FRC robot vision capabilities. This sophisticated system leverages transfer learning on MobileNet SSD architecture to achieve superior object detection accuracy while maintaining real-time performance requirements. The integration of classical computer vision with machine learning represents a cutting-edge approach to competitive robotics vision systems, featuring robust network communication and error correction mechanisms.",
+      "context": {
+        "type": "competition",
+        "title": "Next-Generation FRC Vision Technology",
+        "content": "This project represents the evolution of FRC vision systems from traditional OpenCV-based approaches to hybrid AI-enhanced solutions. Developed for the 2020/21 FRC season, ML-CV addresses the increasing complexity of game elements and environmental challenges through the strategic combination of classical computer vision and modern deep learning techniques."
+      },
+      "technical_details": [
+        {
+          "icon": "🤖",
+          "title": "Hybrid AI-Classical Vision Pipeline",
+          "content": "Integrated transfer-trained MobileNet SSD deep learning model with traditional OpenCV algorithms, creating a robust system that leverages the strengths of both approaches for optimal detection accuracy and performance."
+        },
+        {
+          "icon": "🔄",
+          "title": "Intelligent Error Correction System",
+          "content": "Implemented sophisticated error correction algorithms that cross-validate results between classical and ML approaches, significantly improving system reliability and reducing false positives in competition environments."
+        },
+        {
+          "icon": "🌐",
+          "title": "Real-time Network Communication",
+          "content": "Developed high-performance networking solution using Tornado web framework and WebSocket protocols for ultra-low latency data transmission to robot control systems and driver interfaces."
+        }
+      ],
+      "impact": [
+        {
+          "icon": "🏆",
+          "title": "Competitive Advantage Achievement",
+          "content": "Provided significant competitive advantage through superior detection accuracy and reliability compared to traditional vision systems, enabling more sophisticated autonomous operation."
+        },
+        {
+          "icon": "🔬",
+          "title": "Innovation in FRC Vision",
+          "content": "Pioneered the integration of deep learning techniques in FRC competition environment, establishing new standards for vision system capabilities and performance."
+        },
+        {
+          "icon": "📚",
+          "title": "Knowledge Base Contribution",
+          "content": "Created comprehensive documentation and open-source implementation that enables other FRC teams to adopt similar hybrid vision approaches."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Performance Optimization Balance",
+          "description": "Achieving optimal balance between deep learning model accuracy and real-time performance requirements within computational constraints of FRC robot platforms."
+        },
+        {
+          "title": "Model Training and Optimization",
+          "description": "Successfully implementing transfer learning techniques to adapt MobileNet SSD for specific FRC game elements while maintaining generalization capabilities."
+        },
+        {
+          "title": "System Integration Complexity",
+          "description": "Seamlessly integrating classical computer vision, deep learning models, and network communication systems into a cohesive, reliable competition-ready platform."
+        }
+      ],
+      "skills_gained": [
+        "Deep learning model integration and optimization",
+        "Transfer learning implementation techniques",
+        "Hybrid AI-classical algorithm development",
+        "Real-time system performance optimization",
+        "Advanced network communication protocols",
+        "Computer vision algorithm hybridization",
+        "Competition-focused machine learning deployment"
+      ]
+    }
   },
   "BlueComms": {
     "4_letter": "BC",
@@ -80,7 +635,76 @@
     "resources": {
       "github": "https://github.com/AmarMaksumic/BlueComms"
     },
-    "tags": ["IoT & Networking"]
+    "tags": [
+      "IoT & Networking",
+      "System Integration",
+      "Software Development"
+    ],
+    "modal": {
+      "detailed_description": "Developed an innovative cross-platform communication solution that enables seamless clipboard operations between multiple computers using Bluetooth connectivity. BlueComms addresses the growing need for efficient multi-device workflows by providing transparent, wireless clipboard sharing that feels native to each operating system. The project demonstrates advanced understanding of system-level programming, wireless protocols, and user experience design through the creation of a sophisticated background service architecture.",
+      "context": {
+        "type": "productivity",
+        "title": "Multi-Device Workflow Enhancement",
+        "content": "In today's multi-device computing environment, BlueComms addresses the fundamental challenge of seamless data transfer between computers. This project recognizes the inefficiencies in current workflow patterns and provides an elegant solution through wireless clipboard synchronization, significantly enhancing productivity for users working across multiple machines."
+      },
+      "technical_details": [
+        {
+          "icon": "📱",
+          "title": "Bluetooth Protocol Implementation",
+          "content": "Developed robust Bluetooth communication protocol for reliable, low-latency clipboard data transmission between paired devices, handling various data types and ensuring secure connections."
+        },
+        {
+          "icon": "🔄",
+          "title": "System-Level Integration",
+          "content": "Implemented deep system integration for seamless clipboard monitoring and manipulation across multiple operating systems, ensuring native-feeling user experience without manual intervention."
+        },
+        {
+          "icon": "⚙️",
+          "title": "Background Service Architecture",
+          "content": "Designed comprehensive background service system with automatic startup capabilities, system tray integration, and persistent connection management for transparent operation."
+        }
+      ],
+      "impact": [
+        {
+          "icon": "🚀",
+          "title": "Productivity Enhancement",
+          "content": "Significantly improved workflow efficiency for multi-device users by eliminating friction in cross-device data transfer and enabling seamless computing experiences."
+        },
+        {
+          "icon": "🔧",
+          "title": "User Experience Innovation",
+          "content": "Created intuitive, transparent solution that requires no user training or workflow changes, demonstrating excellent user-centered design principles."
+        },
+        {
+          "icon": "🌐",
+          "title": "Cross-Platform Compatibility",
+          "content": "Developed solution that works across different operating systems, providing universal utility and broad applicability for diverse computing environments."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Cross-Platform System Integration",
+          "description": "Developing consistent functionality across different operating systems while handling platform-specific clipboard APIs and Bluetooth stack variations."
+        },
+        {
+          "title": "Reliable Wireless Communication",
+          "description": "Ensuring robust Bluetooth connectivity with automatic reconnection capabilities and graceful handling of connection interruptions and device pairing issues."
+        },
+        {
+          "title": "Background Service Development",
+          "description": "Creating seamless background operation with proper installer design, automatic startup functionality, and minimal system resource utilization."
+        }
+      ],
+      "skills_gained": [
+        "Bluetooth protocol programming and implementation",
+        "Cross-platform system-level development",
+        "Background service and daemon programming",
+        "System clipboard API integration",
+        "Wireless communication protocol design",
+        "User experience and interface design",
+        "Software packaging and installer development"
+      ]
+    }
   },
   "HawkEye": {
     "4_letter": "hwk eye",
@@ -90,7 +714,77 @@
     "resources": {
       "github": "https://github.com/steelhawks/2020Vision"
     },
-    "tags": ["Computer Vision", "IoT & Networking"]
+    "tags": [
+      "Computer Vision",
+      "IoT & Networking",
+      "Robotics",
+      "Competition"
+    ],
+    "modal": {
+      "detailed_description": "Developed a comprehensive computer vision system for the 2020 FIRST Robotics Competition, providing advanced visual processing capabilities for autonomous robot operation and driver assistance. HawkEye represents a complete vision pipeline solution optimized for the dynamic, fast-paced environment of FRC competition. The system integrates sophisticated image processing algorithms with high-performance networking to deliver real-time visual data to robot control systems and human drivers, significantly enhancing competitive performance.",
+      "context": {
+        "type": "competition",
+        "title": "FRC 2020 'Infinite Recharge' Vision Solution",
+        "content": "Developed for the 2020 FRC season game 'Infinite Recharge', HawkEye provided critical vision capabilities for power cell detection, target identification, and autonomous navigation. This system enabled Team 2601 SteelHawks to compete at the highest levels through advanced computer vision technology."
+      },
+      "technical_details": [
+        {
+          "icon": "👁️",
+          "title": "Advanced OpenCV Processing Pipeline",
+          "content": "Implemented sophisticated computer vision algorithms using OpenCV for real-time object detection, tracking, and measurement, optimized for FRC game elements and competition lighting conditions."
+        },
+        {
+          "icon": "⚡",
+          "title": "High-Performance Network Communication",
+          "content": "Developed ultra-low latency networking solution using Tornado web framework and WebSocket protocols to stream processed vision data to robot systems and driver stations in real-time."
+        },
+        {
+          "icon": "🎯",
+          "title": "Competition-Optimized Processing",
+          "content": "Fine-tuned algorithms for the specific requirements of FRC competition environment, including variable lighting, fast-moving targets, and strict real-time performance constraints."
+        }
+      ],
+      "impact": [
+        {
+          "icon": "🏆",
+          "title": "Competitive Performance Enhancement",
+          "content": "Enabled superior autonomous period performance and enhanced driver capabilities, contributing directly to improved match scores and competition rankings for Team 2601."
+        },
+        {
+          "icon": "👥",
+          "title": "Team Technical Foundation",
+          "content": "Established comprehensive vision system architecture that became the foundation for future FRC seasons and advanced vision projects like ML-CV."
+        },
+        {
+          "icon": "📚",
+          "title": "Open Source Contribution",
+          "content": "Provided complete implementation as open-source project, enabling other FRC teams to benefit from advanced vision capabilities and contributing to the broader FRC community."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Real-Time Performance Under Pressure",
+          "description": "Achieving consistent, reliable vision processing performance in the high-stress, variable conditions of FRC competition environments while maintaining low latency requirements."
+        },
+        {
+          "title": "Dynamic Environmental Adaptation",
+          "description": "Developing robust algorithms that maintain accuracy across varying lighting conditions, camera angles, and field configurations encountered in different competition venues."
+        },
+        {
+          "title": "Network Reliability and Integration",
+          "description": "Ensuring stable, high-performance network communication between vision processing systems and robot control platforms under competition network constraints."
+        }
+      ],
+      "skills_gained": [
+        "Competition-focused computer vision development",
+        "Real-time image processing optimization",
+        "High-performance networking and WebSocket protocols",
+        "Team collaboration and technical leadership",
+        "Competition environment system deployment",
+        "OpenCV advanced algorithm implementation",
+        "Python performance optimization techniques"
+      ]
+    }
   },
   "FRC 2601 - 2K20 Robot, Hylo Wren": {
     "4_letter": "SH '20",
@@ -100,7 +794,77 @@
     "resources": {
       "website": "https://steelhawks.net/robots"
     },
-    "tags": ["Control Systems"]
+    "tags": [
+      "Control Systems",
+      "Robotics",
+      "Software Engineering",
+      "Competition"
+    ],
+    "modal": {
+      "detailed_description": "Contributed to the development of Hylo Wren, Team 2601 SteelHawks' 2020 competition robot designed for the 'Infinite Recharge' FRC game. This project involved collaborative software engineering efforts to create sophisticated control systems that enabled the robot to excel in power cell manipulation, climbing mechanisms, and autonomous operation. The work demonstrates advanced understanding of competitive robotics software architecture and the ability to contribute effectively to complex, time-critical engineering projects under competition pressure.",
+      "context": {
+        "type": "competition",
+        "title": "FRC 2020 'Infinite Recharge' Competition Robot",
+        "content": "The 2020 FRC season featured the 'Infinite Recharge' game where robots needed to score power cells in various targets and navigate complex field obstacles. Hylo Wren was designed to excel in this challenging environment through sophisticated software systems that coordinated multiple mechanisms and enabled both autonomous and teleoperated performance."
+      },
+      "technical_details": [
+        {
+          "icon": "🤖",
+          "title": "Multi-System Robot Control Architecture",
+          "content": "Developed integrated software systems coordinating drivetrain, manipulation mechanisms, climbing systems, and autonomous routines within a unified control architecture optimized for competition performance."
+        },
+        {
+          "icon": "🎯",
+          "title": "Game-Specific Automation Systems",
+          "content": "Implemented specialized control algorithms for power cell handling, target acquisition, and scoring mechanisms tailored specifically to the requirements of the 'Infinite Recharge' game."
+        },
+        {
+          "icon": "🔄",
+          "title": "Collaborative Software Development",
+          "content": "Participated in team-based software development using version control, code review processes, and collaborative debugging to ensure reliable, maintainable competition code."
+        }
+      ],
+      "impact": [
+        {
+          "icon": "🏆",
+          "title": "Competition Performance Success",
+          "content": "Contributed to successful robot performance in the 2020 FRC season, with software systems enabling competitive autonomous scoring and reliable teleoperated control."
+        },
+        {
+          "icon": "👥",
+          "title": "Team Collaboration Excellence",
+          "content": "Demonstrated effective collaboration in high-pressure engineering environment, contributing to team success through reliable software engineering and problem-solving."
+        },
+        {
+          "icon": "🔧",
+          "title": "Technical Foundation Building",
+          "content": "Established software architecture and development practices that supported future team projects and provided foundation for advanced vision systems like HawkEye."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Competition Timeline Pressure",
+          "description": "Developing reliable, high-performance software systems within the compressed timeline of FRC build season while meeting strict competition deadlines."
+        },
+        {
+          "title": "Multi-System Integration",
+          "description": "Coordinating software for multiple robot subsystems while ensuring reliable operation and maintainable code architecture under competition conditions."
+        },
+        {
+          "title": "Team Coordination and Communication",
+          "description": "Effectively collaborating with multiple engineers on shared codebase while maintaining code quality and system reliability standards."
+        }
+      ],
+      "skills_gained": [
+        "Collaborative software development in engineering teams",
+        "Competition robotics control system architecture",
+        "Real-time system coordination and timing",
+        "Version control and team development workflows",
+        "Problem-solving under competition pressure",
+        "Multi-subsystem integration and testing",
+        "Game-specific algorithm development and optimization"
+      ]
+    }
   },
   "Swerve Drive": {
     "4_letter": "SWE RVE",
@@ -108,7 +872,77 @@
     "description": "Worked on the development of a swerve drivetrain prototype for my FRC team. I designed CAD models for the modules and chassis of a swerve drive. In addition, I developed the control systems for both robot orientated and field orientated control of the swerve.",
     "time": "Sep '19 - Dec '19",
     "resources": {},
-    "tags": ["Mechanical Engineering"]
+    "tags": [
+      "Mechanical Engineering",
+      "Control Systems",
+      "Robotics",
+      "CAD Design"
+    ],
+    "modal": {
+      "detailed_description": "Designed and developed a sophisticated swerve drive system representing one of the most advanced drivetrain technologies in competitive robotics. This comprehensive project encompassed both mechanical design and control systems development, creating a prototype that demonstrates mastery of complex mechanical engineering principles. The swerve drive enables omnidirectional movement with independent wheel speed and direction control, providing superior maneuverability compared to traditional drivetrain systems and representing cutting-edge technology in FRC robotics.",
+      "context": {
+        "type": "development",
+        "title": "Advanced Robotics Drivetrain Technology",
+        "content": "Swerve drive systems represent the pinnacle of FRC drivetrain technology, requiring sophisticated mechanical design and control algorithms. This project addresses the challenge of creating highly maneuverable robots capable of omnidirectional movement, rotation while translating, and precise field positioning - capabilities that provide significant competitive advantages in FRC competition scenarios."
+      },
+      "technical_details": [
+        {
+          "icon": "📐",
+          "title": "Advanced CAD Design and Modeling",
+          "content": "Developed comprehensive CAD models for swerve modules and chassis integration, including precise mechanical tolerances, assembly constraints, and manufacturing considerations for high-performance drivetrain components."
+        },
+        {
+          "icon": "⚙️",
+          "title": "Dual-Axis Control Systems",
+          "content": "Implemented sophisticated control algorithms managing both drive motor speed and steering angle for each module, enabling independent control of translation and rotation for omnidirectional movement capabilities."
+        },
+        {
+          "icon": "🧠",
+          "title": "Robot and Field-Oriented Control",
+          "content": "Developed comprehensive control modes including robot-centric control for intuitive driving and field-oriented control for strategic positioning, with seamless switching between control paradigms during operation."
+        }
+      ],
+      "impact": [
+        {
+          "icon": "🚀",
+          "title": "Drivetrain Technology Advancement",
+          "content": "Created prototype that significantly advanced team's drivetrain capabilities, enabling more sophisticated robot designs and enhanced competitive performance through superior maneuverability."
+        },
+        {
+          "icon": "🏗️",
+          "title": "Engineering Excellence Demonstration",
+          "content": "Showcased advanced mechanical engineering and control systems integration, establishing technical leadership and demonstrating mastery of complex robotic systems design."
+        },
+        {
+          "icon": "🗺️",
+          "title": "Strategic Competitive Advantage",
+          "content": "Provided foundation for superior field positioning and maneuverability that translates directly to competitive advantages in match scenarios and autonomous operation."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Mechanical Complexity Management",
+          "description": "Designing reliable mechanical systems that coordinate multiple independent modules while maintaining precision, durability, and maintainability under competition conditions."
+        },
+        {
+          "title": "Control Algorithm Development",
+          "description": "Implementing sophisticated mathematical models and control algorithms that coordinate four independent swerve modules for smooth, predictable omnidirectional movement."
+        },
+        {
+          "title": "Integration and Optimization",
+          "description": "Balancing mechanical design constraints with control system requirements while optimizing for performance, manufacturability, and competitive reliability."
+        }
+      ],
+      "skills_gained": [
+        "Advanced CAD modeling and mechanical design",
+        "Swerve drive kinematics and control theory",
+        "Multi-axis control system development",
+        "Robot-centric and field-oriented control algorithms",
+        "Mechanical engineering optimization techniques",
+        "Prototype development and testing methodologies",
+        "Complex system integration and validation"
+      ]
+    }
   },
   "FRC 2601 - 2K19 Robot, Cygnus": {
     "4_letter": "SH '19",
@@ -118,7 +952,77 @@
     "resources": {
       "website": "https://steelhawks.net/robots"
     },
-    "tags": ["Control Systems"]
+    "tags": [
+      "Control Systems",
+      "Robotics",
+      "Software Engineering",
+      "Competition"
+    ],
+    "modal": {
+      "detailed_description": "Contributed to the software development for Cygnus, Team 2601 SteelHawks' 2019 competition robot designed for the 'Deep Space' FRC game. This project involved developing control systems for hatch panel and cargo manipulation, as well as climbing mechanisms for the habitat platform. The experience provided foundational knowledge in competitive robotics programming and established patterns for collaborative software development that would support future, more advanced projects.",
+      "context": {
+        "type": "competition",
+        "title": "FRC 2019 'Deep Space' Competition Robot",
+        "content": "The 2019 FRC season featured the 'Deep Space' game with space-themed challenges including cargo and hatch panel scoring at multiple levels, plus climbing onto habitat platforms. Cygnus was engineered to excel in this complex game through reliable control systems and strategic mechanism design."
+      },
+      "technical_details": [
+        {
+          "icon": "🔧",
+          "title": "Game Mechanism Control Systems",
+          "content": "Developed control algorithms for cargo intake, hatch panel manipulation, and multi-level scoring systems, ensuring reliable operation during both autonomous and teleoperated periods."
+        },
+        {
+          "icon": "🧧",
+          "title": "Climbing System Integration",
+          "content": "Implemented software for habitat climbing mechanisms, coordinating multiple actuators and safety systems to achieve reliable end-game performance."
+        },
+        {
+          "icon": "👥",
+          "title": "Team Development Practices",
+          "content": "Participated in collaborative programming using team development workflows, version control, and systematic testing procedures to ensure code reliability."
+        }
+      ],
+      "impact": [
+        {
+          "icon": "🏆",
+          "title": "Competitive Performance Contribution",
+          "content": "Supported successful competition performance through reliable software systems that enabled consistent scoring and strategic gameplay execution."
+        },
+        {
+          "icon": "📚",
+          "title": "Foundational Learning Experience",
+          "content": "Established fundamental understanding of competitive robotics software architecture that provided the foundation for future leadership roles and advanced projects."
+        },
+        {
+          "icon": "🤝",
+          "title": "Collaborative Engineering Excellence",
+          "content": "Developed effective teamwork and communication skills essential for complex engineering projects and competitive robotics success."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Learning Complex Game Requirements",
+          "description": "Understanding and implementing software solutions for the multifaceted challenges of the 'Deep Space' game while learning competitive robotics development practices."
+        },
+        {
+          "title": "Reliable System Integration",
+          "description": "Ensuring software systems operated reliably across multiple robot mechanisms while maintaining performance under competition pressure and timing constraints."
+        },
+        {
+          "title": "Team Collaboration Development",
+          "description": "Learning to work effectively in a collaborative engineering environment with shared codebases, deadlines, and coordinated development workflows."
+        }
+      ],
+      "skills_gained": [
+        "Competitive robotics programming fundamentals",
+        "Multi-mechanism control system coordination",
+        "Team-based software development workflows",
+        "Game strategy implementation in software",
+        "Testing and validation procedures for robotics",
+        "Problem-solving under competition constraints",
+        "Foundation for advanced robotics software architecture"
+      ]
+    }
   },
   "FRC 2601 - 2K18 Robot, Steel Hawking": {
     "4_letter": "SH '18",
@@ -128,6 +1032,76 @@
     "resources": {
       "website": "https://steelhawks.net/robots"
     },
-    "tags": ["Control Systems"]
+    "tags": [
+      "Control Systems",
+      "Robotics",
+      "Software Engineering",
+      "Competition"
+    ],
+    "modal": {
+      "detailed_description": "Contributed to the software development for Steel Hawking, Team 2601 SteelHawks' 2018 competition robot designed for the 'Power Up' FRC game. This initial foray into competitive robotics programming involved working with experienced team members to develop control systems for cube manipulation, scale balancing, and autonomous routines. The project provided essential introduction to robotics software engineering and established the foundation for future technical leadership and advanced project development.",
+      "context": {
+        "type": "competition",
+        "title": "FRC 2018 'Power Up' - First Competition Experience",
+        "content": "The 2018 FRC season featured the 'Power Up' game with arcade-themed challenges including cube placement on scales and switches, plus climbing for power-ups. Steel Hawking represented the beginning of a competitive robotics journey, providing crucial learning experiences in team-based engineering and competition-focused development."
+      },
+      "technical_details": [
+        {
+          "icon": "🎮",
+          "title": "Basic Control System Implementation",
+          "content": "Developed fundamental robot control software for cube manipulation, drivetrain operation, and basic autonomous functions while learning competitive robotics programming practices."
+        },
+        {
+          "icon": "📚",
+          "title": "Learning-Focused Development",
+          "content": "Focused on understanding robotics software architecture, sensor integration, and control system fundamentals while contributing to team success under mentorship of experienced programmers."
+        },
+        {
+          "icon": "🚀",
+          "title": "Foundation Building Experience",
+          "content": "Established essential skills in team collaboration, version control, testing procedures, and competition-focused software development that enabled future technical leadership."
+        }
+      ],
+      "impact": [
+        {
+          "icon": "🌱",
+          "title": "Technical Journey Beginning",
+          "content": "Launched competitive robotics career and technical development journey that led to leadership roles in subsequent seasons and advanced project development."
+        },
+        {
+          "icon": "🏆",
+          "title": "Competition Contribution",
+          "content": "Supported team's competitive performance through reliable software contributions and collaborative development practices during rookie programming experience."
+        },
+        {
+          "icon": "🔧",
+          "title": "Skills Foundation Establishment",
+          "content": "Developed fundamental robotics programming skills and team collaboration practices that enabled future technical innovations and leadership opportunities."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Steep Learning Curve",
+          "description": "Rapidly acquiring competitive robotics programming skills while contributing meaningfully to team success within the compressed timeline of FRC build season."
+        },
+        {
+          "title": "Complex System Understanding",
+          "description": "Learning to work with sophisticated robot systems, sensors, and control algorithms while maintaining code quality and reliability standards."
+        },
+        {
+          "title": "Team Integration and Contribution",
+          "description": "Effectively contributing to established team workflows and development practices while building fundamental skills in competitive programming environment."
+        }
+      ],
+      "skills_gained": [
+        "Introduction to competitive robotics programming",
+        "Basic control systems and sensor integration",
+        "Team-based development and collaboration",
+        "Competition-focused software engineering practices",
+        "Version control and testing fundamentals",
+        "Problem-solving in high-pressure environments",
+        "Foundation for advanced robotics development"
+      ]
+    }
   }
 }

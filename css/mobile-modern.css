@@ -1,0 +1,342 @@
+/* Mobile Modern Styles */
+
+.mobile-hero {
+  background: linear-gradient(135deg, var(--primary-orange) 0%, var(--accent-orange) 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-hero-content {
+  padding: var(--space-xl) var(--space-md);
+  text-align: center;
+  width: 100%;
+}
+
+.mobile-image-container {
+  margin-bottom: var(--space-xl);
+}
+
+.mobile-hero-image {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  border: 6px solid rgba(255, 255, 255, 0.3);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.mobile-text-content {
+  color: var(--white);
+}
+
+.mobile-greeting {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: var(--space-sm);
+  opacity: 0.9;
+}
+
+.mobile-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--space-md);
+}
+
+.mobile-highlight {
+  background: linear-gradient(45deg, var(--white), #f1f5f9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mobile-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  opacity: 0.9;
+  margin-bottom: var(--space-xl);
+  padding: 0 var(--space-md);
+}
+
+.mobile-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+  padding: 0 var(--space-md);
+}
+
+.mobile-stat {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: var(--border-radius);
+  padding: var(--space-lg) var(--space-md);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.mobile-stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: var(--space-xs);
+}
+
+.mobile-stat-label {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+/* Mobile Bio Section */
+.mobile-bio {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+}
+
+.mobile-bio-content {
+  padding: var(--space-3xl) var(--space-lg);
+  text-align: center;
+}
+
+.mobile-bio-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: var(--space-lg);
+}
+
+.mobile-bio-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--space-xl);
+}
+
+.mobile-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.mobile-highlight-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--white);
+  padding: var(--space-lg);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobile-highlight-item i {
+  font-size: 1.5rem;
+  color: var(--primary-orange);
+  background: rgba(255, 255, 255, 0.1);
+  padding: var(--space-md);
+  border-radius: var(--border-radius-full);
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-highlight-item span {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.mobile-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  align-items: stretch;
+}
+
+.btn-mobile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-lg) var(--space-xl);
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  min-height: 56px;
+}
+
+.btn-mobile.primary {
+  background: var(--white);
+  color: var(--primary-blue);
+  border-color: var(--white);
+}
+
+.btn-mobile.primary:hover {
+  background: transparent;
+  color: var(--white);
+  border-color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-mobile.outline {
+  background: transparent;
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-mobile.outline:hover {
+  background: var(--white);
+  color: var(--primary-blue);
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* Enhanced contact section for mobile */
+.contact-section {
+  background: linear-gradient(135deg, var(--neutral-900) 0%, var(--neutral-800) 100%);
+  padding: var(--space-3xl) var(--space-lg) !important;
+}
+
+.contact-section .content {
+  padding: 0 !important;
+}
+
+.contact-section .t4,
+.contact-section .t3 {
+  padding: var(--space-sm) 0 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .mobile-hero-image {
+    width: 220px;
+    height: 220px;
+  }
+
+  .mobile-greeting {
+    font-size: 2rem;
+  }
+
+  .mobile-title {
+    font-size: 2.2rem;
+  }
+
+  .mobile-subtitle {
+    font-size: 1rem;
+    padding: 0 var(--space-sm);
+  }
+
+  .mobile-stats {
+    gap: var(--space-md);
+    padding: 0 var(--space-sm);
+  }
+
+  .mobile-stat {
+    padding: var(--space-md) var(--space-sm);
+  }
+
+  .mobile-stat-number {
+    font-size: 1.5rem;
+  }
+
+  .mobile-highlights {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+
+  .mobile-bio-content {
+    padding: var(--space-xl) var(--space-md);
+  }
+
+  .mobile-bio-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .mobile-hero-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .mobile-greeting {
+    font-size: 1.8rem;
+  }
+
+  .mobile-title {
+    font-size: 2rem;
+  }
+
+  .mobile-stats {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+
+  .mobile-stat {
+    padding: var(--space-sm);
+  }
+}
+
+/* Animation delays for mobile elements */
+.mobile-hero-image {
+  animation-delay: 0.3s;
+}
+
+.mobile-greeting {
+  animation: fadeInUp 0.8s ease-out 0.5s both;
+}
+
+.mobile-title {
+  animation: fadeInUp 0.8s ease-out 0.7s both;
+}
+
+.mobile-subtitle {
+  animation: fadeInUp 0.8s ease-out 0.9s both;
+}
+
+.mobile-stats {
+  animation: fadeInUp 0.8s ease-out 1.1s both;
+}
+
+.mobile-bio-title {
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.mobile-bio-text {
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.mobile-highlights {
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.mobile-actions {
+  animation: fadeInUp 0.8s ease-out 0.6s both;
+}

@@ -1,4 +1,40 @@
-<link rel='stylesheet' type='text/css' href='css/navbar.css'>
+<link rel='stylesheet' type='text/css' href='css/navbar-modern.css'>
+
+<nav class='navbar-modern topnav' id='navbar'>
+  <div class='navbar-content'>
+    <div class='navbar-brand'>
+      <span class='brand-text'>Amar Maksumić</span>
+    </div>
+    <div class='navbar-links'>
+      <a id='tab_1' class='nav-link active' onclick='switchTab(1)'>
+        <i class='fas fa-home'></i>
+        <span>Home</span>
+      </a>
+      <a id='tab_2' class='nav-link' onclick='switchTab(2)'>
+        <i class='fas fa-graduation-cap'></i>
+        <span>Education</span>
+      </a>
+      <a id='tab_3' class='nav-link' onclick='switchTab(3)'>
+        <i class='fas fa-briefcase'></i>
+        <span>Experience</span>
+      </a>
+      <a id='tab_4' class='nav-link' onclick='switchTab(4)'>
+        <i class='fas fa-code'></i>
+        <span>Projects</span>
+      </a>
+    </div>
+    <div class='navbar-toggle' onclick='nav_menu()'>
+      <span class='toggle-line'></span>
+      <span class='toggle-line'></span>
+      <span class='toggle-line'></span>
+    </div>
+  </div>
+  <div class='progress-container'>
+    <div class='progress-bar' id='myBar'></div>
+  </div>
+</nav>
+
+<script src='js/navbar.js'></script>heet' type='text/css' href='css/navbar.css'>
 
 <div class='topnav' id='navbar'>
   <a id='tab_1' onclick='switchTab(1)'>Home</a>
@@ -13,5 +49,3 @@
 <div class='progress-container'>
   <div class='progress-bar' id='myBar'></div>
 </div>
-
-<script src='js/navbar.js'></script>

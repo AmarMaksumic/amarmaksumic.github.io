@@ -1,0 +1,689 @@
+/* Modern Design System for Portfolio */
+
+:root {
+  /* Color Palette - More sophisticated and modern */
+  --primary-blue: #2563eb;
+  --primary-orange: #f97316;
+  --dark-blue: #1e40af;
+  --light-blue: #3b82f6;
+  --accent-orange: #ea580c;
+  --neutral-900: #111827;
+  --neutral-800: #1f2937;
+  --neutral-700: #374151;
+  --neutral-600: #4b5563;
+  --neutral-400: #9ca3af;
+  --neutral-200: #e5e7eb;
+  --neutral-100: #f3f4f6;
+  --neutral-50: #f9fafb;
+  --white: #ffffff;
+
+  /* Typography */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Inter', sans-serif;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  /* Borders */
+  --border-radius: 0.5rem;
+  --border-radius-lg: 1rem;
+  --border-radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 300ms ease-in-out;
+  --transition-slow: 500ms ease-in-out;
+}
+
+/* Modern Typography */
+body {
+  font-family: var(--font-primary);
+  line-height: 1.6;
+  color: var(--neutral-800);
+  background: linear-gradient(135deg, var(--neutral-50) 0%, var(--white) 100%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+
+/* Modern Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="0.5" fill="white" fill-opacity="0.05"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: var(--space-md);
+  line-height: 1.1;
+}
+
+.hero-text .subtitle {
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--space-xl);
+  font-weight: 400;
+}
+
+.hero-image {
+  position: relative;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-xl);
+  transform: rotate(2deg);
+  transition: transform var(--transition-normal);
+}
+
+.hero-image img:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+/* Modern Card Design */
+.card-modern {
+  background: var(--white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-xl);
+  transition: all var(--transition-normal);
+  border: 1px solid var(--neutral-200);
+}
+
+.card-modern:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+}
+
+/* Modern Button */
+.btn-modern {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-xl);
+  background: var(--primary-orange);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-modern:hover {
+  background: var(--accent-orange);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-modern.outline {
+  background: transparent;
+  color: var(--primary-blue);
+  border: 2px solid var(--primary-blue);
+}
+
+.btn-modern.outline:hover {
+  background: var(--primary-blue);
+  color: var(--white);
+}
+
+/* Modern Navigation */
+.nav-modern {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--neutral-200);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: var(--space-md) 0;
+}
+
+.nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-xl);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--neutral-700);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+  position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--primary-blue);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-orange);
+  transition: width var(--transition-normal);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* Modern Grid System */
+.grid {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.grid.cols-1 {
+  grid-template-columns: 1fr;
+}
+
+.grid.cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid.cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Modern Section Spacing */
+.section-modern {
+  padding: var(--space-3xl) 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+/* Footer styling to match other sections */
+#footer {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 2rem !important;
+  box-sizing: border-box !important;
+  text-align: center;
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%) !important;
+  color: white !important;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer text styling */
+#footer h1,
+#footer h2,
+#footer h3,
+#footer h4,
+#footer h5,
+#footer h6,
+#footer p,
+#footer div,
+#footer span,
+#footer a {
+  color: white !important;
+}
+
+#footer a:hover {
+  color: var(--primary-orange) !important;
+  transition: color 0.3s ease;
+}
+
+/* Fix nested containers in footer */
+#footer * {
+  background: transparent !important;
+}
+
+#footer .section {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+#footer .content {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Ensure footer container matches page structure */
+#page_cont {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-stats {
+    justify-content: center;
+  }
+
+  .image-container {
+    max-width: 250px;
+  }
+
+  .section {
+    padding: 2rem 1rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--space-xl);
+  }
+
+  .grid.cols-2,
+  .grid.cols-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-content {
+    padding: 0 var(--space-md);
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --neutral-900: #f9fafb;
+    --neutral-800: #f3f4f6;
+    --neutral-700: #e5e7eb;
+    --neutral-600: #9ca3af;
+    --neutral-400: #6b7280;
+    --neutral-200: #374151;
+    --neutral-100: #1f2937;
+    --neutral-50: #111827;
+    --white: #0f172a;
+  }
+}
+
+/* Layout fixes */
+#cont {
+  position: relative;
+  min-height: calc(100vh - 80px);
+  padding-top: 80px;
+  /* Space for fixed navbar */
+}
+
+/* Override old CSS that might cause issues */
+.section {
+  overflow: visible !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  height: auto !important;
+  padding: 1rem 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Ensure consistent container structure */
+.section>.content {
+  padding: 0 2rem !important;
+  margin: 0 auto !important;
+  max-width: 1200px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Ensure content within sections is properly contained */
+.section .content {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 2rem !important;
+  box-sizing: border-box !important;
+}
+
+/* Fix any potential overflow issues */
+.section * {
+  box-sizing: border-box !important;
+  max-width: 100% !important;
+}
+
+.section p,
+.section div,
+.section h1,
+.section h2,
+.section h3,
+.section h4 {
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
+.section.hero-modern {
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100% !important;
+  max-width: 1200px;
+  overflow: visible !important;
+}
+
+/* Ensure content is visible and properly layered */
+.hero-modern .content {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 10 !important;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero-text,
+.hero-title,
+.hero-greeting,
+.hero-subtitle {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 11 !important;
+  color: white !important;
+}
+
+.hero-greeting {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.85) !important;
+  max-width: 600px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-start;
+  margin-top: 3rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-orange) !important;
+  line-height: 1;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8) !important;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.highlight {
+  color: var(--primary-orange) !important;
+}
+
+/* Fix general content visibility */
+.section .content {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 5 !important;
+}
+
+/* Ensure all text content is visible with proper colors */
+.section h1,
+.section h2,
+.section h3,
+.section h4,
+.section h5,
+.section h6,
+.section p,
+.section div,
+.section span {
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 6 !important;
+}
+
+/* Text colors for different section types */
+.section.azure h1,
+.section.azure h2,
+.section.azure h3,
+.section.azure h4,
+.section.azure p,
+.section.azure div,
+.section.azure span,
+.hero-modern h1,
+.hero-modern h2,
+.hero-modern h3,
+.hero-modern h4,
+.hero-modern p,
+.hero-modern div,
+.hero-modern span {
+  color: white !important;
+}
+
+.section.cone h1,
+.section.cone h2,
+.section.cone h3,
+.section.cone h4,
+.section.cone p,
+.section.cone div,
+.section.cone span {
+  color: white !important;
+}
+
+.section.grey h1,
+.section.grey h2,
+.section.grey h3,
+.section.grey h4,
+.section.grey p,
+.section.grey div,
+.section.grey span {
+  color: white !important;
+}
+
+/* Override old color schemes with modern styling */
+.section.azure.hero-modern {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%) !important;
+  color: white !important;
+}
+
+.section.cone {
+  background: linear-gradient(135deg, var(--primary-orange) 0%, #e67e22 100%) !important;
+  color: white !important;
+}
+
+.section.grey {
+  background: linear-gradient(135deg, var(--neutral-700) 0%, var(--neutral-800) 100%) !important;
+  color: white !important;
+}
+
+/* Ensure hero section has proper modern styling */
+.hero-modern {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%) !important;
+  color: white !important;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.hero-text {
+  text-align: left;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Bio section styling */
+.bio-section {
+  background: linear-gradient(135deg, var(--primary-orange) 0%, #e67e22 100%) !important;
+  color: white !important;
+  padding: 4rem 0 !important;
+}
+
+/* Fix bio grid layout */
+.bio-grid {
+  display: grid !important;
+  gap: 2rem !important;
+  padding: 0 2rem !important;
+  box-sizing: border-box !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+}
+
+/* Ensure bio content doesn't overflow */
+.bio-main {
+  max-width: 100% !important;
+  overflow: hidden !important;
+  word-wrap: break-word !important;
+}
+
+/* Animation utilities */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
