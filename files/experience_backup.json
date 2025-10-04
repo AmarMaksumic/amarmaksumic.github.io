@@ -2,7 +2,7 @@
   "Amazon Fulfillment Technologies & Robotics": {
     "bg_color": "#FF9900",
     "color": "#232F3E",
-    "image": "img/amazon.jpg",
+    "image": "img/amazon.png",
     "time": "Aug '25 - Present",
     "desc": null,
     "website": "https://www.amazon.com/",
@@ -270,7 +270,7 @@
     "color": "#ffffff",
     "image": "img/steelhawks.svg",
     "time": "Sep '17 - Jul '21",
-    "desc": null,
+    "desc": null,    
     "website": "https://steelhawks.net/#/",
     "positions": [
       {

@@ -1,19 +1,45 @@
 // Enhanced Projects JavaScript with animations, filtering, and modals
 // Updated: 2025-10-03 - Modal Enhancement Debug Version
 
-let allProjects = {};
-let filteredProjects = {};
-let currentFilter = 'all';
-let isGridView = true;
+// Use window object to avoid redeclaration errors
+window.allProjects = window.allProjects || {};
+window.filteredProjects = window.filteredProjects || {};
+window.currentFilter = window.currentFilter || 'all';
+window.isGridView = window.isGridView !== undefined ? window.isGridView : true;
+
+// Flag to prevent modern.js from interfering
+window.enhancedProjectsActive = true;
+
+// Create local references for easier use
+var allProjects = window.allProjects;
+var filteredProjects = window.filteredProjects;
+var currentFilter = window.currentFilter;
+var isGridView = window.isGridView;
 
 $(document).ready(function() {
-  console.log('📁 Enhanced Projects.js loaded - VERSION 2025-10-03 - Modal Debug');
-  console.log('🔥 Starting initialization with modal debugging enabled');
-  loadProjects();
-  setupEventListeners();
+  try {
+    console.log('📁 Enhanced Projects.js loaded - jQuery available:', typeof $ !== 'undefined');
+    
+    // Prevent multiple initialization
+    if (window.projectsInitialized) {
+      console.log('📁 Projects already initialized, loading fresh data...');
+      loadProjects();
+      return;
+    }
+    
+    window.projectsInitialized = true;
+    loadProjects();
+    console.log('📁 About to call setupEventListeners...');
+    setupEventListeners();
+    console.log('📁 Setup complete, isGridView initial value:', window.isGridView);
+  } catch (error) {
+    console.error('❌ Error in document ready:', error);
+  }
 });
 
 function setupEventListeners() {
+  console.log('🎯 Setting up event listeners...');
+  
   // Filter buttons
   $(document).on('click', '.filter-btn', function() {
     const filter = $(this).data('filter');
@@ -23,7 +49,10 @@ function setupEventListeners() {
   
   // View toggle
   $(document).on('click', '.view-toggle', function() {
-    isGridView = !isGridView;
+    console.log('🔄 VIEW TOGGLE CLICKED! Button:', $(this).attr('data-view'));
+    console.log('🔄 Before toggle - isGridView:', window.isGridView);
+    window.isGridView = isGridView = !isGridView;
+    console.log('🔄 After toggle - isGridView:', window.isGridView);
     updateViewToggle();
     displayFilteredProjects();
   });
@@ -33,6 +62,8 @@ function setupEventListeners() {
     const searchTerm = $(this).val().toLowerCase();
     searchProjects(searchTerm);
   });
+  
+  console.log('✅ Event listeners set up complete');
   
   // Modal functionality
   $(document).on('click', '.project-card', function() {
@@ -70,8 +101,8 @@ function loadProjects() {
         console.log('🔍 LOAD DEBUG: Technical details exist:', !!firstProject.modal.technical_details);
       }
       
-      allProjects = projects;
-      filteredProjects = projects;
+      window.allProjects = allProjects = projects;
+      window.filteredProjects = filteredProjects = projects;
       displayProjects(projects);
     })
     .catch(error => {
@@ -82,278 +113,29 @@ function loadProjects() {
 
 function displayProjects(projects) {
   console.log('🎨 Rendering enhanced projects...');
+  console.log('� NEW DEBUG VERSION 2 LOADED - TESTING ROUNDED BORDERS!');
+  console.log('�🔍 DEBUG: displayProjects called with', Object.keys(projects).length, 'projects');
+  
+  // Random background selection
+  const backgrounds = ['-1.webp', '1.webp', '2.webp', '3.webp', '4.webp', '5.webp', '6.webp'];
+  const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+  console.log('🎨 Selected random background:', randomBg);
+  console.log('🎨 Full background URL will be:', `img/background/${randomBg}`);
   
   // Create filter buttons
   const allTags = [...new Set(Object.values(projects).flatMap(p => p.tags || []))];
   const categories = ['all', ...allTags];
   
+  // Set random background dynamically
+  const style = document.createElement('style');
+  style.textContent = `
+    .projects-container::before {
+      background-image: url('img/background/${randomBg}') !important;
+    }
+  `;
+  document.head.appendChild(style);
+  
   let html = `
-    <style>
-      .projects-container { 
-        padding: 0; 
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-        min-height: 100vh;
-      }
-      .projects-header { 
-        text-align: center; 
-        padding: 60px 20px 40px; 
-        background: rgba(255,255,255,0.05); 
-        backdrop-filter: blur(10px);
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-      }
-      .projects-title { 
-        font-size: 3rem; 
-        font-weight: 700; 
-        background: linear-gradient(45deg, #fff, #e0e7ff);
-        -webkit-background-clip: text; 
-        -webkit-text-fill-color: transparent;
-        margin-bottom: 15px;
-        text-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      }
-      .projects-subtitle { 
-        font-size: 1.2rem; 
-        color: rgba(255,255,255,0.8); 
-        max-width: 600px; 
-        margin: 0 auto;
-      }
-      
-      .controls-section {
-        padding: 30px 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        flex-wrap: wrap;
-        background: rgba(255,255,255,0.03);
-      }
-      
-      .filter-controls {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      
-      .filter-btn {
-        padding: 8px 16px;
-        border: 2px solid rgba(255,255,255,0.3);
-        background: rgba(255,255,255,0.1);
-        color: white;
-        border-radius: 25px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        font-weight: 500;
-        backdrop-filter: blur(10px);
-      }
-      
-      .filter-btn:hover,
-      .filter-btn.active {
-        background: rgba(255,255,255,0.2);
-        border-color: rgba(255,255,255,0.6);
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-      }
-      
-      .view-controls {
-        display: flex;
-        gap: 8px;
-      }
-      
-      .view-toggle {
-        padding: 8px 12px;
-        background: rgba(255,255,255,0.1);
-        color: white;
-        border: 2px solid rgba(255,255,255,0.3);
-        border-radius: 8px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-      }
-      
-      .view-toggle.active {
-        background: rgba(255,255,255,0.2);
-        border-color: rgba(255,255,255,0.6);
-      }
-      
-      .search-container {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-      
-      .search-input {
-        padding: 10px 16px;
-        border: 2px solid rgba(255,255,255,0.3);
-        background: rgba(255,255,255,0.1);
-        color: white;
-        border-radius: 25px;
-        outline: none;
-        transition: all 0.3s ease;
-        backdrop-filter: blur(10px);
-        min-width: 250px;
-      }
-      
-      .search-input::placeholder {
-        color: rgba(255,255,255,0.6);
-      }
-      
-      .search-input:focus {
-        border-color: rgba(255,255,255,0.6);
-        background: rgba(255,255,255,0.15);
-      }
-      
-      .projects-content {
-        padding: 40px 20px;
-      }
-      
-      .projects-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-        gap: 30px;
-        max-width: 1400px;
-        margin: 0 auto;
-      }
-      
-      .projects-list {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        max-width: 1000px;
-        margin: 0 auto;
-      }
-      
-      .project-card {
-        background: rgba(255,255,255,0.95);
-        border-radius: 20px;
-        padding: 25px;
-        cursor: pointer;
-        transition: all 0.4s ease;
-        transform-style: preserve-3d;
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255,255,255,0.2);
-        animation: fadeInUp 0.6s ease forwards;
-        opacity: 0;
-      }
-      
-      .project-card:hover {
-        transform: translateY(-10px) rotateX(5deg);
-        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-        background: rgba(255,255,255,0.98);
-      }
-      
-      .project-image {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        border-radius: 15px;
-        margin-bottom: 20px;
-        transition: transform 0.3s ease;
-      }
-      
-      .project-card:hover .project-image {
-        transform: scale(1.05);
-      }
-      
-      .project-title {
-        font-size: 1.4rem;
-        font-weight: 700;
-        color: #2c3e50;
-        margin-bottom: 10px;
-        background: linear-gradient(45deg, #667eea, #764ba2);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      
-      .project-time {
-        color: #7f8c8d;
-        font-weight: 600;
-        margin-bottom: 15px;
-        font-size: 0.9rem;
-      }
-      
-      .project-description {
-        color: #34495e;
-        line-height: 1.6;
-        margin-bottom: 20px;
-        font-size: 0.95rem;
-      }
-      
-      .project-resources {
-        margin: 20px 0;
-      }
-      
-      .resource-link {
-        display: inline-block;
-        margin: 0 8px 8px 0;
-        padding: 8px 16px;
-        background: linear-gradient(45deg, #667eea, #764ba2);
-        color: white;
-        text-decoration: none;
-        border-radius: 25px;
-        font-size: 0.8rem;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        text-transform: uppercase;
-      }
-      
-      .resource-link:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-        background: linear-gradient(45deg, #764ba2, #667eea);
-      }
-      
-      .no-media-button {
-        display: inline-block;
-        margin: 0 8px 8px 0;
-        padding: 8px 16px;
-        background: transparent;
-        color: #999;
-        border: 2px dashed #ddd;
-        border-radius: 25px;
-        font-size: 0.8rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        cursor: default;
-        transition: all 0.3s ease;
-      }
-      
-      .no-media-button:hover {
-        border-color: #ccc;
-        color: #888;
-      }
-      
-      .project-tags {
-        margin-top: 15px;
-      }
-      
-      .tag {
-        display: inline-block;
-        background: linear-gradient(45deg, #f093fb, #f5576c);
-        color: white;
-        padding: 4px 12px;
-        border-radius: 20px;
-        font-size: 0.75rem;
-        margin: 0 6px 6px 0;
-        font-weight: 500;
-      }
-      
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      
-      .project-card:nth-child(1) { animation-delay: 0.1s; }
-      .project-card:nth-child(2) { animation-delay: 0.2s; }
-      .project-card:nth-child(3) { animation-delay: 0.3s; }
-      .project-card:nth-child(4) { animation-delay: 0.4s; }
-      .project-card:nth-child(5) { animation-delay: 0.5s; }
-      .project-card:nth-child(6) { animation-delay: 0.6s; }
-    </style>
     
     <div class="projects-container">
       <div class="projects-header">
@@ -381,69 +163,390 @@ function displayProjects(projects) {
       </div>
       
       <div class="projects-content">
-        <div class="${isGridView ? 'projects-grid' : 'projects-list'}" id="projects-display">
+        <div id="projects-display">
           <!-- Projects will be inserted here -->
         </div>
       </div>
     </div>
   `;
   
-  $('#projects-container').html(html);
-  displayFilteredProjects();
+  console.log('🏗️ Setting projects container HTML...');
+  console.log('🏗️ isGridView when generating HTML:', isGridView);
+  console.log('🏗️ HTML contains view-toggle buttons:', html.includes('view-toggle'));
+  console.log('🏗️ Button HTML snippet:', html.substring(html.indexOf('view-controls'), html.indexOf('view-controls') + 200));
+  
+  const projectsContainer = $('#projects-container');
+  console.log('🏗️ Projects container found:', projectsContainer.length);
+  projectsContainer.html(html);
+  
+  // Protect the container from being cleared by other scripts
+  projectsContainer.attr('data-enhanced-projects', 'true');
+  
+  console.log('🏗️ Checking if view toggle buttons exist:', $('.view-toggle').length);
+  $('.view-toggle').each(function(i, btn) {
+    console.log('🏗️ Button', i, '- data-view:', $(btn).attr('data-view'), 'active:', $(btn).hasClass('active'));
+  });
+  
+  // Test if click events work by adding a temporary direct handler
+  setTimeout(() => {
+    console.log('🧪 Testing direct click handlers...');
+    $('.view-toggle').off('click.test').on('click.test', function() {
+      console.log('🧪 DIRECT CLICK HANDLER FIRED!', $(this).attr('data-view'));
+    });
+  }, 500);
+  
+  // Add DOM mutation observer to detect content changes
+  setTimeout(() => {
+    const container = $('#projects-display')[0];
+    
+    // DEEP DEBUG: Check what else might be affecting this container
+    console.log('🔬 DEEP DEBUG - Container element:', container);
+    console.log('🔬 Container parent:', container ? container.parentElement : 'NO CONTAINER');
+    console.log('🔬 All scripts on page:', Array.from(document.scripts).map(s => s.src || 'inline'));
+    console.log('🔬 jQuery event handlers on container:', $._data(container, 'events'));
+    
+    if (container && window.MutationObserver) {
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.type === 'childList') {
+            console.log('🔍 DOM MUTATION detected on #projects-display:');
+            console.log('🔍 Nodes added:', mutation.addedNodes.length);
+            console.log('🔍 Nodes removed:', mutation.removedNodes.length);
+            console.log('🔍 Current children count:', container.children.length);
+            
+            // Only alert if content was removed WITHOUT new content being added
+            if (mutation.removedNodes.length > 0 && mutation.addedNodes.length === 0) {
+              console.log('❌ ALERT: Content was cleared without replacement!');
+              console.trace('🔍 Mutation stack trace');
+            } else if (mutation.addedNodes.length > 0) {
+              console.log('✅ Content successfully updated');
+            }
+          }
+        });
+      });
+      
+      observer.observe(container, { 
+        childList: true, 
+        subtree: true 
+      });
+      console.log('🔍 DOM observer attached to #projects-display');
+    }
+    
+    displayFilteredProjects();
+  }, 100);
   console.log('✅ Enhanced projects rendered successfully');
 }
 
 function displayFilteredProjects() {
   const container = $('#projects-display');
+  if (container.length === 0) return;
+  
+  let html = '';
+  if (isGridView) {
+    html = generateGridView();
+  } else {
+    html = generateListView();
+  }
+  
+  container.html(html);
+}
+
+function actuallyDisplayProjects() {
+  console.log('🎯 === ACTUALLY DISPLAYING PROJECTS ===');
+  
+  try {
+    const container = $('#projects-display');
+    console.log('🎯 Container check - found:', container.length);
+    console.log('🎯 Container current children:', container.children().length);
+    
+    if (container.length === 0) {
+      console.error('❌ Container disappeared!');
+      return;
+    }
+    
+    let html = '';
+    const projectCount = Object.keys(filteredProjects).length;
+    console.log('🎯 Projects to display:', projectCount);
+    
+    if (projectCount === 0) {
+      html = '<div style="padding: 40px; text-align: center; color: #666;">No projects available</div>';
+    } else if (isGridView) {
+      console.log('🎯 Generating GRID view...');
+      html = generateGridView();
+    } else {
+      console.log('🎯 Generating LIST view...');
+      html = generateListView();
+    }
+    
+    console.log('🎯 Generated HTML length:', html.length);
+    console.log('🎯 HTML preview:', html.substring(0, 200) + '...');
+    
+    // Force update regardless
+    console.log('🎯 Setting HTML content...');
+    
+    // MINIMAL TEST: Set simple content first
+    container.html('<div style="background: red; color: white; padding: 20px; font-size: 24px;">TEST CONTENT - SHOULD BE VISIBLE</div>');
+    
+    setTimeout(() => {
+      const testVisible = container.children().length;
+      console.log('🧪 MINIMAL TEST - Test content visible:', testVisible > 0);
+      
+      if (testVisible > 0) {
+        console.log('🧪 Test content survived - now setting real HTML');
+        container.html(html);
+      } else {
+        console.error('🧪 CRITICAL: Even simple test content disappeared!');
+        return; // Don't proceed if test content disappears
+      }
+    }, 100);
+    
+    // Verify it was set and check CSS visibility
+    setTimeout(() => {
+      const newChildCount = container.children().length;
+      console.log('🎯 After HTML set - children count:', newChildCount);
+      
+      if (newChildCount === 0) {
+        console.error('❌ HTML was cleared after setting!');
+      } else {
+        // Check CSS visibility
+        const containerStyles = window.getComputedStyle(container[0]);
+        const firstCard = container.children().first()[0];
+        const firstCardStyles = firstCard ? window.getComputedStyle(firstCard) : null;
+        
+        console.log('🎨 Container CSS - display:', containerStyles.display, 'visibility:', containerStyles.visibility, 'opacity:', containerStyles.opacity);
+        console.log('🎨 Container CSS - z-index:', containerStyles.zIndex, 'position:', containerStyles.position);
+        console.log('🎨 Container classes:', container.attr('class'));
+        
+        // Check for elements that might be covering our content
+        const containerRect = container[0].getBoundingClientRect();
+        console.log('🎨 Container position:', {
+          top: containerRect.top,
+          left: containerRect.left,
+          width: containerRect.width,
+          height: containerRect.height
+        });
+        
+        // Check what element is at the container's position
+        const elementAtPosition = document.elementFromPoint(
+          containerRect.left + containerRect.width/2,
+          containerRect.top + containerRect.height/2
+        );
+        console.log('🎨 Element covering container center:', elementAtPosition);
+        
+        if (firstCardStyles) {
+          console.log('🎨 First card CSS - display:', firstCardStyles.display, 'visibility:', firstCardStyles.visibility, 'opacity:', firstCardStyles.opacity);
+          console.log('🎨 First card CSS - z-index:', firstCardStyles.zIndex, 'position:', firstCardStyles.position);
+          console.log('🎨 First card classes:', firstCard.className);
+        }
+        
+        // Force visible styles and high z-index if needed
+        if (containerStyles.display === 'none' || containerStyles.visibility === 'hidden') {
+          console.log('🔧 Forcing container to be visible');
+          container.css({ display: 'block', visibility: 'visible', opacity: '1' });
+        }
+        
+        // Force high z-index to ensure content is on top
+        console.log('🔧 Forcing high z-index for container');
+        container.css({
+          'z-index': '9999',
+          'position': 'relative',
+          'background': 'rgba(255,255,255,0.95)' // Add background to see if covered
+        });
+      }
+    }, 10);
+    
+    console.log('🎯 Display complete');
+    
+  } catch (error) {
+    console.error('❌ Error in actuallyDisplayProjects:', error);
+    console.error('❌ Stack:', error.stack);
+  }
+  
+  console.log('🎯 === DISPLAY FUNCTION END ===');
+}
+
+function generateGridView() {
   let html = '';
   
   Object.entries(filteredProjects).forEach(([title, project], index) => {
     const delay = index * 0.1;
+    const techStack = project.modal?.technical_details?.tech_stack || project.tags || [];
+    const status = getProjectStatus(project.time);
+    
     html += `
-      <div class="project-card" data-project="${title}" style="animation-delay: ${delay}s;">
+      <div class="project-card grid-card" data-project="${title}" style="animation-delay: ${delay}s;">
         ${project.img ? `
           <img src="${project.img}" alt="${title}" class="project-image" onerror="this.style.display='none'">
-        ` : ''}
-        
-        <h3 class="project-title">${title}</h3>
-        <div class="project-time">${project.time}</div>
-        <p class="project-description">${project.description.length > 150 ? project.description.substring(0, 150) + '...' : project.description}</p>
-        
-        ${Object.keys(project.resources || {}).length > 0 ? `
-          <div class="project-resources">
-            ${Object.entries(project.resources).map(([type, url]) => 
-              `<a href="${url}" target="_blank" class="resource-link" onclick="event.stopPropagation();">${type}</a>`
-            ).join('')}
-          </div>
         ` : `
-          <div class="project-resources">
-            <span class="no-media-button">No media</span>
+          <div class="project-placeholder">
+            <div class="placeholder-icon">🚀</div>
+            <div class="placeholder-text">Project</div>
           </div>
         `}
         
-        ${project.tags && project.tags.length > 0 ? `
-          <div class="project-tags">
-            ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+        <div class="grid-content">
+          <h3 class="project-title">${title}</h3>
+          <div class="project-meta">
+            <span class="project-time">📅 ${project.time}</span>
+            <span class="project-status status-${status.toLowerCase()}">${status}</span>
           </div>
-        ` : ''}
+          
+          <p class="project-description">${project.description.length > 120 ? project.description.substring(0, 120) + '...' : project.description}</p>
+          
+          ${techStack.length > 0 ? `
+            <div class="tech-stack">
+              <div class="tech-label">💻 Tech:</div>
+              <div class="tech-items">
+                ${techStack.slice(0, 3).map(tech => `<span class="tech-item">${tech}</span>`).join('')}
+                ${techStack.length > 3 ? `<span class="tech-more">+${techStack.length - 3} more</span>` : ''}
+              </div>
+            </div>
+          ` : ''}
+          
+          <div class="grid-footer">
+            <div class="click-hint">👆 Click to explore</div>
+            ${Object.keys(project.resources || {}).length > 0 ? `
+              <div class="resources-count">📁 ${Object.keys(project.resources).length} resources</div>
+            ` : ''}
+          </div>
+        </div>
       </div>
     `;
   });
   
-  container.html(html);
+  return html;
+}
+
+function generateListView() {
+  let html = '';
+  
+  Object.entries(filteredProjects).forEach(([title, project], index) => {
+    const delay = index * 0.05;
+    const modal = project.modal || {};
+    const techDetails = modal.technical_details || {};
+    const impact = modal.impact || '';
+    const challenges = modal.challenges || '';
+    const skills = modal.skills_gained || [];
+    const status = getProjectStatus(project.time);
+    
+    html += `
+      <div class="project-card list-card" data-project="${title}" style="animation-delay: ${delay}s;">
+        <div class="list-content">
+          <div class="list-header">
+            <div class="list-title-section">
+              <h3 class="project-title">${title}</h3>
+              <div class="list-meta">
+                <span class="project-time">📅 ${project.time}</span>
+                <span class="project-status status-${status.toLowerCase()}">${status}</span>
+                ${modal.context ? `<span class="project-context">🏢 ${modal.context}</span>` : ''}
+              </div>
+            </div>
+            ${project.img ? `
+              <div class="list-image">
+                <img src="${project.img}" alt="${title}" onerror="this.style.display='none'">
+              </div>
+            ` : ''}
+          </div>
+          
+          <div class="list-body">
+            <div class="main-description">
+              <p><strong>Overview:</strong> ${project.description}</p>
+              ${modal.detailed_description ? `
+                <p><strong>Details:</strong> ${modal.detailed_description}</p>
+              ` : ''}
+            </div>
+            
+            ${impact ? `
+              <div class="impact-section">
+                <strong>🎯 Impact & Results:</strong>
+                <p>${impact}</p>
+              </div>
+            ` : ''}
+            
+            ${challenges ? `
+              <div class="challenges-section">
+                <strong>⚡ Key Challenges:</strong>
+                <p>${challenges}</p>
+              </div>
+            ` : ''}
+            
+            <div class="technical-details">
+              ${techDetails.tech_stack?.length > 0 ? `
+                <div class="tech-section">
+                  <strong>💻 Technology Stack:</strong>
+                  <div class="tech-list">
+                    ${techDetails.tech_stack.map(tech => `<span class="tech-badge">${tech}</span>`).join('')}
+                  </div>
+                </div>
+              ` : ''}
+              
+              ${techDetails.architecture ? `
+                <div class="architecture-section">
+                  <strong>🏗️ Architecture:</strong> <span>${techDetails.architecture}</span>
+                </div>
+              ` : ''}
+              
+              ${techDetails.key_features?.length > 0 ? `
+                <div class="features-section">
+                  <strong>✨ Key Features:</strong>
+                  <ul>
+                    ${techDetails.key_features.map(feature => `<li>${feature}</li>`).join('')}
+                  </ul>
+                </div>
+              ` : ''}
+            </div>
+            
+            ${skills.length > 0 ? `
+              <div class="skills-section">
+                <strong>🎓 Skills Developed:</strong>
+                <div class="skills-list">
+                  ${skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
+                </div>
+              </div>
+            ` : ''}
+            
+            ${Object.keys(project.resources || {}).length > 0 ? `
+              <div class="resources-section">
+                <strong>📁 Resources & Links:</strong>
+                <div class="resource-links">
+                  ${Object.entries(project.resources).map(([type, url]) => 
+                    `<a href="${url}" target="_blank" class="resource-link" onclick="event.stopPropagation();">
+                      <span class="resource-icon">${getResourceIcon(type)}</span>
+                      <span>${type}</span>
+                    </a>`
+                  ).join('')}
+                </div>
+              </div>
+            ` : ''}
+            
+            ${project.tags?.length > 0 ? `
+              <div class="tags-section">
+                <strong>🏷️ Categories:</strong>
+                <div class="project-tags">
+                  ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                </div>
+              </div>
+            ` : ''}
+          </div>
+        </div>
+      </div>
+    `;
+  });
+  
+  return html;
 }
 
 function setActiveFilter(element, filter) {
   $('.filter-btn').removeClass('active');
   $(element).addClass('active');
-  currentFilter = filter;
+  window.currentFilter = currentFilter = filter;
 }
 
 function filterProjects(filter) {
   if (filter === 'all') {
-    filteredProjects = allProjects;
+    window.filteredProjects = filteredProjects = allProjects;
   } else {
-    filteredProjects = Object.fromEntries(
+    window.filteredProjects = filteredProjects = Object.fromEntries(
       Object.entries(allProjects).filter(([title, project]) => 
         project.tags && project.tags.includes(filter)
       )
@@ -458,7 +561,7 @@ function searchProjects(searchTerm) {
     return;
   }
   
-  filteredProjects = Object.fromEntries(
+  window.filteredProjects = filteredProjects = Object.fromEntries(
     Object.entries(allProjects).filter(([title, project]) => {
       const searchableText = `${title} ${project.description} ${(project.tags || []).join(' ')}`.toLowerCase();
       return searchableText.includes(searchTerm);
@@ -468,8 +571,31 @@ function searchProjects(searchTerm) {
 }
 
 function updateViewToggle() {
+  console.log('🎯 UpdateViewToggle called, isGridView:', isGridView);
+  
+  // Update button states
   $('.view-toggle').removeClass('active');
-  $(`.view-toggle[data-view="${isGridView ? 'grid' : 'list'}"]`).addClass('active');
+  const targetView = isGridView ? 'grid' : 'list';
+  const selector = `.view-toggle[data-view="${targetView}"]`;
+  console.log('🎯 Target selector:', selector);
+  
+  const targetButton = $(selector);
+  console.log('🎯 Found target button:', targetButton.length);
+  targetButton.addClass('active');
+  
+  // Update the container class to switch between grid and list view
+  const container = $('#projects-display');
+  console.log('🎯 Container found:', container.length, 'current classes:', container.attr('class'));
+  
+  if (isGridView) {
+    container.removeClass('projects-list').addClass('projects-grid');
+    console.log('🎯 Set to GRID view');
+  } else {
+    container.removeClass('projects-grid').addClass('projects-list');
+    console.log('🎯 Set to LIST view');
+  }
+  
+  console.log('🎯 Container classes after update:', container.attr('class'));
 }
 
 function openProjectModal(title) {
@@ -945,6 +1071,22 @@ function getImpactSection(title, project) {
   return impact;
 }
 
+function getResourceIcon(type) {
+  const icons = {
+    'GitHub': '💻',
+    'Demo': '🌐',
+    'Video': '🎥',
+    'Paper': '📄',
+    'Slides': '📊',
+    'Documentation': '📝',
+    'Report': '📈',
+    'Code': '💻',
+    'Website': '🌍',
+    'Article': '📰'
+  };
+  return icons[type] || '🔗';
+}
+
 function getProjectStatus(timeString) {
   if (timeString.includes('WIP') || timeString.includes('current')) {
     return 'In Progress';
@@ -987,3 +1129,54 @@ function initializeProjects() {
 
 // Make function available globally
 window.initializeProjects = initializeProjects;
+
+// DEEP DEBUG: Simple isolated test function
+window.testProjectsDisplay = function() {
+  console.log('🧪 === ISOLATED TEST START ===');
+  
+  const container = $('#projects-display');
+  console.log('🧪 Container found:', container.length);
+  
+  if (container.length === 0) {
+    console.error('🧪 No container found!');
+    return;
+  }
+  
+  // Test 1: Simple text with HIGH Z-INDEX
+  container.css({
+    'z-index': '99999',
+    'position': 'relative',
+    'background': 'yellow'
+  });
+  container.html('<h1 style="color: red; font-size: 48px; z-index: 99999; position: relative; background: lime;">TEST 1 - HIGH Z-INDEX</h1>');
+  
+  setTimeout(() => {
+    console.log('🧪 Test 1 result - children:', container.children().length);
+    const testElement = container.find('h1')[0];
+    if (testElement) {
+      const testRect = testElement.getBoundingClientRect();
+      const elementAtTest = document.elementFromPoint(
+        testRect.left + testRect.width/2,
+        testRect.top + testRect.height/2
+      );
+      console.log('🧪 Element at test position:', elementAtTest);
+      console.log('🧪 Test element rect:', testRect);
+    }
+    
+    // Test 2: Simple project card with EXTREME z-index
+    container.html(`
+      <div style="background: blue; color: white; padding: 20px; margin: 10px; border: 3px solid red; z-index: 99999; position: relative;">
+        <h2>TEST PROJECT CARD - Z-INDEX 99999</h2>
+        <p>This should be on TOP of everything</p>
+      </div>
+    `);
+    
+    setTimeout(() => {
+      console.log('🧪 Test 2 result - children:', container.children().length);
+      console.log('🧪 Container HTML:', container.html().substring(0, 100));
+    }, 1000);
+    
+  }, 1000);
+};
+
+console.log('🧪 TEST FUNCTION READY: Type testProjectsDisplay() in console to run isolated test');

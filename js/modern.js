@@ -257,10 +257,9 @@ class PortfolioManager {
               });
               break;
             case 4:
-              // Load projects script and initialize
-              console.log('🚀 Loading projects page...');
-              this.loadScriptIfNeeded('js/projects-simple.js', () => {
-                console.log('✅ Projects script loaded, initializing...');
+              // Initialize projects page - script is loaded via HTML
+              console.log('🚀 Initializing projects page...');
+              setTimeout(() => {
                 if (typeof initializeProjects === 'function') {
                   console.log('🎯 Calling initializeProjects...');
                   initializeProjects();
@@ -268,7 +267,7 @@ class PortfolioManager {
                 } else {
                   console.error('❌ initializeProjects function not found');
                 }
-              });
+              }, 200); // Give script time to load from HTML
               break;
           }
         }, 100); // Small delay to ensure DOM is ready
@@ -283,7 +282,7 @@ class PortfolioManager {
     if (existingScript) {
       console.log(`Script already loaded: ${src}`);
       if (callback) {
-        // Small delay to ensure script is fully executed
+        // Always call callback even if script exists, as we need to reinitialize functionality
         setTimeout(callback, 100);
       }
       return;
@@ -466,6 +465,12 @@ class ProjectManager {
   }
 
   renderProjects() {
+    // Skip if enhanced projects are active
+    if (window.enhancedProjectsActive) {
+      console.log('🚫 Modern.js renderProjects skipped - enhanced projects active');
+      return;
+    }
+    
     const container = document.querySelector('.projects-grid');
     if (!container) return;
 

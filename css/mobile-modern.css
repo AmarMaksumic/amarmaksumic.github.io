@@ -235,6 +235,12 @@
 
 /* Responsive adjustments */
 @media (max-width: 480px) {
+
+  /* Ensure no top padding on small mobile screens */
+  #cont {
+    padding-top: 0 !important;
+  }
+
   .mobile-hero-image {
     width: 220px;
     height: 220px;

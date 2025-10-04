@@ -4,13 +4,12 @@
     "color": "#d6001c",
     "image": "img/rpi200black.webp",
     "time": "Jan '25 - May '26",
-    "gpa": 3.33,
+    "gpa": 3.61,
     "degree": "Master's of Science in Computer & Systems Engineering",
     "socs_and_acts": [
       "Rensselaer Motorsport"
     ],
-    "hons_and_awds": [
-    ],
+    "hons_and_awds": [],
     "courses": [
       "ECSE 4220 - VLSI Design (Hardware)",
       "ECSE 6050 - Advanced Electronic Circuits",
@@ -30,8 +29,8 @@
     "degree": "Bachelor of Science in Computer Science and Computer & Systems Engineering",
     "sdegree": "with Minor in Literature and Creative Writing",
     "socs_and_acts": [
-      "Rensselaer Motorsport", 
-      "RPI Robotics", 
+      "Rensselaer Motorsport",
+      "RPI Robotics",
       "The Archimedean Program/Society",
       "Upsilon Pi Epsilon Computer Science Honor Society",
       "Tau Beta Pi Engineering Honor Society (New York Gamma Chapter)"
@@ -39,7 +38,6 @@
     "hons_and_awds": [
       "Performance Excellence Award for Outstanding Technical Achievement",
       "Dean's Honor List (F'21, S'22, F'22, S'23, U'23, F'23, F'24)"
-
     ],
     "courses": [
       "CSCI 4150 - Artifical Intelligence",
@@ -78,24 +76,24 @@
     "degree": "Regents Diploma with Advanced Designation with Honors and Mastery in Math and Science",
     "sdegree": null,
     "socs_and_acts": [
-      "FRC Team 2601 Steel Hawks - Robotics Team (2017-2021)", 
-      "Mu Alpha Theta National Honor Society (2020 & 2021)", 
-      "New York State Science Honor Society (2020 & 2021)", 
-      "Fencing Team (2019)", 
-      "Soccer Team (2018)", 
+      "FRC Team 2601 Steel Hawks - Robotics Team (2017-2021)",
+      "Mu Alpha Theta National Honor Society (2020 & 2021)",
+      "New York State Science Honor Society (2020 & 2021)",
+      "Fencing Team (2019)",
+      "Soccer Team (2018)",
       "Balkan FON (2018)"
     ],
     "hons_and_awds": [
-      "AP Scholar with Distinction (2020 & 2021)", 
-      "Certificate of Outstanding Scholarship in Advanced Placement Computer Science A", 
-      "Certificate of Outstanding Scholarship in Mathematics", 
+      "AP Scholar with Distinction (2020 & 2021)",
+      "Certificate of Outstanding Scholarship in Advanced Placement Computer Science A",
+      "Certificate of Outstanding Scholarship in Mathematics",
       "Plaque for Highest Honors in Robotics",
-      "2nd Place Team at Bay Area Hacks", 
-      "Excellent Progress in Spanish Language Study and Generosity to Peers", 
-      "National Latin Exam - Maxima Cum Laude / Silver Medal Award for Level II", 
-      "FIRST Robotics Competition Chairman's Award (2020 NYC Regional)", 
-      "FIRST Robotics Competition Judges' Award (2018 Hudson Valley Regional)", 
-      "FIRST Robotics Competition Regional Engineering Inspiration Award (2018 SBPLI Long Island Regional #2)", 
+      "2nd Place Team at Bay Area Hacks",
+      "Excellent Progress in Spanish Language Study and Generosity to Peers",
+      "National Latin Exam - Maxima Cum Laude / Silver Medal Award for Level II",
+      "FIRST Robotics Competition Chairman's Award (2020 NYC Regional)",
+      "FIRST Robotics Competition Judges' Award (2018 Hudson Valley Regional)",
+      "FIRST Robotics Competition Regional Engineering Inspiration Award (2018 SBPLI Long Island Regional #2)",
       "FIRST Robotics Competition Regional Finalists (2018 Hudson Valley Regional)"
     ],
     "courses": [

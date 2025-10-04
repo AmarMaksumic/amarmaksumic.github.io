@@ -35,6 +35,9 @@ window.addEventListener('scroll', function() {
   lastScrollTop = scrollTop;
 });
 
+// Navbar styling is now controlled by scroll state only
+// The .scrolled class automatically handles both background and button styling
+
 async function switchTab (switchTo) {
   console.log(switchTo)
   for (let i = 1; i < 5; i++) {

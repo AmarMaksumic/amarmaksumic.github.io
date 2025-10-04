@@ -25,7 +25,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
+  height: 60px;
 }
 
 .navbar-brand {
@@ -59,7 +59,6 @@
   text-decoration: none;
   font-weight: 500;
   padding: var(--space-sm, 0.5rem) var(--space-md, 1rem);
-  border-radius: var(--border-radius, 0.5rem);
   transition: all var(--transition-fast, 150ms ease-in-out);
   position: relative;
   cursor: pointer;
@@ -93,7 +92,6 @@
   width: 20px;
   height: 3px;
   background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
-  border-radius: var(--border-radius-full);
 }
 
 .navbar-toggle {
@@ -102,7 +100,6 @@
   gap: 4px;
   cursor: pointer;
   padding: var(--space-sm);
-  border-radius: var(--border-radius);
   transition: all var(--transition-fast);
 }
 
@@ -114,7 +111,7 @@
   width: 24px;
   height: 3px;
   background: var(--neutral-700);
-  border-radius: var(--border-radius-full);
+  /* border-radius: var(--border-radius-full); */
   transition: all var(--transition-fast);
 }
 

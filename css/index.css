@@ -49,7 +49,7 @@ a {
 }
 
 .section.full {
-  min-height: 95vh;
+  min-height: auto;
 }
 
 .section.shadow {

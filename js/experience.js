@@ -99,10 +99,13 @@ function fill_card(card, exp, data) {
 
 // Function to initialize experience content
 function initializeExperience() {
-  $.getJSON('./files/experience.json', function(json_data) {
+  const cacheBuster = new Date().getTime();
+  console.log('🔄 Loading experience data...');
+  $.getJSON(`./files/experience.json?v=${cacheBuster}`, function(json_data) {
+    console.log('✅ Experience data loaded:', Object.keys(json_data).length, 'companies');
     let container = document.getElementsByClassName('dyna_container');
     if (container.length === 0) {
-      console.log('Experience: dyna_container not found, skipping initialization');
+      console.log('❌ Experience: dyna_container not found, skipping initialization');
       return;
     }
 
@@ -136,6 +139,9 @@ function initializeExperience() {
     sectionDiv.appendChild(make_element('DIV', 'divider', null));
     container[0].appendChild(sectionDiv);
   }
+  console.log('🎉 Experience rendering complete');
+}).fail(function(jqxhr, textStatus, error) {
+  console.error('❌ Failed to load experience.json:', textStatus, error);
 });
 }
 

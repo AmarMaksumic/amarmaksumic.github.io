@@ -1,0 +1,651 @@
+/* Simplified Projects CSS - Clean and minimal */
+
+/* Container with animated wave background */
+.projects-container {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  /* Semi-transparent to show wave */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin: 0;
+  padding: 2rem;
+  overflow: hidden;
+  /* Ensure wave effects stay contained */
+}
+
+/* Animated color wave background */
+.projects-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(-45deg,
+      rgba(102, 126, 234, 0.15),
+      rgba(118, 75, 162, 0.15),
+      rgba(240, 147, 251, 0.15),
+      rgba(245, 87, 108, 0.15),
+      rgba(52, 152, 219, 0.15),
+      rgba(155, 89, 182, 0.15));
+  background-size: 400% 400%;
+  animation: waveGradient 15s ease infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Wave animation keyframes */
+@keyframes waveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Additional wave overlay for more depth */
+.projects-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg,
+      rgba(255, 107, 107, 0.08),
+      rgba(78, 205, 196, 0.08),
+      rgba(199, 121, 208, 0.08),
+      rgba(131, 164, 232, 0.08));
+  background-size: 300% 300%;
+  animation: waveGradient 20s ease infinite reverse;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Header with wave decoration */
+.projects-header {
+  text-align: center;
+  padding: 0 0 40px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.projects-header::before {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg,
+      rgba(102, 126, 234, 0.3),
+      rgba(240, 147, 251, 0.6),
+      rgba(245, 87, 108, 0.3));
+  border-radius: 2px;
+  animation: waveDecoration 3s ease-in-out infinite;
+}
+
+@keyframes waveDecoration {
+
+  0%,
+  100% {
+    width: 100px;
+    opacity: 0.6;
+  }
+
+  50% {
+    width: 150px;
+    opacity: 1;
+  }
+}
+
+.projects-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+.projects-subtitle {
+  font-size: 1.25rem;
+  color: var(--neutral-600);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Controls */
+.controls-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.filter-btn,
+.view-toggle {
+  padding: 8px 16px;
+  border: 2px solid var(--neutral-200);
+  background: var(--white);
+  color: var(--neutral-700);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-btn:hover,
+.filter-btn.active,
+.view-toggle:hover,
+.view-toggle.active {
+  background: var(--primary-blue);
+  color: var(--white);
+  border-color: var(--primary-blue);
+  transform: translateY(-2px);
+}
+
+.view-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.search-input {
+  padding: 10px 16px;
+  border: 2px solid var(--neutral-200);
+  background: var(--white);
+  border-radius: 25px;
+  outline: none;
+  transition: all 0.3s ease;
+  min-width: 250px;
+}
+
+.search-input:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Content area */
+.projects-content {
+  padding: 20px 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Grid layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* List layout */
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Project cards */
+.project-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.95));
+  border-radius: 15px;
+  padding: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(37, 99, 235, 0.1);
+  /* Site's primary blue */
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.08);
+  /* Blue shadow */
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+  /* Blue hover shadow */
+  border-color: rgba(37, 99, 235, 0.2);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-placeholder {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.placeholder-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.placeholder-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.project-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.project-time {
+  color: #7f8c8d;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.project-description {
+  color: #34495e;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.tag {
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  /* Site's primary blue */
+  color: white;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+  /* Blue shadow */
+}
+
+/* List view specific */
+.project-card-list {
+  padding: 30px;
+}
+
+.list-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+
+.list-text-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-image-content {
+  flex-shrink: 0;
+  width: 200px;
+  height: 150px;
+}
+
+.project-image-list {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-image-list:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .controls-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-input {
+    min-width: 100%;
+  }
+
+  /* List view responsive adjustments */
+  .list-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .list-image-content {
+    width: 100%;
+    height: 200px;
+    order: -1;
+    /* Show image above text on mobile */
+  }
+}
+
+/* ================================
+   MODAL STYLES - EASILY EDITABLE
+   ================================ */
+
+/* Modal backdrop */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  backdrop-filter: blur(5px);
+}
+
+/* Main modal container */
+.modal-content {
+  background: white;
+  border-radius: 20px;
+  max-width: 900px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: modalSlideIn 0.3s ease;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  margin: 20px;
+}
+
+/* Modal close button */
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  z-index: 10001;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  background: #c0392b;
+  transform: scale(1.1);
+}
+
+/* Modal content padding */
+.modal-inner {
+  padding: 40px;
+}
+
+/* Modal header section */
+.modal-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.modal-image {
+  width: 100%;
+  max-width: 400px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.modal-title {
+  color: #2c3e50;
+  margin: 0 0 10px 0;
+  font-size: 2.2rem;
+}
+
+.modal-context {
+  color: #3498db;
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.modal-context-content {
+  color: #7f8c8d;
+  margin: 5px 0 0 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Modal sections */
+.modal-section {
+  margin-bottom: 30px;
+}
+
+.modal-section h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.3rem;
+}
+
+/* Project Overview section */
+.modal-overview {
+  background: rgba(219, 152, 52, 0.25);
+  /* Lighter version of #db9834 border color */
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #db9834;
+}
+
+.modal-overview p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Technical Details section */
+.modal-tech-details {
+  background: rgba(52, 152, 219, 0.25);
+  /* Lighter version of #3498db border color */
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #3498db;
+}
+
+.modal-tech-item {
+  margin-bottom: 20px;
+}
+
+.modal-tech-item h4 {
+  margin: 0 0 8px 0;
+  color: #3498db;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modal-tech-item p {
+  margin: 0;
+  line-height: 1.6;
+  color: #2d3436;
+}
+
+
+
+/* Impact & Results section */
+.modal-impact {
+  background: rgba(39, 174, 96, 0.25);
+  /* Light version of #27ae60 border color */
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #27ae60;
+}
+
+.modal-impact-item {
+  margin-bottom: 15px;
+}
+
+.modal-impact-item h4 {
+  margin: 0 0 8px 0;
+  color: #27ae60;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modal-impact-item p {
+  margin: 0;
+  line-height: 1.6;
+  color: #2d3436;
+}
+
+/* Challenges & Solutions section */
+.modal-challenges {
+  background: rgba(231, 76, 60, 0.25);
+  /* Lighter version of #e74c3c border color */
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #e74c3c;
+}
+
+.modal-challenge-item {
+  margin-bottom: 15px;
+}
+
+.modal-challenge-item h4 {
+  margin: 0 0 8px 0;
+  color: #e74c3c;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modal-challenge-item p {
+  margin: 0;
+  line-height: 1.6;
+  color: #2d3436;
+}
+
+/* Skills Developed section */
+.modal-skills {
+  margin-bottom: 20px;
+}
+
+.modal-skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.modal-skill-tag {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+/* Modal footer links */
+.modal-footer {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.modal-link {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 500;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.modal-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.modal-link.demo {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.modal-link.demo:hover {
+  box-shadow: 0 5px 15px rgba(240, 147, 251, 0.4);
+}
+
+/* Modal animations */
+@keyframes modalSlideIn {
+  from {
+    transform: scale(0.7) translateY(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
