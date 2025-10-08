@@ -200,7 +200,7 @@
     "4_letter": "MRCS",
     "img": "img/projects/multirobot/simulation.png",
     "description": "Advanced multi-robot coordination system implementing SLAM, ArUco marker detection, and Weighted Conflict-Based Search (WCBS) for collision-free path planning. Features real-time LiDAR simulation, occupancy grid mapping, and coordinated navigation for up to six robots in shared environments.",
-    "time": "Fall '24",
+    "time": "Mar '25 - Apr '25",
     "media": {
       "images": [
         "img/projects/multirobot/simulation.png"
