@@ -13,6 +13,7 @@
         "desc_list": [
           {
             "items": [
+              "Working on Linux Kernel driver development for new robotic sensors",
               "TBD"
             ]
           }
@@ -70,7 +71,7 @@
     ]
   },
   "Tesla": {
-    "bg_color": "#E31937",
+    "bg_color": "#e82127",
     "color": "#ffffff",
     "image": "img/tesla.png",
     "time": "Jan '24 - May '24",
@@ -84,8 +85,8 @@
           {
             "items": [
               "Analyzed CAN logs to propose Loss of Propulsion changes. Performed Hardware in Loop (HIL) and Software in Loop (SIL) tests to validate changes",
-              "Used Jenkins, Docker, and Kubernetes to develop an automated vehicle config variant tracker, with company‑wide access",
-              "Developed control flow diagrams & implemented associated controls and communications code changes to dyno‑in‑loop real‑world simulator to validate Tesla's autonomy capabilities"
+              "Used Jenkins, Docker, and Kubernetes to develop an automated vehicle config variant tracker, with company-wide access",
+              "Developed control flow diagrams & implemented associated controls and communications code changes to dyno-in-loop real-world simulator to validate Tesla's autonomy capabilities"
             ]
           }
         ]
@@ -107,8 +108,8 @@
           {
             "items": [
               "Lead firmware development and integration for ECU, Power Distributor, Battery Management System, Isolation Monitoring Device, Inverter, & Pedal Box nodes",
-              "Developed STM‑32 based RTOS Control Unit for Vehicle; custom firmware written in C, validated with Lapsim SIL & in‑house HIL testbench",
-              "Developed non‑linear, closed‑loop control systems for Traction Control, Launch Control, and Throttle Mapping using MATLAB Simulink",
+              "Developed STM-32 based RTOS Control Unit for Vehicle; custom firmware written in C, validated with Lapsim SIL & in-house HIL testbench",
+              "Developed non-linear, closed-loop control systems for Traction Control, Launch Control, and Throttle Mapping using MATLAB Simulink",
               "Used Jira for project management and task tracking; Increased productivity by 2x"
             ]
           }
@@ -122,7 +123,7 @@
             "items": [
               "Led development of RM's first electric powertrain: EMRAX 228 motor with a Cascadia RMS PM100DX motor controller",
               "Worked on selection of vehicle's BMS (Battery Management System) and integration of BMS into car's controls and safety systems",
-              "Developed linear, closed‑loop control systems for Torque Commanding, Torque Shudder, and Regen Braking using MATLAB Simulink"
+              "Developed linear, closed-loop control systems for Torque Commanding, Torque Shudder, and Regen Braking using MATLAB Simulink"
             ]
           }
         ]
@@ -157,7 +158,7 @@
             "items": [
               "Measured 224 structures across 14 Photonic Chips produced by AIM Photonics to determine accuracy within the tolerances of fabrication",
               "Developed python plotting software to calculate the change in edges of band pass filters and slow-light structures from chip to chip",
-              "Working with PhD student Amir Begović to publish results to paper"
+              "Worked with PhD student Amir Begović to publish results to paper"
             ]
           }
         ]
@@ -169,46 +170,9 @@
           {
             "items": [
               "Converted subproblem solutions from \"Canonical Subproblems for Robot Inverse Kinematics\" to C++ with PhD student Alex Elias",
-              "Tested subproblem efficiency with bench‑marking and testing subproblem efficacy with various robots on campus",
+              "Tested subproblem efficiency with bench-marking and testing subproblem efficacy with various robots on campus",
               "Saved $1,000 in repair costs for one of our research robots by performing repairs in house instead of shipping the machine back to the company while out of its warranty period",
               "Developed demo of C++ implementation for engineers at NASA (National Aeronautics and Space Administration)"
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "Rensselaer Motorsport": {
-    "bg_color": "#ffffff",
-    "color": "#b2282e",
-    "image": "img/rm-modified.png",
-    "time": "Mar '22 - Present",
-    "desc": null,
-    "website": "http://www.formularpi.org/",
-    "positions": [
-      {
-        "title": "Powertrain Lead",
-        "time": "Jun '22 - Present",
-        "desc_list": [
-          {
-            "title": "Work on motor control/powertrain electronics and software for Rensselaer Motorsport's transition to EV",
-            "items": [
-              "Leading development of RM’s first electric powertrain: EMRAX 228 motor with a Cascadia RMS PM100DX motor controller",
-              "Developing open and closed loop control systems (Traction Control, Launch Control, Regen Braking) that increase driver control",
-              "Using a Kanban board to assign tasks to and using Slack to communicate with several team members under my leadership",
-              "Setting up and hosting Webex meetings with several subsystems to develop a high-performance car that meets competition regulations"
-            ]
-          }
-        ]
-      },
-      {
-        "title": "Full Time Member (Software Electrical Engineer)",
-        "time": "Mar '22 - Present",
-        "desc_list": [
-          {
-            "items": [
-              "Designed wireless telemetry and strain gauge systems to analyze the forces on suspension and help optimize our physics models",
-              "Researched MoTeC CAN bus protocol to implement CAN communication for Arduino boards in the strain gauge system"
             ]
           }
         ]
@@ -219,13 +183,13 @@
     "bg_color": "#696969",
     "color": "#ffffff",
     "image": "img/rpi_robotics.png",
-    "time": "Aug '21 - Present",
+    "time": "Aug '21 - Dec '23",
     "desc": null,
     "website": "https://sites.ecse.rpi.edu/roboticsclub/",
     "positions": [
       {
-        "title": "Vice President",
-        "time": "Dec '22 - Present",
+        "title": "President (Fall) & Vice President (Spring)",
+        "time": "Dec '22 - Dec '23",
         "desc_list": [
           {
             "items": [

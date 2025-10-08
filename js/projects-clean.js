@@ -306,7 +306,7 @@ function openProjectModal(title) {
         
         <div class="modal-inner">
           <div class="modal-header">
-            ${project.image ? `<img src="${project.image}" alt="${title}" class="modal-image">` : ''}
+            ${generateMediaCarousel(project)}
             <h2 class="modal-title">${title}</h2>
             ${modal.context ? `
               ${typeof modal.context === 'string' ? 
@@ -410,21 +410,220 @@ function openProjectModal(title) {
   `;
   
   $('body').append(modalHtml);
+
+  setupCarouselNavigation(); 
   
   // Add event handlers using event delegation
+  // Remove any existing modal handlers first
+  $(document).off('click', '.modal-backdrop');
+  $(document).off('click', '.modal-close');
+
+  // Add event handlers with proper event stopping
   $(document).on('click', '.modal-backdrop', function(e) {
+    // Only close if clicked directly on backdrop, not on modal content
     if (e.target === this) {
       closeProjectModal();
     }
   });
-  
+
   $(document).on('click', '.modal-close', function(e) {
     e.preventDefault();
+    e.stopPropagation();
     closeProjectModal();
+  });
+
+  // Prevent modal content clicks from bubbling to backdrop
+  $(document).on('click', '.modal-content', function(e) {
+    e.stopPropagation();
   });
 }
 
 function closeProjectModal() {
   console.log('❌ Closing modal');
   $('.modal-backdrop').remove();
+}
+
+function generateMediaCarousel(project) {
+    const images = project.media?.images || [];
+    const videos = project.media?.videos || [];
+    const websites = project.media?.websites || [];
+    
+    // Fallback to old format if no media object exists
+    if (!project.media && (project.img || project.image)) {
+        images.push(project.img || project.image);
+    }
+    
+    // Combine all media into a single array with type information
+    const allMedia = [
+        ...images.map(img => ({ type: 'image', src: img, title: 'Project Image' })),
+        ...videos.map(video => ({ 
+            type: 'video', 
+            src: video.url, 
+            thumbnail: video.thumbnail || 'img/video-placeholder.jpg',
+            title: video.title || 'Project Video' 
+        })),
+        ...websites.map(website => ({ 
+            type: 'website', 
+            src: website.url, 
+            preview: website.preview || 'img/website-placeholder.jpg',
+            title: website.title || 'Project Website' 
+        }))
+    ];
+    
+    const hasMultipleMedia = allMedia.length > 1;
+    
+    console.log('🎠 Generating carousel for:', project.title, 'Total media:', allMedia.length);
+    
+    if (allMedia.length === 0) {
+        return '<div class="no-media">No media available</div>';
+    }
+    
+    let carouselHTML = `
+        <div class="media-carousel">
+            ${allMedia.map((media, index) => {
+                if (media.type === 'image') {
+                    return `
+                        <div class="carousel-slide ${index === 0 ? 'active' : ''}" data-slide="${index}" data-type="image">
+                            <img src="${media.src}" alt="${media.title}" />
+                            <div class="media-type-indicator">📷 Image</div>
+                        </div>
+                    `;
+                } else if (media.type === 'video') {
+                    return `
+                        <div class="carousel-slide ${index === 0 ? 'active' : ''}" data-slide="${index}" data-type="video">
+                            <div class="video-container" onclick="window.open('${media.src}', '_blank')">
+                                <img src="${media.thumbnail}" alt="${media.title}" />
+                                <div class="video-overlay">
+                                    <div class="play-button">▶️</div>
+                                </div>
+                            </div>
+                            <div class="media-type-indicator">🎥 ${media.title}</div>
+                        </div>
+                    `;
+                } else if (media.type === 'website') {
+                    return `
+                        <div class="carousel-slide ${index === 0 ? 'active' : ''}" data-slide="${index}" data-type="website">
+                            <div class="website-container" onclick="window.open('${media.src}', '_blank')">
+                                <img src="${media.preview}" alt="${media.title}" />
+                                <div class="website-overlay">
+                                    <div class="website-icon">🌐</div>
+                                    <div class="website-text">Visit Site</div>
+                                </div>
+                            </div>
+                            <div class="media-type-indicator">🌐 ${media.title}</div>
+                        </div>
+                    `;
+                }
+            }).join('')}
+            
+            ${hasMultipleMedia ? `
+                <button class="carousel-nav carousel-prev" data-direction="prev">‹</button>
+                <button class="carousel-nav carousel-next" data-direction="next">›</button>
+                <div class="carousel-counter">
+                    <span class="current-slide">1</span> of <span class="total-slides">${allMedia.length}</span>
+                </div>
+                <div class="media-type-filter">
+                    <button class="media-filter-btn active" data-filter="all">🎯 All</button>
+                    ${images.length > 0 ? '<button class="media-filter-btn" data-filter="image">📷 Images</button>' : ''}
+                    ${videos.length > 0 ? '<button class="media-filter-btn" data-filter="video">🎥 Videos</button>' : ''}
+                    ${websites.length > 0 ? '<button class="media-filter-btn" data-filter="website">🌐 Websites</button>' : ''}
+                </div>
+            ` : ''}
+        </div>
+    `;
+    
+    return carouselHTML;
+}
+
+function setupCarouselNavigation() {
+    // Remove any existing carousel event listeners
+    $(document).off('click', '.carousel-nav');
+    $(document).off('click', '.media-filter-btn');
+    
+    // Navigation arrows
+    $(document).on('click', '.carousel-nav', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        console.log('🎠 Carousel nav clicked:', $(this).attr('data-direction'));
+        
+        const carousel = $(this).closest('.media-carousel');
+        const allSlides = carousel.find('.carousel-slide');
+        
+        // Get currently active slide
+        const currentActiveSlide = carousel.find('.carousel-slide.active');
+        const currentIndex = parseInt(currentActiveSlide.attr('data-slide')) || 0;
+        const direction = $(this).attr('data-direction');
+        
+        console.log('🎠 Current active slide index:', currentIndex);
+        console.log('🎠 Total slides:', allSlides.length);
+        
+        if (allSlides.length <= 1) {
+            console.log('🎠 Only one slide, skipping navigation');
+            return;
+        }
+        
+        let nextIndex;
+        if (direction === 'next') {
+            nextIndex = currentIndex + 1 >= allSlides.length ? 0 : currentIndex + 1;
+        } else {
+            nextIndex = currentIndex - 1 < 0 ? allSlides.length - 1 : currentIndex - 1;
+        }
+        
+        console.log('🎠 Moving from slide', currentIndex, 'to slide', nextIndex);
+        
+        // Remove active class from all slides
+        allSlides.removeClass('active');
+        
+        // Add active class to next slide using data-slide attribute
+        const nextSlide = carousel.find(`[data-slide="${nextIndex}"]`);
+        nextSlide.addClass('active');
+        
+        console.log('🎠 Next slide found:', nextSlide.length > 0);
+        
+        // Update counter
+        const counter = carousel.find('.current-slide');
+        if (counter.length) {
+            counter.text(nextIndex + 1);
+        }
+    });
+    
+    // Media type filtering
+    $(document).on('click', '.media-filter-btn', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const carousel = $(this).closest('.media-carousel');
+        const filter = $(this).attr('data-filter');
+        
+        console.log('🎯 Filter clicked:', filter);
+        
+        // Update active filter button
+        carousel.find('.media-filter-btn').removeClass('active');
+        $(this).addClass('active');
+        
+        // Show/hide slides based on filter
+        const allSlides = carousel.find('.carousel-slide');
+        if (filter === 'all') {
+            allSlides.show();
+        } else {
+            allSlides.hide();
+            allSlides.filter(`[data-type="${filter}"]`).show();
+        }
+        
+        // Activate first visible slide
+        const visibleSlides = carousel.find('.carousel-slide:visible');
+        allSlides.removeClass('active');
+        if (visibleSlides.length > 0) {
+            visibleSlides.first().addClass('active');
+        }
+        
+        // Update counter
+        const counter = carousel.find('.current-slide');
+        const totalCounter = carousel.find('.total-slides');
+        if (counter.length) {
+            counter.text('1');
+            totalCounter.text(visibleSlides.length);
+        }
+    });
 }

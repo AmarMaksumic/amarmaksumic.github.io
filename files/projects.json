@@ -1,86 +1,696 @@
 {
-  "Rensselaer Motorsport - Control Systems Unit": {
-    "4_letter": "RM CSU",
+  "SwerveWorks Athena Platform (SWAP)": {
+    "4_letter": "SW AP",
+    "img": "img/projects/swerveworks/swerveworks.png",
+    "description": "Developing an omni-directional, modular robotics platform for research and development in autonomous systems. The SWAP platform integrates advanced sensor suites, real-time control algorithms, and robust mechanical design to facilitate experimentation in navigation, mapping, and multi-robot coordination for autonomous logistics.",
+    "time": "May '25 - WIP",
+    "media": {
+      "images": [
+        "img/projects/swerveworks/swap_modules.jpeg"
+      ],
+      "videos": [],
+      "websites": [
+        {
+          "url": "https://cad.onshape.com/documents/1c24afc6d49adfdb2d6464ea/w/a45358d55c625e73594d82c9/e/2e059c446f9177cf54d490c0?renderMode=0&uiState=68e5c67b6f1582ca5cf60fdb",
+          "title": "SWAP CAD Model",
+          "preview": "img/projects/swerveworks/swerveworks.png"
+        },
+        {
+          "url": "https://github.com/RensselaerMotorsport/VehicleControlUnit",
+          "title": "SWAP Software Repository",
+          "preview": "img/projects/vcu/shabbyHILsetup.jpg"
+        }
+      ]
+    },
+    "tags": [
+      "Robotics",
+      "Embedded Systems",
+      "C",
+      "Mechanical Engineering"
+    ],
+    "modal": {
+      "detailed_description": "SWAP is a dual module differential swerve platform designed for advanced robotics research and development. Each module features independent drive and steering capabilities, allowing for omni-directional movement and precise control of the chassis. The platform is equipped with a comprehensive sensor suite including RPLidar C1 LIDAR, an IMU, and cameras routed to a Nvidia Jetson Nano to support autonomous navigation and mapping tasks. The mechanical design emphasizes modularity and ease of maintenance, while the embedded systems architecture supports real-time control and data processing.",
+      "context": {
+        "type": "robotics",
+        "title": "Advanced Robotics Innovation",
+        "content": "SWAP is a cutting-edge robotics platform that redefines the capabilities of autonomous systems. By integrating advanced sensor technologies, real-time processing, and modular design, SWAP enables unprecedented experimentation in robotic navigation, mapping, and multi-agent coordination."
+      },
+      "technical_details": [
+        {
+          "icon": "🛞",
+          "title": "Differential Swerve Module Design",
+          "content": "Each module provides independent drive and steering, enabling true omni-directional movement and agile maneuvering. The modular mechanical design allows for rapid maintenance and reconfiguration."
+        },
+        {
+          "icon": "🧭",
+          "title": "Advanced Sensor Suite Integration",
+          "content": "Equipped with RPLidar C1 LIDAR, IMU, and multiple cameras, all interfaced with a Jetson Nano for real-time SLAM, navigation, and perception tasks."
+        },
+        {
+          "icon": "⚡",
+          "title": "Real-Time Embedded Control",
+          "content": "Custom embedded firmware in C manages low-level motor control, sensor fusion, and CAN bus communication, supporting high-frequency feedback loops for precise motion and data acquisition."
+        }
+      ],
+      "impact": [
+        {
+          "icon": "🔬",
+          "title": "Research Platform Enablement",
+          "content": "Provides a robust, flexible testbed for autonomous navigation, mapping, and multi-robot coordination experiments in logistics and robotics research."
+        },
+        {
+          "icon": "🧩",
+          "title": "Modularity and Scalability",
+          "content": "Mechanical and electrical modularity allows for rapid prototyping, easy upgrades, and adaptation to a wide range of research scenarios."
+        },
+        {
+          "icon": "🤖",
+          "title": "Advancement of Autonomous Systems",
+          "content": "Accelerates development and validation of advanced algorithms in SLAM, path planning, and distributed robotics, supporting both academic and industrial innovation."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Sensor Fusion and Real-Time Processing",
+          "description": "Integrating data from LIDAR, IMU, and cameras in real-time for accurate localization and mapping under computational constraints."
+        },
+        {
+          "title": "Robust Embedded Systems Design",
+          "description": "Ensuring reliable, low-latency control and communication across distributed modules and sensors, with fault tolerance and maintainability."
+        },
+        {
+          "title": "Mechanical-Electrical Integration",
+          "description": "Balancing modularity, durability, and performance in a compact platform while supporting rapid maintenance and expansion."
+        }
+      ],
+      "skills_gained": [
+        "Real-time embedded systems programming",
+        "CAN bus protocols and networking",
+        "Advanced control systems design and implementation",
+        "Sensor fusion and SLAM",
+        "Mechanical and electrical modular design",
+        "Hardware-software integration testing",
+        "Autonomous robotics research methodologies"
+      ]
+    }
+  },
+  "Rensselaer Motorsport - Vehicle Control Unit": {
+    "4_letter": "RM VCU",
     "img": "img/projects/rm_holder.jpg",
-    "description": "Developing a new ECU for Rensselaer Motorsport's RM27. The ECU will be based on the Jetson Nano microcontroller and will be used to control the vehicle's powertrain and other systems. I am currently leading a design team for the hardware and software implementation of the ECU with a team at Rensselaer's Center for Open Source. I am actively working on the Control Systems models in MATLAB, on the side.",
+    "description": "Developing a custom Vehicle Control Unit (VCU) for Rensselaer Motorsport's RM27 Formula SAE car, now based on the STM32F767Zi microcontroller. The VCU implements real-time datalogging, control, and simulation systems, with a robust safety architecture and modular task scheduler. Leading a team at Rensselaer's Center for Open Source to deliver both hardware and software, including FreeRTOS-based firmware, CAN bus networking, and extensive unit testing.",
     "time": "May '23 - WIP",
-    "resources": {},
+    "media": {
+      "images": [
+        "img/projects/vcu/shabbyHILsetup.jpg",
+        "img/projects/vcu/CubeMXpic1.png",
+        "img/projects/vcu/CubeMXpic2.png"
+      ],
+      "videos": [],
+      "websites": [
+        {
+          "url": "https://github.com/RensselaerMotorsport/VehicleControlUnit",
+          "title": "VCU Software Repository",
+          "preview": "img/projects/rm_holder.jpg"
+        },
+        {
+          "url": "https://rensselaermotorsport.github.io/VehicleControlUnit/files.html",
+          "title": "VCU Doxygen Documentation",
+          "preview": "img/projects/vcu/doxygen.png"
+        }
+      ]
+    },
     "tags": [
       "Control Systems",
       "Automotive",
-      "Embedded Systems"
+      "Embedded Systems",
+      "STM32"
     ],
     "modal": {
-      "detailed_description": "Leading the development of an advanced Electronic Control Unit (ECU) for Rensselaer Motorsport's RM27 Formula SAE vehicle. This project represents a significant leap in vehicle control systems, integrating multiple subsystems including powertrain management, data acquisition, and safety monitoring. Working with a multidisciplinary team to develop both hardware and software components that meet strict competition regulations while pushing performance boundaries.",
+      "detailed_description": "Leading the design and implementation of a next-generation Vehicle Control Unit (VCU) for Formula SAE, built on the STM32F767Zi microcontroller. The VCU features a modular, real-time architecture using FreeRTOS, supporting datalogging, control, and simulation for all major vehicle systems. The software is structured around a scheduler and updateable task model, with strict safety validation for all control actions. The platform is highly configurable for use as a central VCU, CAN node, or datalogger, and is supported by custom hardware (KiCAD), HAL drivers, and comprehensive documentation.",
       "context": {
         "type": "motorsport",
-        "title": "Formula SAE Engineering Excellence",
-        "content": "Formula SAE is the world's most prestigious engineering design competition where university teams design, build, and race small formula-style cars. This ECU project pushes the boundaries of automotive control systems in a highly competitive environment where performance, reliability, and innovation are paramount."
+        "title": "Formula SAE Embedded Systems Innovation",
+        "content": "This project advances Formula SAE vehicle electronics by introducing a robust, modular VCU platform on STM32. The system is designed for reliability, safety, and extensibility, supporting rapid development and deployment of new vehicle features, and enabling advanced testing and simulation workflows."
       },
       "technical_details": [
         {
           "icon": "⚡",
-          "title": "Real-Time Control Systems",
-          "content": "Implementing advanced control algorithms using Jetson Nano for real-time vehicle dynamics management, including traction control, launch control, and comprehensive data logging systems with sub-millisecond response times."
+          "title": "STM32F767Zi Real-Time Architecture",
+          "content": "Implements a FreeRTOS-based scheduler for real-time task management, supporting sub-millisecond control loops, safety monitoring, and deterministic system updates. Modular Updateable classes allow for flexible expansion of sensors, controllers, and outputs."
         },
         {
-          "icon": "🔧",
-          "title": "Hardware Integration",
-          "content": "Custom PCB design and sensor integration for CAN bus communication, with emphasis on reliability and electromagnetic compatibility in harsh racing environments. Designing fail-safe mechanisms and redundant systems."
+          "icon": "🛠️",
+          "title": "Safety-First Control Systems",
+          "content": "All controllers are validated by monitor routines before actuating outputs, ensuring fail-safe operation. The architecture supports rapid disabling, safety checks, and redundancy for critical vehicle functions."
         },
         {
-          "icon": "📊",
-          "title": "MATLAB Control Modeling",
-          "content": "Developing sophisticated control models in MATLAB for vehicle dynamics simulation, powertrain optimization, and performance prediction to validate real-world implementation strategies."
+          "icon": "🚌",
+          "title": "CAN Bus & Hardware Integration",
+          "content": "Custom PCB design with KiCAD, STM32 HAL drivers, and robust CAN bus communication for reliable data exchange with inverters, BMS, and other subsystems. Designed for electromagnetic compatibility and harsh automotive environments."
+        },
+        {
+          "icon": "🧪",
+          "title": "Comprehensive Testing & Simulation",
+          "content": "Supports SIL (Software-In-Loop), HIL (Hardware-In-Loop), and PIL (Processor-In-Loop) testing. Includes unit tests, simulation models, and documentation for rapid validation and debugging."
         }
       ],
       "impact": [
         {
           "icon": "🚀",
-          "title": "Performance Innovation",
-          "content": "Expected 15% improvement in lap times through optimized powertrain control, advanced traction management, and data-driven setup adjustments based on real-time telemetry."
+          "title": "Embedded Systems Leadership",
+          "content": "Establishes a reusable, extensible VCU platform for current and future Formula SAE vehicles, accelerating development and improving reliability."
         },
         {
           "icon": "👥",
-          "title": "Team Leadership Excellence",
-          "content": "Leading a diverse team of 8+ engineers across electrical, software, and mechanical disciplines to deliver integrated vehicle systems under tight competition deadlines."
+          "title": "Team & Open Source Collaboration",
+          "content": "Leads a multidisciplinary team and open source contributors, producing public documentation and code for the broader motorsport and embedded systems community."
         },
         {
           "icon": "🏆",
-          "title": "Competition Advantage",
-          "content": "Developing cutting-edge technology that positions Rensselaer Motorsport as a leader in Formula SAE innovation and performance engineering."
+          "title": "Competition-Ready Reliability",
+          "content": "Delivers a robust, safety-validated control platform that meets the demanding requirements of Formula SAE competition."
         }
       ],
       "challenges": [
         {
-          "title": "Real-Time Performance Constraints",
-          "description": "Ensuring control loop execution within 1ms timing constraints while managing multiple sensor inputs, actuator outputs, and complex vehicle dynamics calculations."
+          "title": "Real-Time Scheduling & Safety",
+          "description": "Ensuring all control and safety tasks execute within strict timing constraints, with reliable failover and monitoring. Implemented priority-based task scheduling using FreeRTOS, added watchdog timers and redundant safety checks, and designed modular safety monitors for critical control paths."
         },
         {
-          "title": "Safety-Critical System Design",
-          "description": "Implementing comprehensive fail-safe mechanisms and redundant systems to meet stringent safety requirements for high-performance racing applications."
+          "title": "Hardware-Software Co-Design",
+          "description": "Coordinating PCB, firmware, and system architecture to maximize reliability, maintainability, and performance on STM32. Iterated hardware and firmware design in parallel with regular integration tests, used custom hardware abstraction layers (HAL) for portability between STM chips, and documented interfaces with version control for both hardware and software."
         },
         {
-          "title": "Cross-Disciplinary Integration",
-          "description": "Coordinating hardware, software, and mechanical system requirements across multiple engineering disciplines while maintaining project timeline and budget constraints."
+          "title": "Testing Across Environments",
+          "description": "Supporting seamless SIL, HIL, and PIL testing to validate firmware before deployment on real vehicles. Developed simulation models for all hardware interfaces, automated test suites for SIL, HIL, and PIL workflows, and used continuous integration pipelines to run tests on every code change."
         }
       ],
       "skills_gained": [
-        "Real-time embedded systems programming",
-        "CAN bus protocols and automotive networking",
-        "Advanced control systems design and implementation",
-        "Technical team leadership and project management",
-        "Safety-critical system architecture",
-        "MATLAB modeling and simulation",
-        "Hardware-software integration testing"
+        "STM32 embedded firmware development",
+        "FreeRTOS real-time task scheduling",
+        "CAN bus protocol and automotive networking",
+        "Safety-critical system design and validation",
+        "Hardware-software integration (KiCAD, HAL)",
+        "Unit testing and simulation for embedded systems",
+        "Technical leadership and open source collaboration"
+      ]
+    }
+  },
+  "Multi-Robot Coordination System": {
+    "4_letter": "MRCS",
+    "img": "img/projects/multirobot/simulation.png",
+    "description": "Advanced multi-robot coordination system implementing SLAM, ArUco marker detection, and Weighted Conflict-Based Search (WCBS) for collision-free path planning. Features real-time LiDAR simulation, occupancy grid mapping, and coordinated navigation for up to six robots in shared environments.",
+    "time": "Fall '24",
+    "media": {
+      "images": [
+        "img/projects/multirobot/simulation.png"
+      ],
+      "videos": [
+        {
+          "url": "https://drive.google.com/file/d/1-SBP6zZVlUvf8kbpI0DZmbQDgqVu7UfT/view?resourcekey",
+          "title": "WCBS Multi-Robot Simulation",
+          "preview": "img/projects/multirobot/simulation2.png"
+        }
+      ],
+      "websites": [
+        {
+          "url": "https://github.com/AmarMaksumic/MultiRobotSim",
+          "title": "Multi-Robot Simulation Repository",
+          "preview": "img/projects/multirobot/aruco_detection.png"
+        },
+        {
+          "url": "https://www.linkedin.com/in/maksua/details/projects/1759899684409/single-media-viewer/?profileId=ACoAACwClcMB6GXAd_uAfyf9qoVC0ed8yXhg8mU",
+          "title": "Project LinkedIn Post",
+          "preview": "img/projects/multirobot/lidar_scan.png"
+        }
+      ]
+    },
+    "tags": [
+      "Robotics",
+      "SLAM",
+      "Path Planning",
+      "Computer Vision",
+      "Multi-Agent Systems"
+    ],
+    "modal": {
+      "detailed_description": "Comprehensive multi-robot coordination system designed for autonomous navigation in shared environments. The system integrates SLAM (Simultaneous Localization and Mapping), ArUco marker-based visual guidance, and advanced path planning algorithms to enable safe, coordinated movement of multiple robots. Built using NumPy and PyGame for real-time simulation, the project demonstrates sophisticated robotics concepts including sensor fusion, occupancy grid mapping, and conflict-free multi-agent path planning using Weighted Conflict-Based Search (WCBS).",
+      "context": {
+        "type": "academic",
+        "title": "ECSE 6490: Robotics II Final Project",
+        "content": "This capstone project for RPI's advanced Robotics course addresses fundamental challenges in multi-robot systems including coordination, collision avoidance, and real-time navigation. The work demonstrates mastery of SLAM algorithms, computer vision techniques, and advanced path planning methods essential for modern autonomous robotics applications in warehouses, hospitals, and collaborative workspaces."
+      },
+      "technical_details": [
+        {
+          "icon": "🗺️",
+          "title": "Real-Time SLAM Implementation",
+          "content": "Developed lightweight occupancy grid SLAM using LiDAR ray-casting simulation with Gaussian blur filtering and decay mechanisms. Implements both real-time mapping for immediate path planning and ICP-based offline SLAM using Open3D for high-precision global maps with point cloud alignment and drift correction."
+        },
+        {
+          "icon": "🎯",
+          "title": "ArUco Marker Visual Guidance",
+          "content": "Integrated OpenCV-based ArUco marker detection with ROS messaging for robust robot localization and target assignment. Implemented transform frame management, marker dictionary systems, and broadcasting capabilities enabling marker-based navigation and human-robot interaction scenarios."
+        },
+        {
+          "icon": "🤖",
+          "title": "Weighted Conflict-Based Search (WCBS)",
+          "content": "Advanced multi-robot path planning using WCBS algorithm with reservation tables managing space-time constraints. Implements safety margins, collision buffers (9-cell radius), and temporal reservations enabling coordinated navigation of up to six robots without deadlocks or collisions."
+        },
+        {
+          "icon": "📡",
+          "title": "LiDAR Simulation & Sensor Fusion",
+          "content": "High-fidelity LiDAR simulation using 360-degree ray-marching with distance-dependent noise modeling. Generates point clouds for SLAM processing with configurable range (10m), resolution (1000x1000 grid), and realistic sensor characteristics matching commercial spinning LiDAR systems."
+        }
+      ],
+      "impact": [
+        {
+          "icon": "🏭",
+          "title": "Multi-Robot Coordination Advancement",
+          "content": "Successfully demonstrated collision-free coordination of six robots in shared workspace, addressing critical challenges in warehouse automation, collaborative robotics, and autonomous logistics applications where multiple agents must operate safely in confined spaces."
+        },
+        {
+          "icon": "🔬",
+          "title": "SLAM & Navigation Integration",
+          "content": "Created comprehensive robotics framework combining real-time mapping, visual guidance, and coordinated planning that serves as foundation for advanced autonomous systems research and practical multi-robot deployments."
+        },
+        {
+          "icon": "📚",
+          "title": "Educational & Research Platform",
+          "content": "Developed complete simulation environment with real-time visualization enabling further research in multi-agent systems, human-robot interaction, and autonomous navigation algorithms."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Multi-Robot Deadlock Prevention",
+          "description": "Addressed complex coordination challenges where independent A* planning caused frequent collisions and deadlocks. Successfully implemented WCBS with space-time reservation tables, safety margins, and temporal constraints to enable smooth multi-robot navigation without conflicts."
+        },
+        {
+          "title": "Real-Time SLAM Performance",
+          "description": "Balanced mapping accuracy with computational efficiency for real-time operation. Developed lightweight occupancy grid approach with Gaussian filtering and decay mechanisms, plus high-precision ICP-based offline SLAM for comprehensive environment reconstruction."
+        },
+        {
+          "title": "Sensor Integration & Simulation Fidelity",
+          "description": "Created realistic sensor simulation including LiDAR ray-casting, distance-dependent noise modeling, and ArUco marker detection. Integrated multiple sensor modalities while maintaining real-time performance and accurate environmental representation."
+        }
+      ],
+      "skills_gained": [
+        "Advanced SLAM algorithm implementation and optimization",
+        "Multi-robot coordination and conflict resolution",
+        "Computer vision and ArUco marker detection",
+        "Path planning algorithms (A*, WCBS)",
+        "Real-time robotics simulation and visualization",
+        "Sensor fusion and occupancy grid mapping",
+        "Point cloud processing and ICP alignment",
+        "Multi-agent system design and coordination"
+      ]
+    }
+  },
+  "FIR Filter Design & FPGA Implementation": {
+    "4_letter": "FIR",
+    "img": "img/projects/fir_filter/rtlschem.png",
+    "description": "Comprehensive FPGA implementation of multiple FIR filter architectures for audio processing applications. Designed and analyzed four different filter implementations using AMD Vivado and System Verilog, including pipelined, parallel, and hybrid approaches optimized for performance, power, and area efficiency on Kintex-7 FPGA.",
+    "time": "Mar '25",
+    "media": {
+      "images": [],
+      "videos": [],
+      "websites": [
+        {
+          "url": "https://github.com/AmarMaksumic/FIR-Filter-Design",
+          "title": "FIR Filter Design Repository",
+          "preview": "img/projects/fir_filter/rtlschem.png"
+        }
+      ]
+    },
+    "tags": [
+      "FPGA",
+      "Digital Signal Processing",
+      "VHDL/Verilog",
+      "Audio Processing",
+      "Hardware Design"
+    ],
+    "modal": {
+      "detailed_description": "Advanced FPGA-based digital signal processing project implementing four distinct FIR filter architectures optimized for different performance criteria. This comprehensive study explores the trade-offs between throughput, latency, power consumption, and silicon area usage through systematic implementation and analysis of pipelined, parallel, and hybrid filter designs. Using AMD Vivado and System Verilog, the project demonstrates mastery of hardware design principles, DSP optimization techniques, and FPGA resource management for real-time audio processing applications.",
+      "context": {
+        "type": "academic",
+        "title": "Advanced FPGA Design & DSP Optimization",
+        "content": "This project represents a deep exploration of FPGA-based DSP implementation, addressing fundamental challenges in hardware filter design including performance optimization, resource utilization, and power efficiency. The work demonstrates advanced understanding of digital filter theory, FPGA architecture, and hardware design trade-offs essential for modern embedded DSP systems."
+      },
+      "technical_details": [
+        {
+          "icon": "🔧",
+          "title": "Multi-Architecture FPGA Implementation",
+          "content": "Designed and implemented four distinct FIR filter architectures: Pipelined FIR (8.66ns critical path), L2 Parallel (80.17ns), L3 Parallel (56.79ns), and Pipelined L3 Parallel (11.88ns) using System Verilog on Kintex-7 FPGA with comprehensive performance analysis."
+        },
+        {
+          "icon": "📊",
+          "title": "Advanced DSP Algorithm Optimization",
+          "content": "Implemented Parks-McClellan algorithm for coefficient generation, 24-bit fixed-point quantization analysis, and sophisticated pipelining strategies including vertical pipeline optimization to achieve sub-10ns critical paths while maintaining signal integrity."
+        },
+        {
+          "icon": "⚡",
+          "title": "Hardware-Software Co-Design",
+          "content": "Developed complete design flow including MATLAB coefficient generation, Python test signal creation, System Verilog RTL implementation, and comprehensive FPGA validation using Vivado synthesis, implementation, and timing analysis tools."
+        },
+        {
+          "icon": "🎯",
+          "title": "Performance Analysis & Validation",
+          "content": "Conducted systematic analysis of critical path timing, power consumption (0.081W across all implementations), resource utilization (102-204 DSP blocks), and behavioral verification using comprehensive test benches with logarithmic frequency sweep validation."
+        }
+      ],
+      "impact": [
+        {
+          "icon": "🚀",
+          "title": "FPGA Design Excellence",
+          "content": "Demonstrated mastery of advanced FPGA design techniques achieving 115.4 MHz maximum clock frequency with pipelined architecture while maintaining audio processing quality standards for CD-quality 44.1 kHz sampling."
+        },
+        {
+          "icon": "📈",
+          "title": "DSP Architecture Innovation",
+          "content": "Established comprehensive comparison framework for FIR filter architectures, providing quantitative analysis of performance trade-offs between throughput (8.66ns vs 80.17ns critical path), latency (34-204 clock cycles), and resource utilization."
+        },
+        {
+          "icon": "🔬",
+          "title": "Research & Educational Impact",
+          "content": "Created complete open-source FPGA filter design methodology with detailed documentation, RTL implementations, and analysis results serving as educational resource for advanced DSP and FPGA design."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Multi-Architecture Performance Optimization",
+          "description": "Balancing competing design objectives across four different architectures while optimizing for critical path timing, resource utilization, and power efficiency within FPGA constraints. Successfully achieved 10x improvement in critical path (80ns to 8ns) through strategic pipelining."
+        },
+        {
+          "title": "Fixed-Point Precision Management",
+          "description": "Managing numerical precision and quantization effects in 24-bit coefficient representation while maintaining -80dB stopband attenuation requirements. Implemented comprehensive analysis comparing 16-bit, 24-bit, and 32-bit representations."
+        },
+        {
+          "title": "Complex FPGA Implementation & Validation",
+          "description": "Developing robust System Verilog implementations with comprehensive test benches, behavioral simulation, and timing validation across multiple filter architectures while ensuring consistent audio processing performance."
+        }
+      ],
+      "skills_gained": [
+        "Advanced FPGA design using AMD Vivado and System Verilog",
+        "Digital signal processing algorithm implementation and optimization",
+        "FIR filter architecture design and performance analysis",
+        "Hardware pipelining and parallelization techniques",
+        "Fixed-point arithmetic and quantization analysis",
+        "FPGA resource optimization and timing analysis",
+        "Hardware-software co-design methodologies",
+        "Advanced DSP validation and testing procedures"
+      ]
+    }
+  },
+  "Gain-Scheduled Traction Control System": {
+    "4_letter": "TCS",
+    "img": "img/projects/tcs/system.png",
+    "description": "Advanced nonlinear control system implementing gain-scheduled PID controller for longitudinal traction control in rear-wheel drive motorcycle. Features Pacejka Magic Formula tire modeling, suspension dynamics integration, and real-time slip ratio regulation up to 1kHz for optimal traction under varying road conditions.",
+    "time": "Mar '25 - Apr '25",
+    "media": {
+      "images": [],
+      "videos": [],
+      "websites": [
+        {
+          "url": "https://www.linkedin.com/in/maksua/details/projects/1759898610202/single-media-viewer/?profileId=ACoAACwClcMB6GXAd_uAfyf9qoVC0ed8yXhg8mU",
+          "title": "Project Report on LinkedIn",
+          "preview": "img/projects/tcs/sim.png"
+        }
+      ]
+    },
+    "tags": [
+      "Control Systems",
+      "Automotive Systems",
+      "Nonlinear Control",
+      "MATLAB/Simulink"
+    ],
+    "modal": {
+      "detailed_description": "Comprehensive development of an advanced traction control system (TCS) for rear-wheel drive motorcycles using sophisticated nonlinear control theory. This project implements a gain-scheduled PID controller that dynamically adapts to varying slip conditions through real-time torque modulation at rates up to 1kHz. The system incorporates the Pacejka Magic Formula for realistic tire force modeling and accounts for vehicle suspension dynamics to accurately represent load transfer effects. Through systematic linearization at key operating points and Hartman-Grobman stability analysis, the controller demonstrates superior performance over fixed-gain approaches across diverse road conditions and driving scenarios.",
+      "context": {
+        "type": "academic",
+        "title": "ECSE 6420: Nonlinear Control Systems Final Project",
+        "content": "This advanced control systems project addresses the fundamental challenge of maintaining optimal traction in nonlinear vehicle dynamics. Developed for RPI's graduate-level Nonlinear Control Systems course, the work demonstrates mastery of gain scheduling, stability analysis, and practical implementation of advanced control theory for safety-critical automotive applications."
+      },
+      "technical_details": [
+        {
+          "icon": "🎯",
+          "title": "Advanced Gain Scheduling Implementation",
+          "content": "Developed sophisticated gain scheduling strategy using linearized models at three key slip ratios (0%, 10%, 30%) with linear interpolation between operating points. Implemented lookup table approach with PID gains ranging from aggressive (Kp=1000, Ki=5000, Kd=15000) to conservative (Kp=50, Ki=150, Kd=300) based on desired slip conditions."
+        },
+        {
+          "icon": "🔬",
+          "title": "Pacejka Magic Formula Integration",
+          "content": "Integrated empirical Pacejka Magic Formula for realistic tire force modeling with coefficients B, C, D, E representing different road surfaces. Coupled with suspension dynamics modeling including spring-mass-damper systems to accurately capture vertical load transfer effects and their impact on longitudinal traction forces."
+        },
+        {
+          "icon": "📊",
+          "title": "Comprehensive Stability Analysis",
+          "content": "Performed rigorous stability analysis using Hartman-Grobman theorem with Jacobian linearization around equilibrium points. Validated system stability through eigenvalue analysis confirming negative real parts, enabling confident application of gain scheduling techniques to the nonlinear system."
+        },
+        {
+          "icon": "⚡",
+          "title": "Real-Time Control Architecture",
+          "content": "Designed high-frequency control system capable of 1kHz torque modulation with slip ratio feedback from wheel speed differential measurements. Implemented longitudinal bicycle model with state-space representation incorporating angular velocity, linear velocity, and suspension dynamics for comprehensive system modeling."
+        }
+      ],
+      "impact": [
+        {
+          "icon": "🚗",
+          "title": "Automotive Safety Enhancement",
+          "content": "Demonstrated significant improvement in vehicle stability and safety through adaptive traction control that maintains optimal slip ratios across diverse road conditions, from dry pavement to low-traction surfaces like snow and ice."
+        },
+        {
+          "icon": "📈",
+          "title": "Advanced Control Theory Application",
+          "content": "Successfully applied sophisticated nonlinear control techniques to practical automotive problem, showcasing the effectiveness of gain scheduling over traditional fixed-gain approaches in highly nonlinear systems with varying operating conditions."
+        },
+        {
+          "icon": "🔧",
+          "title": "Simulation-to-Reality Foundation",
+          "content": "Created comprehensive simulation framework with realistic vehicle modeling that provides strong foundation for real-world implementation in electric and hybrid vehicles where software-based traction control is increasingly important."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Nonlinear System Modeling and Linearization",
+          "description": "Successfully modeled complex tire-road interactions using Pacejka Magic Formula while managing the inherent nonlinearities in vehicle dynamics. Developed systematic approach to linearization around multiple operating points while maintaining system stability and performance across the full operating envelope."
+        },
+        {
+          "title": "Gain Scheduling Optimization",
+          "description": "Designed effective gain scheduling strategy that balances responsiveness with stability across diverse slip conditions. Addressed the challenge of smooth transitions between operating regions while avoiding gain scheduling artifacts and maintaining consistent performance from conservative (0% slip) to aggressive (30% slip) driving scenarios."
+        },
+        {
+          "title": "Multi-Physics System Integration",
+          "description": "Integrated multiple complex subsystems including tire dynamics, suspension mechanics, and vehicle longitudinal dynamics into a cohesive control framework. Managed the complexity of coupling between vertical load transfer, tire forces, and slip dynamics while maintaining real-time performance requirements."
+        }
+      ],
+      "skills_gained": [
+        "Advanced nonlinear control system design and analysis",
+        "Gain scheduling implementation and optimization techniques",
+        "Pacejka tire model integration and parameter tuning",
+        "Vehicle dynamics modeling and simulation",
+        "Stability analysis using Hartman-Grobman theorem",
+        "MATLAB/Simulink advanced control system development",
+        "Automotive traction control system architecture",
+        "Multi-physics system modeling and integration"
+      ]
+    }
+  },
+  "STM32 CAN Network System": {
+    "4_letter": "CAN",
+    "img": "img/projects/stm_can/hardware.png",
+    "description": "Comprehensive CAN (Controller Area Network) implementation using multiple STM32F769 Discovery Boards with MCP2551 transceivers. Developed multi-node communication system featuring real-time data exchange, differential signaling, message prioritization, and robust error detection for automotive and industrial applications.",
+    "time": "Dec '24",
+    "media": {
+      "websites": [
+        {
+          "url": "https://www.linkedin.com/in/maksua/details/projects/1738174905829/single-media-viewer/?profileId=ACoAACwClcMB6GXAd_uAfyf9qoVC0ed8yXhg8mU",
+          "title": "Project Report on LinkedIn",
+          "preview": "img/projects/stm_can/arch.png"
+        }
+      ],
+      "images": [
+        "img/projects/stm_can/osc.png",
+        "img/projects/stm_can/term.png"
+      ],
+      "videos": []
+    },
+    "tags": [
+      "Embedded Systems",
+      "STM32",
+      "Communication Protocols",
+      "Hardware Design",
+      "Automotive Systems"
+    ],
+    "modal": {
+      "detailed_description": "Advanced embedded systems project implementing a complete CAN (Controller Area Network) communication system across multiple STM32F769 Discovery Boards. This comprehensive implementation demonstrates mastery of automotive-grade communication protocols, featuring multi-node data exchange, differential signaling through MCP2551 transceivers, and real-time terminal interface. The system transmits diverse data types including button states, ADC readings, UART characters, and system diagnostics with robust error detection and checksum validation at 1 Mbps communication speed.",
+      "context": {
+        "type": "academic",
+        "title": "ECSE 4790: Microprocessor Systems Final Project",
+        "content": "This capstone project for RPI's Microprocessor Systems course demonstrates advanced understanding of embedded communication protocols and multi-device system integration. CAN networks are critical in automotive, industrial, and medical applications where reliable, prioritized communication between multiple devices is essential for system operation and safety."
+      },
+      "technical_details": [
+        {
+          "icon": "🚗",
+          "title": "Automotive-Grade CAN Protocol Implementation",
+          "content": "Implemented full CAN 2.0A protocol with 1 Mbps baud rate using STM32 hardware CAN peripheral. Configured precise timing parameters: 18 MHz CAN clock with prescaler=3, TimeSeg1=13 TQ, TimeSeg2=4 TQ for reliable multi-node communication with MCP2551 transceivers providing differential signaling."
+        },
+        {
+          "icon": "📊",
+          "title": "Multi-Sensor Data Integration",
+          "content": "Developed comprehensive 8-byte payload structure transmitting button states (GPIO), 12-bit ADC values, UART terminal characters, frequency data, timeout management, transmission counters, and checksum validation with real-time error detection and correction capabilities."
+        },
+        {
+          "icon": "🔧",
+          "title": "Hardware-Software Co-Design",
+          "content": "Designed complete system including MCP2551 transceiver interfacing, twisted-pair CAN bus topology, STM32 HAL driver integration, interrupt-driven UART communication, and comprehensive terminal interface for real-time system monitoring and debugging."
+        },
+        {
+          "icon": "⚡",
+          "title": "Real-Time System Performance",
+          "content": "Achieved 20 Hz data transmission rate with 4 Hz terminal refresh, implementing interrupt-driven architecture with CAN RX FIFO management, circular buffer UART handling, and optimized system timing to prevent bus overload while maintaining responsive communication."
+        }
+      ],
+      "impact": [
+        {
+          "icon": "🏭",
+          "title": "Industrial Communication Standards",
+          "content": "Demonstrated implementation of automotive and industrial standard CAN protocol, providing foundation for real-world embedded systems in automotive ECUs, industrial automation, and medical device networks requiring reliable multi-node communication."
+        },
+        {
+          "icon": "🔬",
+          "title": "Advanced Embedded Systems Mastery",
+          "content": "Showcased comprehensive understanding of embedded system integration including communication protocols, interrupt handling, real-time performance optimization, and hardware-software interface design essential for professional embedded development."
+        },
+        {
+          "icon": "📚",
+          "title": "Educational Excellence & Documentation",
+          "content": "Created detailed technical documentation including circuit diagrams, oscilloscope analysis, and system architecture that serves as educational resource for understanding CAN protocol implementation and multi-device embedded systems."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Multi-Device Communication Coordination",
+          "description": "Successfully coordinated communication between four STM32 Discovery Boards while managing message arbitration, collision avoidance, and maintaining system stability. Implemented proper CAN timing parameters and message prioritization to ensure reliable data exchange across all network nodes."
+        },
+        {
+          "title": "Hardware Interface and Signal Integrity",
+          "description": "Achieved reliable differential signaling through proper MCP2551 transceiver configuration and twisted-pair CAN bus implementation. Addressed noise reduction, reference voltage configuration (-2.5V), and proper grounding to maintain signal integrity in multi-device network."
+        },
+        {
+          "title": "Real-Time Performance Optimization",
+          "description": "Resolved system latency issues when running multiple concurrent processes (UART interrupts, ADC polling, timer interrupts) by optimizing interrupt priorities, implementing efficient circular buffers, and balancing terminal refresh rates to prevent bus overload while maintaining responsiveness."
+        }
+      ],
+      "skills_gained": [
+        "CAN protocol implementation and automotive communication standards",
+        "STM32 HAL driver programming and peripheral configuration",
+        "Multi-device embedded system architecture and coordination",
+        "Hardware transceiver interfacing and differential signaling",
+        "Real-time interrupt handling and system optimization",
+        "Communication protocol debugging and oscilloscope analysis",
+        "Embedded system documentation and technical reporting",
+        "Industrial-grade embedded system design principles"
+      ]
+    }
+  },
+  "Hand Sign Detection ML System": {
+    "4_letter": "HSD",
+    "img": "img/projects/hand_sign/depth_image.png",
+    "description": "Advanced machine learning system for hand gesture recognition using depth-based computer vision. Developed CNN and MLP models trained on custom 3D depth image dataset to enable interactive communication with Stretch robot in RPI's Mercer XLab through real-time hand sign classification.",
+    "time": "Dec '24",
+    "media": {
+      "images": [],
+      "videos": [],
+      "websites": [
+        {
+          "url": "https://www.linkedin.com/in/maksua/details/projects/1738175212545/single-media-viewer/?profileId=ACoAACwClcMB6GXAd_uAfyf9qoVC0ed8yXhg8mU",
+          "title": "Project Report on LinkedIn",
+          "preview": "img/projects/hand_sign/cnn_architecture.png"
+        }
+      ]
+    },
+    "tags": [
+      "Machine Learning",
+      "Computer Vision",
+      "Deep Learning",
+      "Robotics",
+      "PyTorch"
+    ],
+    "modal": {
+      "detailed_description": "Comprehensive machine learning project developing an advanced hand gesture recognition system for human-robot interaction applications. Created custom dataset using Intel D435i 3D camera capturing depth-based images of six distinct hand signs, then implemented and compared CNN and MLP architectures using PyTorch. The system achieves 91.39% testing accuracy with CNN model, enabling real-time gesture classification for interactive robotics applications. This innovative approach leverages depth sensing for robust feature extraction, demonstrating superior performance over traditional RGB-based methods for spatial gesture recognition.",
+      "context": {
+        "type": "academic",
+        "title": "Introduction to Machine Learning Final Project",
+        "content": "This project addresses the challenge of enabling meaningful human-robot interaction through gesture recognition for RPI's Stretch robot in the Mercer XLab. Rather than relying on generic chatbot interfaces, the system creates intuitive, gesture-based communication that showcases innovative student capabilities while providing practical functionality for interactive robotics applications."
+      },
+      "technical_details": [
+        {
+          "icon": "🤖",
+          "title": "Advanced CNN Architecture Implementation",
+          "content": "Developed sophisticated convolutional neural network with optimized kernel sizes (2x2), 2D batch normalization, and strategic dropout layers. Implemented three convolutional layers with ReLU activation, max pooling, and dual fully connected layers achieving 91.39% testing accuracy with effective overfitting prevention through regularization."
+        },
+        {
+          "icon": "📊",
+          "title": "Custom Depth-Based Dataset Creation",
+          "content": "Curated comprehensive dataset of 3,300 depth images across six hand gesture classes using Intel D435i 3D camera. Implemented pinhole camera model projection, statistical depth filtering (mean ± 1.5σ), and 8-bit normalization pipeline converting 3D point clouds to optimized 224x224 depth images for ML processing."
+        },
+        {
+          "icon": "🔬",
+          "title": "Comparative ML Model Analysis",
+          "content": "Systematically compared CNN vs MLP architectures using identical training protocols, Cross-Entropy loss, and Adam optimizer. Implemented comprehensive evaluation framework with confusion matrices, ROC curves, and hyperparameter tuning achieving CNN: 91.39% vs MLP: 86.28% testing accuracy."
+        },
+        {
+          "icon": "⚡",
+          "title": "Real-Time Processing Pipeline",
+          "content": "Developed efficient preprocessing pipeline with Savitzky-Golay filtering for loss smoothing, custom PyTorch dataset classes, and GPU-accelerated inference enabling real-time gesture classification suitable for interactive robotics deployment on Stretch robot platform."
+        }
+      ],
+      "impact": [
+        {
+          "icon": "🚀",
+          "title": "Human-Robot Interaction Innovation",
+          "content": "Created practical solution for intuitive robot communication enabling meaningful gesture-based commands ('follow me', 'stop', 'explain') that demonstrates student innovation beyond generic AI interfaces, directly applicable to Stretch robot in Mercer XLab interactive tours."
+        },
+        {
+          "icon": "📈",
+          "title": "Depth-Based Vision Advancement",
+          "content": "Pioneered depth-sensing approach for hand gesture recognition showing advantages over traditional RGB methods for spatial feature extraction, particularly effective for finger position analysis and hand orientation detection in challenging lighting conditions."
+        },
+        {
+          "icon": "🔧",
+          "title": "Open-Source ML Framework",
+          "content": "Developed complete machine learning pipeline with custom dataset creation tools, model architectures, and evaluation frameworks available for broader robotics community, enabling replication and extension for similar interactive robotics applications."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Dataset Quality and Overfitting Management",
+          "description": "Overcame significant challenges with depth image quality including missing finger data and inconsistent depth patterns. Addressed severe CNN overfitting (100% training accuracy with poor testing) through strategic regularization, dropout implementation, dataset expansion to 3,300 samples, and rigorous data pruning removing indistinguishable samples."
+        },
+        {
+          "title": "Depth Image Processing and Optimization",
+          "description": "Developed sophisticated preprocessing pipeline to handle noisy 3D point cloud data, implementing statistical filtering algorithms, 16-bit to 8-bit conversion, and spatial normalization while preserving critical hand features. Optimized image resolution from 640x480 to 224x224 balancing detail retention with computational efficiency."
+        },
+        {
+          "title": "Multi-Class Classification Accuracy",
+          "description": "Addressed significant misclassification challenges between similar gestures (hangloose, spiderman, peace) through careful dataset curation, hyperparameter optimization (kernel size reduction from 3x3 to 2x2), and advanced evaluation using confusion matrices and ROC analysis to achieve 91.39% final accuracy."
+        }
+      ],
+      "skills_gained": [
+        "Advanced PyTorch deep learning implementation and optimization",
+        "Custom computer vision dataset creation and preprocessing",
+        "3D point cloud processing and depth image conversion",
+        "CNN and MLP architecture design and comparison",
+        "Machine learning model evaluation and validation techniques",
+        "Overfitting detection and regularization strategies",
+        "Real-time computer vision pipeline development",
+        "Human-robot interaction system design"
       ]
     }
   },
   "RPI Robotic Art Installation": {
     "4_letter": "Line",
     "img": "img/projects/RAI.jpg",
-    "description": "Art installation for the RPI campus. Will be comprised of several dozen origami units that open and close in response to user stimulus from a computer vision system. Serving as the Team Lead for the project, helping out with programming and electrical work.",
-    "time": "Dec '22 - WIP",
+    "description": "Art installation for the RPI campus. Comprised of several dozen origami units that opened and closed in response to user stimulus from a computer vision system. Served as the Team Lead for the project, helped with programming and electrical work.",
+    "time": "Dec '22 - Dec '23",
     "resources": {},
     "tags": [
       "Computer Vision",
@@ -88,17 +698,17 @@
       "Art Installation"
     ],
     "modal": {
-      "detailed_description": "An innovative interactive art installation combining robotics, computer vision, and artistic expression for the RPI campus. The installation features several dozen responsive origami units that create dynamic visual patterns through coordinated movement based on real-time computer vision analysis of user interactions. This project bridges the gap between technology and art, creating an engaging public space that responds to human presence and movement.",
+      "detailed_description": "An innovative interactive art installation that combined robotics, computer vision, and artistic expression for the RPI campus. The installation featured several dozen responsive origami units that created dynamic visual patterns through coordinated movement based on real-time computer vision analysis of user interactions. This project bridged the gap between technology and art, creating an engaging public space that responded to human presence and movement.",
       "context": {
         "type": "research",
         "title": "Interactive Art & Technology Integration",
-        "content": "This installation represents the intersection of engineering and artistic expression, demonstrating how advanced robotics and computer vision can create meaningful human-technology interactions in public spaces. The project showcases RPI's commitment to innovation in both technical and creative domains."
+        "content": "This installation represented the intersection of engineering and artistic expression, demonstrating how advanced robotics and computer vision could create meaningful human-technology interactions in public spaces. The project showcased RPI's commitment to innovation in both technical and creative domains."
       },
       "technical_details": [
         {
           "icon": "👁️",
           "title": "Computer Vision System",
-          "content": "Real-time person detection and tracking using advanced computer vision algorithms to analyze user movement patterns, proximity, and gestures for responsive art installation control."
+          "content": "Implemented real-time person detection and tracking using advanced computer vision algorithms to analyze user movement patterns, proximity, and gestures for responsive art installation control."
         },
         {
           "icon": "🤖",
@@ -108,38 +718,38 @@
         {
           "icon": "🎨",
           "title": "Interactive Design",
-          "content": "Algorithmic pattern generation that translates human movement into beautiful, flowing origami animations, creating unique artistic experiences for each interaction."
+          "content": "Developed algorithmic pattern generation that translated human movement into beautiful, flowing origami animations, creating unique artistic experiences for each interaction."
         }
       ],
       "impact": [
         {
           "icon": "🎯",
           "title": "Campus Enhancement",
-          "content": "Creating an engaging interactive experience that enhances the RPI campus environment and demonstrates the university's leadership in innovative technology applications."
+          "content": "Created an engaging interactive experience that enhanced the RPI campus environment and demonstrated the university's leadership in innovative technology applications."
         },
         {
           "icon": "👥",
           "title": "Interdisciplinary Collaboration",
-          "content": "Leading cross-functional teams combining engineering, computer science, and artistic design principles to create a unified technical-artistic vision."
+          "content": "Led cross-functional teams combining engineering, computer science, and artistic design principles to create a unified technical-artistic vision."
         },
         {
           "icon": "🔬",
           "title": "Research Innovation",
-          "content": "Advancing the field of interactive installations by developing novel approaches to human-robot interaction in artistic contexts."
+          "content": "Advanced the field of interactive installations by developing novel approaches to human-robot interaction in artistic contexts."
         }
       ],
       "challenges": [
         {
           "title": "Real-Time Responsiveness",
-          "description": "Ensuring seamless, low-latency response to user interactions while coordinating dozens of mechanical units in real-time."
+          "description": "Ensured seamless, low-latency response to user interactions while coordinating dozens of mechanical units in real-time."
         },
         {
-          "title": "Outdoor Durability",
-          "description": "Designing robust systems that can withstand weather conditions while maintaining precise mechanical operation and reliable electronics."
+          "title": "Durability",
+          "description": "Designed robust systems that could withstand wear-and-tear while maintaining precise mechanical operation and reliable electronics."
         },
         {
           "title": "Artistic-Technical Balance",
-          "description": "Balancing technical capabilities with artistic vision to create meaningful aesthetic experiences while maintaining system reliability."
+          "description": "Balanced technical capabilities with artistic vision to create meaningful aesthetic experiences while maintaining system reliability."
         }
       ],
       "skills_gained": [
@@ -153,91 +763,21 @@
       ]
     }
   },
-  "Rensselaer Motorsport - RM26": {
-    "4_letter": "RM 26",
-    "img": "img/projects/rm26.jpg",
-    "description": "Powertrain Lead for Rensselaer Motorsport's first electric vehicle. I worked on decision matrices and design reviews in favor of implementing an EMRAX 228 motor with Cascadia Rinehart PM100DX motor controller for our powertrain. I am currently working on the implementation, control systems, and high voltage routing for this configuration. I am also working on the battery management system for our accumulator battery.",
-    "time": "Jun '22 - Jun '23",
-    "resources": {},
-    "tags": [
-      "Electric Vehicles",
-      "Powertrain",
-      "Battery Systems"
-    ],
-    "modal": {
-      "detailed_description": "Served as Powertrain Lead for Rensselaer Motorsport's groundbreaking transition to electric vehicles with RM26. This historic project marked the team's first foray into electric powertrain technology, requiring comprehensive research, design, and implementation of high-voltage systems. Led the technical decision-making process for motor and controller selection, designed the battery management architecture, and oversaw the integration of all powertrain components while ensuring compliance with Formula SAE electric vehicle regulations.",
-      "context": {
-        "type": "motorsport",
-        "title": "Electric Vehicle Innovation in Formula SAE",
-        "content": "RM26 represents a pivotal moment in Rensselaer Motorsport's history - the transition from internal combustion to electric powertrains. This shift required mastering entirely new technologies including high-voltage safety, battery management, electric motor control, and thermal management while maintaining competitive performance standards in Formula SAE competition."
-      },
-      "technical_details": [
-        {
-          "icon": "⚡",
-          "title": "High-Performance Electric Powertrain",
-          "content": "Selected and integrated EMRAX 228 motor with Cascadia Rinehart PM100DX controller, delivering optimal power-to-weight ratio and efficiency for Formula SAE applications with regenerative braking capabilities."
-        },
-        {
-          "icon": "🔋",
-          "title": "Advanced Battery Management System",
-          "content": "Designed comprehensive BMS architecture for lithium-ion accumulator with cell monitoring, balancing, thermal management, and safety shutdown systems compliant with Formula SAE EV regulations."
-        },
-        {
-          "icon": "🔧",
-          "title": "High-Voltage System Integration",
-          "content": "Engineered complete HV routing, safety systems, and component integration including inverter mounting, cooling systems, and emergency shutdown procedures meeting strict safety standards."
-        }
-      ],
-      "impact": [
-        {
-          "icon": "🚀",
-          "title": "Technology Transition Leadership",
-          "content": "Successfully led Rensselaer Motorsport's transition to electric vehicles, establishing the foundation for future EV development and competitive performance in Formula SAE Electric."
-        },
-        {
-          "icon": "📊",
-          "title": "Performance Optimization",
-          "content": "Achieved competitive power delivery and efficiency through systematic component selection and integration, positioning the team for strong competition results."
-        },
-        {
-          "icon": "🛡️",
-          "title": "Safety Standard Excellence",
-          "content": "Implemented comprehensive safety systems and procedures that became the template for future electric vehicle projects, ensuring both performance and safety compliance."
-        }
-      ],
-      "challenges": [
-        {
-          "title": "Technology Learning Curve",
-          "description": "Mastering electric vehicle technologies, high-voltage safety protocols, and battery management systems while transitioning from traditional ICE powertrains."
-        },
-        {
-          "title": "Regulatory Compliance",
-          "description": "Ensuring all systems met stringent Formula SAE EV safety and technical regulations while maintaining competitive performance characteristics."
-        },
-        {
-          "title": "Integration Complexity",
-          "description": "Coordinating electrical, mechanical, and software systems integration across multiple engineering disciplines under tight timeline constraints."
-        }
-      ],
-      "skills_gained": [
-        "Electric vehicle powertrain design",
-        "Battery management system architecture",
-        "High-voltage safety protocols and implementation",
-        "Motor control and power electronics",
-        "Thermal management system design",
-        "Technical leadership in emerging technologies",
-        "Cross-functional system integration",
-        "Regulatory compliance and documentation"
-      ]
-    }
-  },
   "RPI Ungergrad Research: Inverse Kinematics": {
     "4_letter": "IK URP",
     "img": "img/projects/ik_urp.png",
     "description": "Worked on C++ implementation of subproblem solutions using a linear algebra approach from \"Canonical Subproblems for Robot Inverse Kinematics\"",
     "time": "Sep '22 - May '23",
-    "resources": {
-      "github": "https://github.com/rpiRobotics/linear-subproblem-solutions"
+    "media": {
+      "images": [],
+      "videos": [],
+      "websites": [
+        {
+          "url": "https://github.com/rpiRobotics/linear-subproblem-solutions",
+          "title": "Inverse Kinematics Research Repository",
+          "preview": "img/projects/ik_urp.png"
+        }
+      ]
     },
     "tags": [
       "Robotics",
@@ -310,91 +850,22 @@
       ]
     }
   },
-  "Rensselaer Motorsport - RM25": {
-    "4_letter": "RM 25",
-    "img": "img/projects/rm25.jpg",
-    "description": "Worked on software and electric systems for Rensselaer Motorsport's 25th Formula SAE car, RM25.",
-    "time": "Mar '22 - May '22",
-    "resources": {
-      "website": "http://www.formularpi.org/rollout-2022/"
-    },
-    "tags": [
-      "Mechanical Engineering",
-      "Software Development",
-      "Electric Systems"
-    ],
-    "modal": {
-      "detailed_description": "Contributed to the development of Rensselaer Motorsport's milestone 25th Formula SAE vehicle, RM25. This project marked a significant achievement in the team's history, combining traditional Formula SAE engineering excellence with modern software and electrical systems integration. Worked on multiple subsystems including embedded software development, electrical system design, and vehicle integration testing to ensure optimal performance and reliability for competition.",
-      "context": {
-        "type": "motorsport",
-        "title": "Formula SAE Heritage & Innovation",
-        "content": "RM25 represents 25 years of Formula SAE excellence at Rensselaer, combining the team's rich engineering heritage with cutting-edge technology. This vehicle served as a stepping stone toward the team's electric vehicle transition while maintaining competitive performance in traditional Formula SAE competition."
-      },
-      "technical_details": [
-        {
-          "icon": "💻",
-          "title": "Embedded Software Development",
-          "content": "Developed and implemented embedded software systems for vehicle control, data acquisition, and driver interface systems using modern programming practices and real-time constraints."
-        },
-        {
-          "icon": "⚡",
-          "title": "Electrical System Integration",
-          "content": "Designed and implemented electrical systems including wiring harnesses, sensor integration, and control module connectivity ensuring reliable operation under racing conditions."
-        },
-        {
-          "icon": "🔧",
-          "title": "Vehicle System Testing",
-          "content": "Conducted comprehensive system testing and integration validation to ensure all software and electrical components functioned correctly under various operating conditions."
-        }
-      ],
-      "impact": [
-        {
-          "icon": "🏆",
-          "title": "Competition Success",
-          "content": "Contributed to successful vehicle deployment and competition performance, maintaining Rensselaer Motorsport's reputation for engineering excellence."
-        },
-        {
-          "icon": "🔄",
-          "title": "Technology Foundation",
-          "content": "Established software and electrical system foundations that would support the team's transition to electric vehicle technology in subsequent projects."
-        },
-        {
-          "icon": "👥",
-          "title": "Team Integration",
-          "content": "Successfully integrated software and electrical systems with mechanical components through effective cross-disciplinary collaboration."
-        }
-      ],
-      "challenges": [
-        {
-          "title": "System Integration Complexity",
-          "description": "Coordinating software and electrical systems with mechanical components while meeting strict competition deadlines and performance requirements."
-        },
-        {
-          "title": "Reliability Under Stress",
-          "description": "Ensuring all electronic systems maintained reliability and performance under the demanding conditions of competitive racing."
-        },
-        {
-          "title": "Legacy System Integration",
-          "description": "Integrating new software and electrical technologies with established team practices and existing system architectures."
-        }
-      ],
-      "skills_gained": [
-        "Embedded systems programming",
-        "Electrical system design and integration",
-        "Vehicle-level system testing and validation",
-        "Cross-disciplinary engineering collaboration",
-        "Competition-focused engineering practices",
-        "Real-time software development",
-        "Project timeline management under pressure"
-      ]
-    }
-  },
   "Power Take-Off Gearbox": {
     "4_letter": "PTO",
     "img": "img/projects/ptov2.jpg",
     "description": "Drop-in replacement for VexPro Three CIM Ball Shifter, while providing independent outputs to two mechanisms. All electronics and pneumatics are located to one side (to prevent interference with wheels and chassis), and the second output is fitted with a power shuttle to reverse output direction (in the case that both outputs run at the same time).",
     "time": "Mar '20 - Jun '21",
-    "resources": {},
+    "media": {
+      "images": [],
+      "videos": [],
+      "websites": [
+        {
+          "url": "https://cad.onshape.com/documents/9fe8a78d285bab0307f97abb/w/89d3e6984a2b0de5430c622c/e/8737fa940d2e3063bf9912e8",
+          "title": "PTO CAD Model",
+          "preview": "img/projects/ptov2.jpg"
+        }
+      ]
+    },
     "tags": [
       "Mechanical Engineering",
       "Robotics",
@@ -471,9 +942,21 @@
     "img": "img/projects/aquila_heavy.jpg",
     "description": "Thrust Vector Controlled model rocket using a dual Arduino telemetry and control system. Can recorded flight data like altitude, pitch, yaw, and roll along with camera feed.",
     "time": "Dec '20 - Jun '21",
-    "resources": {
-      "cad": "https://cad.onshape.com/documents/4e32d9f36a97adf58a6869c2/w/24def73a5e4a5848b79d8d09/e/69e1de1bbc6c503f41a5028c",
-      "github": "https://github.com/AmarMaksumic/AquilaHeavy"
+    "media": {
+      "images": [],
+      "videos": [],
+      "websites": [
+        {
+          "url": "https://cad.onshape.com/documents/4e32d9f36a97adf58a6869c2/w/24def73a5e4a5848b79d8d09/e/69e1de1bbc6c503f41a5028c",
+          "title": "Aquila Heavy CAD Model",
+          "preview": "img/projects/aquila_heavy.jpg"
+        },
+        {
+          "url": "https://github.com/AmarMaksumic/AquilaHeavy",
+          "title": "Aquila Heavy Software Repository",
+          "preview": "img/projects/aquila_heavy.jpg"
+        }
+      ]
     },
     "tags": [
       "Control Systems",
@@ -552,8 +1035,16 @@
     "img": "img/projects/mlcv.jpg",
     "description": "Hybrid Computer Vision System coded in Python for the 2020/21 FRC game. Utilizes OpenCV algorithms alongside a Transfer Trained MobileNet SSD model for video processing and error correction. Uses Tornado and Websockets for relaying data to the robot and driver.",
     "time": "Mar '20 - Feb '21",
-    "resources": {
-      "github": "https://github.com/AmarMaksumic/ML-CV"
+    "media": {
+      "images": [],
+      "videos": [],
+      "websites": [
+        {
+          "url": "https://github.com/AmarMaksumic/ML-CV",
+          "title": "ML-CV Software Repository",
+          "preview": "img/projects/mlcv.jpg"
+        }
+      ]
     },
     "tags": [
       "Computer Vision",
@@ -632,8 +1123,16 @@
     "img": "img/projects/bluecomm.jpg",
     "description": "Cross-Computer communication for functions like copy, paste, cut, etc. using Bluetooth. Currently working on designing an installer for the code so that it can run as a background program instead of a script that must be manually executed on machine startup.",
     "time": "Jan '21",
-    "resources": {
-      "github": "https://github.com/AmarMaksumic/BlueComms"
+    "media": {
+      "images": [],
+      "videos": [],
+      "websites": [
+        {
+          "url": "https://github.com/AmarMaksumic/BlueComms",
+          "title": "BlueComms Software Repository",
+          "preview": "img/projects/bluecomm.jpg"
+        }
+      ]
     },
     "tags": [
       "IoT & Networking",
@@ -711,8 +1210,16 @@
     "img": "img/projects/hawk_eye.jpg",
     "description": "Computer Vision System coded in Python for the 2020 FRC game. Utilizes OpenCV, Tornado, and Websockets for video processing and relaying data to the robot and driver.",
     "time": "Jan '20 - Mar '20",
-    "resources": {
-      "github": "https://github.com/steelhawks/2020Vision"
+    "media": {
+      "images": [],
+      "videos": [],
+      "websites": [
+        {
+          "url": "https://github.com/steelhawks/2020Vision",
+          "title": "HawkEye Software Repository",
+          "preview": "img/projects/hawk_eye.jpg"
+        }
+      ]
     },
     "tags": [
       "Computer Vision",
@@ -791,8 +1298,16 @@
     "img": "img/projects/sh2k20.jpg",
     "description": "Worked on various software systems with other engineers on the team for FRC Team 2601's 2020 robot.",
     "time": "Jan '20 - Mar '20",
-    "resources": {
-      "website": "https://steelhawks.net/robots"
+    "media": {
+      "images": [],
+      "videos": [],
+      "websites": [
+        {
+          "url": "https://steelhawks.net/robots",
+          "title": "SteelHawks Robots Page",
+          "preview": "img/projects/sh2k20.jpg"
+        }
+      ]
     },
     "tags": [
       "Control Systems",
@@ -871,7 +1386,13 @@
     "img": "img/projects/swerve.jpg",
     "description": "Worked on the development of a swerve drivetrain prototype for my FRC team. I designed CAD models for the modules and chassis of a swerve drive. In addition, I developed the control systems for both robot orientated and field orientated control of the swerve.",
     "time": "Sep '19 - Dec '19",
-    "resources": {},
+    "media": {
+      "images": [
+        "img/projects/swerve.jpg"
+      ],
+      "videos": [],
+      "websites": []
+    },
     "tags": [
       "Mechanical Engineering",
       "Control Systems",
@@ -949,8 +1470,16 @@
     "img": "img/projects/sh2k19.jpg",
     "description": "Worked on various software systems with other engineers on the team for FRC Team 2601's 2019 robot.",
     "time": "Jan '19 - Apr '19",
-    "resources": {
-      "website": "https://steelhawks.net/robots"
+    "media": {
+      "images": [],
+      "videos": [],
+      "websites": [
+        {
+          "url": "https://steelhawks.net/robots",
+          "title": "SteelHawks Robots Page",
+          "preview": "img/projects/sh2k19.jpg"
+        }
+      ]
     },
     "tags": [
       "Control Systems",
@@ -1029,8 +1558,16 @@
     "img": "img/projects/sh2k18.jpg",
     "description": "Worked on various software systems with other engineers on the team for FRC Team 2601's 2018 robot.",
     "time": "Jan '18 - May '18",
-    "resources": {
-      "website": "https://steelhawks.net/robots"
+    "media": {
+      "images": [],
+      "videos": [],
+      "websites": [
+        {
+          "url": "https://steelhawks.net/robots",
+          "title": "SteelHawks Robots Page",
+          "preview": "img/projects/sh2k18.jpg"
+        }
+      ]
     },
     "tags": [
       "Control Systems",

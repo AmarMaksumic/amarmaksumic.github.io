@@ -649,3 +649,316 @@
     opacity: 1;
   }
 }
+
+/* Media Carousel Styles */
+.media-carousel {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 1.5rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: var(--neutral-100);
+}
+
+.carousel-slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.carousel-nav:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-prev {
+  left: 1rem;
+}
+
+.carousel-next {
+  right: 1rem;
+}
+
+.carousel-counter {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  backdrop-filter: blur(4px);
+}
+
+/* Enhanced Media Carousel Styles */
+.video-container,
+.website-container {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.video-container:hover,
+.website-container:hover {
+  transform: scale(1.02);
+}
+
+.video-overlay,
+.website-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: all 0.3s ease;
+  border-radius: 0.75rem;
+}
+
+.video-container:hover .video-overlay,
+.website-container:hover .website-overlay {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Enhanced play button with pulse animation */
+.play-button {
+  font-size: 3rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  animation: pulse 2s infinite;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.play-button:hover {
+  transform: scale(1.1);
+  background: #ff4757;
+  color: white;
+  box-shadow: 0 6px 25px rgba(255, 71, 87, 0.4);
+}
+
+/* Enhanced website button */
+.website-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  animation: bounce 2s infinite;
+}
+
+.website-text {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  background: rgba(37, 99, 235, 0.9);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+  transition: all 0.3s ease;
+}
+
+.website-container:hover .website-text {
+  background: rgba(37, 99, 235, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+}
+
+/* Click me indicators */
+.media-type-indicator {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+/* Click me animation for videos */
+.carousel-slide[data-type="video"] .media-type-indicator {
+  background: linear-gradient(135deg, #ff4757, #ff3742);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.carousel-slide[data-type="video"] .media-type-indicator::after {
+  content: " • Click to Watch!";
+  font-size: 0.7rem;
+  opacity: 0.9;
+}
+
+/* Click me animation for websites */
+.carousel-slide[data-type="website"] .media-type-indicator {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.carousel-slide[data-type="website"] .media-type-indicator::after {
+  content: " • Click to Visit!";
+  font-size: 0.7rem;
+  opacity: 0.9;
+}
+
+/* Glow animation */
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    transform: scale(1);
+  }
+
+  to {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    transform: scale(1.05);
+  }
+}
+
+/* Pulse animation for play button */
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+/* Bounce animation for website icon */
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-10px);
+  }
+
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Enhanced cursor and hover states */
+.carousel-slide[data-type="video"],
+.carousel-slide[data-type="website"] {
+  cursor: pointer;
+  position: relative;
+}
+
+.carousel-slide[data-type="video"]::before {
+  content: "🎬 CLICK TO PLAY";
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 71, 87, 0.9);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.carousel-slide[data-type="website"]::before {
+  content: "🌐 CLICK TO VISIT";
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(37, 99, 235, 0.9);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.carousel-slide[data-type="video"]:hover::before,
+.carousel-slide[data-type="website"]:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .play-button {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+
+  .media-type-indicator {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .website-text {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
